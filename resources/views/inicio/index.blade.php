@@ -12,7 +12,7 @@
         <meta name="application-name" content="Facebol" />
         <meta name="author" content="Gabriel Angel Pinto C." />
         <meta name="description" content="Pagina dedicada a la administracion, marketing, y venta de servicios y negocios de todo el mundo" />        
-        <meta name="keywords" content="administracion, marketing, venta de servicios, facebol, facebolsrl, negocios, empredimientos, multinivel, freelance, trabajo, genere dinero" />
+        <meta name="keywords" content="administracion, marketing, venta de servicios, facebol, facebolsrl, negocios, empredimientos, multinivel, freelance, trabajo, genere dinero, facebol bolivia, facebolsrl bolivia" />
         <!-- meta character set -->
         <meta name="encoding" charset="utf-8" />
         <meta name="robots" content="index, follow" />
@@ -430,13 +430,15 @@
                     <div class="col-md-12 col-sm-12 col-xs-12 wow fadeInUp">
                         <div class="pricing-table text-center">
                             <div class="price">
-                                <span class="plan">Precio Unico</span>
-                                <span class="value"><small>$</small><strong>17</strong>o 120 bs</span>
+                                <span class="plan">Precio Unico por lanzamiento a tan solo</span>
+                                <span class="value"><small>Bs</small><strong>200</strong></span>
                             </div>
                             <ul class="text-center">
                                 <li>Acceso Cursos Gratuitos</li>
                                 <li>Aprenderas a Generar Ingresos</li>
                                 <li>Descuentos en productos</li>
+                                <li>Tarjeta Personal de la Empresa</li>
+                                <li>Plataforma de ventas</li>
                             </ul>
                         </div>
                     </div>
@@ -485,18 +487,18 @@
                     
                     <div class="col-md-8 col-sm-9 wow fadeInLeft">
                         <div class="contact-form clearfix">
-                            <form action="index.html" method="post">
+                            {!!Form::open(['route'=>'email_post','method'=>'POST'])!!}
                                 <div class="input-field">
-                                    <input type="text" class="form-control" name="name" placeholder="Tu nombre" required="">
+                                    {!!Form::text('nombre',null,['class'=>'form-control','placeholder'=>'Tu nombre completo','required'])!!}
                                 </div>
                                 <div class="input-field">
-                                    <input type="email" class="form-control" name="email" placeholder="Tu correo" required="">
+                                    {!!Form::email('email',null,['class'=>'form-control','placeholder'=>'Tu correo','required'])!!}
                                 </div>
                                 <div class="input-field message">
-                                    <textarea name="message" class="form-control" placeholder="Tu mensaje" required=""></textarea>
+                                    {!!Form::textarea('mensaje',null,['class'=>'form-control','placeholder'=>'Tu mensaje','required'])!!}
                                 </div>
-                                <input type="submit" class="btn btn-blue pull-right" value="Enviar Mensaje" id="msg-submit">
-                            </form>
+                                    {!!Form::submit('Enviar Mensaje',['class'=>'btn btn-blue pull-right','id'=>'msg-submit'])!!}
+                            {!!Form::close()!!}
                         </div> <!-- end .contact-form -->
                     </div> <!-- .col-md-8 -->
 
