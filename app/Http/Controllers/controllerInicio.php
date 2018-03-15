@@ -6,10 +6,12 @@ use Illuminate\Http\Request;
 use App\Email;
 use Storage;
 use Mail;
+use App\Institucion;
 class controllerInicio extends Controller
 {
     public function Inicio()
     {
+        
         return view('inicio.index');
     }
     public function suscribir(Request $datos)

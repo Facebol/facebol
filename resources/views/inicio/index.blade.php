@@ -1,587 +1,803 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="es" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
-    <head>
-        <!-- Mobile Specific Meta -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Always force latest IE rendering engine -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- Meta Keyword -->
-        <meta name="application-name" content="Facebol" />
-        <meta name="author" content="Gabriel Angel Pinto C." />
-        <meta name="description" content="Pagina dedicada a la administracion, marketing, y venta de servicios y negocios de todo el mundo" />        
-        <meta name="keywords" content="administracion, marketing, venta de servicios, facebol, facebolsrl, negocios, empredimientos, multinivel, freelance, trabajo, genere dinero, facebol bolivia, facebolsrl bolivia" />
-        <!-- meta character set -->
-        <meta name="encoding" charset="utf-8" />
-        <meta name="robots" content="index, follow" />
+<html lang="en">
+  
+<!-- Mirrored from agmstudio.io/themes/material-style/2.2.2/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 23:06:58 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#333">
+    <title>Facebol</title>
+    <meta name="description" content="Material Style Theme">
+    @include('inicio.partes.styles.css')
 
-        <!-- Site Title -->
-        <title>Facebol</title>
-        
-        <!--
-        Google Fonts
-        ============================================= -->
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
-		
-        <!--
-        CSS
-        ============================================= -->
-        <!-- Fontawesome -->
-        <link rel="stylesheet" href="../css/font-awesome.min.css">
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <!-- Fancybox -->
-        <link rel="stylesheet" href="../css/jquery.fancybox.css">
-        <!-- owl carousel -->
-        <link rel="stylesheet" href="../css/owl.carousel.css">
-        <!-- Animate -->
-        <link rel="stylesheet" href="../css/animate.css">
-        <!-- Main Stylesheet -->
-        <link rel="stylesheet" href="../css/main.css">
-        <!-- Main Responsive -->
-        <link rel="stylesheet" href="../css/responsive.css">
-		
-		<link rel="stylesheet" type="text/css" href="../css/elastislide.css" />
-		<link rel="stylesheet" type="text/css" href="../css/custom.css" />
-		<script src="../js/modernizr.custom.17475.js"></script>
-    </head>
-	
-    <body>
-
-        <!--
-        Fixed Navigation
-        ==================================== -->
-        <header id="navigation" class="navbar-fixed-top">
-            <div class="container">
-
-                <div class="navbar-header">
-                    <!-- responsive nav button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Navegacion</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- /responsive nav button -->
-
-                    <!-- logo -->
-                    <h1 class="navbar-brand">
-                        <a href="#body">
-                            <img src="img/facebol-logo.png" alt="Kasper Logo">
-                        </a>
-                    </h1>
-                    <!-- /logo -->
-
-                    </div>
-
-                    <!-- main nav -->
-                    <nav class="collapse navigation navbar-collapse navbar-right" role="navigation">
-                        <ul id="nav" class="nav navbar-nav">
-                            <li class="current"><a href="#home">Inicio</a></li>
-                            <li><a href="#service">Conocenos</a></li>
-                            <li><a href="#portfolio">Servicios</a></li>
-                            <li><a href="#ganancia">Beneficios</a></li>
-                            <li><a href="#pricing">Unete</a></li>
-                            <li><a href="#contact">Contactanos</a></li>
-                        </ul>
-                    </nav>
-                    <!-- /main nav -->
-                </div>
-
+  </head>
+  <body>
+    <a href="javascript:void(0)" class="ms-conf-btn ms-configurator-btn btn-circle btn-circle-raised btn-circle-primary animated rubberBand">
+      <i class="fa fa-gears"></i>
+    </a>
+    @include('inicio.partes.conf')
+    <div id="ms-preload" class="ms-preload">
+      <div id="status">
+        <div class="spinner">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="ms-site-container">
+     
+    @include('inicio.partes.modal')
+    @include('inicio.partes.navLogo')  
+    @include('inicio.partes.nav')
+    @include('inicio.partes.slider')
+      <!-- ms-hero ms-hero-black -->
+      <div class="container mt-4">
+        <h2 class="text-center color-primary mb-2 wow fadeInDown animation-delay-4">Quienes SOmos</h2>
+        <p class="lead text-center aco wow fadeInDown animation-delay-5 mw-800 center-block mb-4"> Lorem ipsum dolor sit amet,
+          <span class="color-primary">consectetur adipisicing</span> elit. Dolor alias provident excepturi eligendi, nam numquam iusto eum illum, ea quisquam.</p>
+        <div class="row">
+          <div class="ms-feature col-xl-3 col-lg-6 col-md-6 card wow flipInX animation-delay-4">
+            <div class="text-center card-body">
+              <span class="ms-icon ms-icon-circle ms-icon-xxlg color-info">
+                <i class="zmdi zmdi-cloud-outline"></i>
+              </span>
+              <h4 class="color-info">A feature title</h4>
+              <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
+              <a href="javascript:void(0)" class="btn btn-info btn-raised">Action here</a>
             </div>
-        </header>
-        <!--
-        End Fixed Navigation
-        ==================================== -->
-
-
-        <!--
-        Home Slider
-        ==================================== -->
-        <section id="home">     
-            <div id="home-carousel" class="carousel slide" data-interval="false">
-                <ol class="carousel-indicators">
-                    <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#home-carousel" data-slide-to="1"></li>
-                    <li data-target="#home-carousel" data-slide-to="2"></li>
-                </ol>
-                <!--/.carousel-indicators-->
-
-                <div class="carousel-inner">
-
-                    <div class="item active"  style="background-image: url('img/slider4.jpg')" >
-                        <div class="carousel-caption">
-                            <div class="animated bounceInRight">
-                                <h2>HOLA !! <br>SOMOS FACEBOL.</h2>
-                                <p>Somos una empresa boliviana legalmente establecida que se dedica a la administracion, marketing y venta de servicios para empresas y negocios de todo el mundo</p>
-                                <h2>¿Eres Parte? <a href="" class="btn btn-success"><i class="fa fa-user"></i> Inicia Sesion</a></h2>
-                            </div>
-                        </div>
-                    </div>              
-
-                    <div class="item" style="background-image: url('img/slider5.jpg')">                
-                        <div class="carousel-caption">
-                            <div class="animated bounceInDown">
-                                    <h2>HOLA !! <br>SOMOS FACEBOL.</h2>
-                                    <p>Somos una empresa boliviana legalmente establecida que se dedica a la administracion, marketing y venta de servicios para empresas y negocios de todo el mundo</p>
-                                    <h2>¿Eres Parte? <a href="" class="btn btn-success"><i class="fa fa-user"></i> Inicia Sesion</a></h2>
-                             </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!--/.carousel-inner-->
-                <nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
-                    <a class="sl-prev hidden-xs" href="#home-carousel" data-slide="prev">
-                        <i class="fa fa-angle-left fa-3x"></i>
-                    </a>
-                    <a class="sl-next" href="#home-carousel" data-slide="next">
-                        <i class="fa fa-angle-right fa-3x"></i>
-                    </a>
-                </nav>
-
+          </div>
+          <div class="ms-feature col-xl-3 col-lg-6 col-md-6 card wow flipInX animation-delay-8">
+            <div class="text-center card-body">
+              <span class="ms-icon ms-icon-circle ms-icon-xxlg color-warning">
+                <i class="zmdi zmdi-desktop-mac"></i>
+              </span>
+              <h4 class="color-warning">A feature title</h4>
+              <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
+              <a href="javascript:void(0)" class="btn btn-warning btn-raised">Action here</a>
             </div>
-        </section>
-        <!--
-        End #home Slider
-        ========================== -->
-
-            
-        <!--
-        #service
-        ========================== -->
-        <section id="service">
-            <div class="container">
+          </div>
+          <div class="ms-feature col-xl-3 col-lg-6 col-md-6 card wow flipInX animation-delay-10">
+            <div class="text-center card-body">
+              <span class="ms-icon ms-icon-circle ms-icon-xxlg color-success">
+                <i class="zmdi zmdi-car-taxi"></i>
+              </span>
+              <h4 class="color-success">A feature title</h4>
+              <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
+              <a href="javascript:void(0)" class="btn btn-success btn-raised">Action here</a>
+            </div>
+          </div>
+          <div class="ms-feature col-xl-3 col-lg-6 col-md-6 card wow flipInX animation-delay-6">
+            <div class="text-center card-body">
+              <span class="ms-icon ms-icon-circle ms-icon-xxlg  color-danger">
+                <i class="zmdi zmdi-flower-alt"></i>
+              </span>
+              <h4 class="color-danger">A feature title</h4>
+              <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
+              <a href="javascript:void(0)" class="btn btn-danger btn-raised">Action here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- container -->
+      <div class="wrap wrap-mountain mt-6">
+        <div class="container">
+          <h2 class="text-center text-light mb-6 wow fadeInDown animation-delay-5">Material Design is a
+            <strong>new way</strong> to create designs</h2>
+          <div class="row">
+            <div class="col-lg-6 order-lg-2 mb-4  center-block">
+              <img src="assets/img/demo/mock.png" alt="" class="img-fluid center-block wow zoomIn animation-delay-12 "> </div>
+            <div class="col-lg-6 order-lg-1 pr-6">
+              <p class="wow fadeInLeft animation-delay-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam sint officiis odio tempora natus, sed voluptas facilis ullam suscipit. Ducimus quas, eius ut, dolores mollitia sapiente doloremque aliquid sequi eaque.</p>
+              <p class="wow fadeInLeft animation-delay-7">Adipisicing elit. Sapiente porro voluptatem rerum modi quibusdam accusantium nihil facere cupiditate quam! Ipsa.</p>
+              <p class="wow fadeInLeft animation-delay-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quasi voluptatem, similique corrupti necessitatibus nihil error, nemo delectus voluptates deserunt ducimus quaerat molestiae labore id repellat exercitationem asperiores neque
+                quibusdam.</p>
+              <div class="text-center">
+                <a href="javascript:void(0)" class="btn btn-warning btn-raised mr-1 wow flipInX animation-delay-14">
+                  <i class="zmdi zmdi-chart-donut"></i> Action here </a>
+                <a href="javascript:void(0)" class="btn btn-info btn-raised wow flipInX animation-delay-16">
+                  <i class="zmdi zmdi-case"></i> Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-6">
+        <h1 class="font-light">Technology that brings teams together</h1>
+        <p class="lead color-primary">— Intelligent apps that help you do your best work. </p>
+        <div class="panel panel-light panel-flat">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs nav-tabs-transparent indicator-primary nav-tabs-full nav-tabs-5" role="tablist">
+            <li class="nav-item wow fadeInDown animation-delay-6" role="presentation">
+              <a href="#windows" aria-controls="windows" role="tab" data-toggle="tab" class="nav-link withoutripple">
+                <i class="zmdi zmdi-windows"></i>
+                <span class="d-none d-md-inline">Windows</span>
+              </a>
+            </li>
+            <li class="nav-item wow fadeInDown animation-delay-4" role="presentation">
+              <a href="#macos" aria-controls="macos" role="tab" data-toggle="tab" class="nav-link withoutripple active">
+                <i class="zmdi zmdi-apple"></i>
+                <span class="d-none d-md-inline">MacOS</span>
+              </a>
+            </li>
+            <li class="nav-item wow fadeInDown animation-delay-2" role="presentation">
+              <a href="#linux" aria-controls="linux" role="tab" data-toggle="tab" class="nav-link withoutripple">
+                <i class="fa fa-linux"></i>
+                <span class="d-none d-md-inline">Linux</span>
+              </a>
+            </li>
+            <li class="nav-item wow fadeInDown animation-delay-4" role="presentation">
+              <a href="#android" aria-controls="android" role="tab" data-toggle="tab" class="nav-link withoutripple">
+                <i class="zmdi zmdi-android"></i>
+                <span class="d-none d-md-inline">Android</span>
+              </a>
+            </li>
+            <li class="nav-item wow fadeInDown animation-delay-6" role="presentation">
+              <a href="#ios" aria-controls="ios" role="tab" data-toggle="tab" class="nav-link withoutripple">
+                <i class="zmdi zmdi-smartphone-iphone"></i>
+                <span class="d-none d-md-inline">IOS</span>
+              </a>
+            </li>
+          </ul>
+          <div class="panel-body">
+            <!-- Tab panes -->
+            <div class="tab-content mt-4">
+              <div role="tabpanel" class="tab-pane fade" id="windows">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title text-center wow fadeInDown">
-                            <h2>¿Quienes Somos?</h2>    
-                        </div>
+                  <div class="col-lg-6 order-lg-2">
+                    <img src="assets/img/demo/mock4.png" alt="" class="img-fluid animated zoomIn animation-delay-8"> </div>
+                  <div class="col-lg-6 order-lg-1">
+                    <h3 class="text-normal animated fadeInUp animation-delay-4">Bring ideas together faster</h3>
+                    <p class="lead lead-md animated fadeInUp animation-delay-6">Create documents, spreadsheets and presentations from anywhere. Share them with teammates and work together on the same file, at the same time.</p>
+                    <p class="lead lead-md animated fadeInUp animation-delay-7">sing your work is easy with one login for everything you do. Administrative controls offer two-step verification to enhance security for the whole company.</p>
+                    <div class="">
+                      <a href="javascript:void(0)" class="btn btn-info btn-raised animated zoomIn animation-delay-10">
+                        <i class="zmdi zmdi-info"></i> More info</a>
+                      <a href="javascript:void(0)" class="btn btn-danger btn-raised mr-1 animated zoomIn animation-delay-12">
+                        <i class="zmdi zmdi-chart-donut"></i> Action here </a>
                     </div>
+                  </div>
                 </div>
+              </div>
+              <div role="tabpanel" class="tab-pane active show fade" id="macos">
                 <div class="row">
-
-                    <div class="col-md-6 col-sm-12 wow fadeInLeft">
-                        <div class="media">
-                            <a href="#" class="pull-left">
-                                <img src="img/icons/test.png" class="media-object" alt="Monitor">
-                            </a>
-                            <div class="media-body">
-                                <h3>Facebol</h3>
-                                <p>Somos una empresa boliviana legalmente establecida que se dedica a la administracion, marketing y venta de servicios para empresas y negocios de todo el mundo.</p>
-                            </div>
-                        </div>
-
+                  <div class="col-lg-6">
+                    <img src="assets/img/demo/mock2.png" alt="" class="img-fluid wow animated zoomIn animation-delay-8"> </div>
+                  <div class="col-lg-6">
+                    <h3 class="text-normal wow animated fadeInUp animation-delay-4">Bring ideas together faster</h3>
+                    <p class="lead lead-md  wow animated fadeInUp animation-delay-6">Create documents, spreadsheets and presentations from anywhere. Share them with teammates and work together on the same file, at the same time.</p>
+                    <p class="lead lead-md wow animated fadeInUp animation-delay-7">sing your work is easy with one login for everything you do. Administrative controls offer two-step verification to enhance security for the whole company.</p>
+                    <div class="">
+                      <a href="javascript:void(0)" class="btn btn-info btn-raised wow animated zoomIn animation-delay-10">
+                        <i class="zmdi zmdi-info"></i> More info</a>
+                      <a href="javascript:void(0)" class="btn btn-danger btn-raised mr-1 wow animated zoomIn animation-delay-12">
+                        <i class="zmdi zmdi-chart-donut"></i> Action here </a>
                     </div>
-                    <div class="col-md-6 col-sm-12 wow fadeInLeft">
-                        <div class="media">
-                            <a href="#" class="pull-left">
-                                <img src="img/icons/test.png" class="media-object" alt="Monitor">
-                            </a>
-                            <div class="media-body">
-                                <h3>Mision</h3>
-                                <p>Brindar a las personas la oportunidar de aumentar sus ingresos e impulsar su educacion e inteligencia financiera.</p>
-                            </div>
-                        </div>
-
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="linux">
+                <div class="row">
+                  <div class="col-lg-6 order-lg-2">
+                    <img src="assets/img/demo/mock5.png" alt="" class="img-fluid animated zoomIn animation-delay-8"> </div>
+                  <div class="col-lg-6 order-lg-1">
+                    <h3 class="text-normal animated fadeInUp animation-delay-4">Bring ideas together faster</h3>
+                    <p class="lead lead-md animated fadeInUp animation-delay-6">Create documents, spreadsheets and presentations from anywhere. Share them with teammates and work together on the same file, at the same time.</p>
+                    <p class="lead lead-md animated fadeInUp animation-delay-7">sing your work is easy with one login for everything you do. Administrative controls offer two-step verification to enhance security for the whole company.</p>
+                    <div class="">
+                      <a href="javascript:void(0)" class="btn btn-info btn-raised animated zoomIn animation-delay-10">
+                        <i class="zmdi zmdi-info"></i> More info</a>
+                      <a href="javascript:void(0)" class="btn btn-danger btn-raised mr-1 animated zoomIn animation-delay-12">
+                        <i class="zmdi zmdi-chart-donut"></i> Action here </a>
                     </div>
-
-                    <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="0.2s">
-                        <div class="media">
-                            <a href="#" class="pull-left">
-                                <img src="img/icons/test.png" alt="Cog">
-                            </a>
-                            <div class="media-body">
-                                <h3>Vision</h3>
-                                <p>Ser una de las empresas Bolivianas mas reconocidas a nivel nacionaly tener una fuerte presencia a nivel Internacional.</p>
-                            </div>
-                        </div>
-                        
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="android">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <img src="assets/img/demo/mock6.png" alt="" class="img-fluid animated zoomIn animation-delay-8"> </div>
+                  <div class="col-lg-6">
+                    <h3 class="text-normal animated fadeInUp animation-delay-4">Bring ideas together faster</h3>
+                    <p class="lead lead-md  animated fadeInUp animation-delay-6">Create documents, spreadsheets and presentations from anywhere. Share them with teammates and work together on the same file, at the same time.</p>
+                    <p class="lead lead-md animated fadeInUp animation-delay-7">sing your work is easy with one login for everything you do. Administrative controls offer two-step verification to enhance security for the whole company.</p>
+                    <div class="">
+                      <a href="javascript:void(0)" class="btn btn-info btn-raised animated zoomIn animation-delay-10">
+                        <i class="zmdi zmdi-info"></i> More info</a>
+                      <a href="javascript:void(0)" class="btn btn-danger btn-raised mr-1 animated zoomIn animation-delay-12">
+                        <i class="zmdi zmdi-chart-donut"></i> Action here </a>
                     </div>
-
-                </div> <!-- end .row -->
-            </div> <!-- end .container -->
-        </section>
-        <!--
-        End #service
-        ========================== -->
-        <section id="quotes">
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="ios">
+                <div class="row">
+                  <div class="col-lg-6 order-lg-2">
+                    <img src="assets/img/demo/mock3.png" alt="" class="img-fluid animated zoomIn animation-delay-8"> </div>
+                  <div class="col-lg-6 order-lg-1">
+                    <h3 class="text-normal animated fadeInUp animation-delay-4">Bring ideas together faster</h3>
+                    <p class="lead lead-md animated fadeInUp animation-delay-6">Create documents, spreadsheets and presentations from anywhere. Share them with teammates and work together on the same file, at the same time.</p>
+                    <p class="lead lead-md animated fadeInUp animation-delay-7">sing your work is easy with one login for everything you do. Administrative controls offer two-step verification to enhance security for the whole company.</p>
+                    <div class="">
+                      <a href="javascript:void(0)" class="btn btn-info btn-raised animated zoomIn animation-delay-10">
+                        <i class="zmdi zmdi-info"></i> More info</a>
+                      <a href="javascript:void(0)" class="btn btn-danger btn-raised mr-1 animated zoomIn animation-delay-12">
+                        <i class="zmdi zmdi-chart-donut"></i> Action here </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- panel -->
+      </div>
+      <!-- container -->
+      <div class="container mt-6">
+        <div class="text-center mb-4">
+          <h2 class="uppercase color-primary">See our subscription plans</h2>
+          <p class="lead uppercase">Surprise with our unique features</p>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-4">
+            <div class="price-table price-table-info wow zoomInUp animation-delay-2">
+              <header class="price-table-header">
+                <span class="price-table-category">Personal</span>
+                <h3>
+                  <sup>$</sup>19.99
+                  <sub>/mo.</sub>
+                </h3>
+              </header>
+              <div class="price-table-body">
+                <ul class="price-table-list">
+                  <li>
+                    <i class="zmdi zmdi-code"></i> Lorem ipsum dolor sit amet.</li>
+                  <li>
+                    <i class="zmdi zmdi-globe"></i> Voluptate ex quam autem dolor.</li>
+                  <li>
+                    <i class="zmdi zmdi-settings"></i> Dignissimos velit reic cumque.</li>
+                  <li>
+                    <i class="zmdi zmdi-cloud"></i> Nihil corrupti soluta vitae non.</li>
+                  <li>
+                    <i class="zmdi zmdi-star"></i> Atque molestiae, blanditiis ratione.</li>
+                </ul>
+                <div class="text-center">
+                  <a href="javascript:void(0)" class="btn btn-info btn-raised">
+                    <i class="zmdi zmdi-cloud-download"></i> Get Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="price-table price-table-success prominent wow zoomInDown animation-delay-2">
+              <header class="price-table-header">
+                <span class="price-table-category">Professional</span>
+                <h3>
+                  <sup>$</sup>49.99
+                  <sub>/mo.</sub>
+                </h3>
+              </header>
+              <div class="price-table-body">
+                <ul class="price-table-list">
+                  <li>
+                    <i class="zmdi zmdi-code"></i> Lorem ipsum dolor sit amet.</li>
+                  <li>
+                    <i class="zmdi zmdi-globe"></i> Voluptate ex quam autem dolor.</li>
+                  <li>
+                    <i class="zmdi zmdi-settings"></i> Dignissimos velit reic cumque.</li>
+                  <li>
+                    <i class="zmdi zmdi-cloud"></i> Nihil corrupti soluta vitae non.</li>
+                  <li>
+                    <i class="zmdi zmdi-star"></i> Atque molestiae, blanditiis ratione.</li>
+                </ul>
+                <div class="text-center">
+                  <a href="javascript:void(0)" class="btn btn-success btn-raised">
+                    <i class="zmdi zmdi-cloud-download"></i> Get Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="price-table price-table-warning wow zoomInUp animation-delay-2">
+              <header class="price-table-header">
+                <span class="price-table-category">Business</span>
+                <h3>
+                  <sup>$</sup>99.99
+                  <sub>/mo.</sub>
+                </h3>
+              </header>
+              <div class="price-table-body">
+                <ul class="price-table-list">
+                  <li>
+                    <i class="zmdi zmdi-code"></i> Lorem ipsum dolor sit amet.</li>
+                  <li>
+                    <i class="zmdi zmdi-globe"></i> Voluptate ex quam autem dolor.</li>
+                  <li>
+                    <i class="zmdi zmdi-settings"></i> Dignissimos velit reic cumque.</li>
+                  <li>
+                    <i class="zmdi zmdi-cloud"></i> Nihil corrupti soluta vitae non.</li>
+                  <li>
+                    <i class="zmdi zmdi-star"></i> Atque molestiae, blanditiis ratione.</li>
+                </ul>
+                <div class="text-center">
+                  <a href="javascript:void(0)" class="btn btn-warning btn-raised">
+                    <i class="zmdi zmdi-cloud-download"></i> Get Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--container -->
+      <div class="wrap wrap-danger mt-6">
+        <h2 class="text-center no-m">What our customers say</h2>
+        <div id="carousel-example-generic" class="carousel carousel-cards carousel-fade slide" data-ride="carousel" data-interval="7000">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <div class="carousel-caption">
                 <div class="container">
-                    <div class="row wow zoomIn">
-                        <div class="col-lg-12">
-                            <div class="call-to-action text-center">
-                                <p>¡¡¡¡HAZLO DIFERENTE!!!</p>
-                                <span>FACEBOL</span>
-                            </div>
-                        </div>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="card animated flipInX animation-delay-2 mb-4">
+                        <blockquote class="blockquote blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar d-none d-sm-block">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
                     </div>
+                    <div class="col-lg-4">
+                      <div class="card animated flipInX animation-delay-3 mb-4">
+                        <blockquote class="blockquote blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar d-none d-sm-block">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="card animated flipInX animation-delay-4 mb-4">
+                        <blockquote class="blockquote blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar d-none d-sm-block">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-        </section>
-        <!--
-        #service-bottom
-        ========================== -->
-        
-       
-        <!--
-        End #service-bottom
-        ========================== -->
-
-
-        <!--
-        #Portfolio
-        ========================== -->
-        
-        <section id="portfolio">
-
-            <div class="section-title text-center wow fadeInDown">
-                <h2>Servicios</h2>    
-                <h5>Todas las Empresas Afiliadas a Facebol</h5>
+              </div>
             </div>
-            
-           <!-- <nav class="project-filter clearfix text-center wow fadeInLeft"  data-wow-delay="0.5s">
-                <ul class="list-inline">
-                    <li><a href="javascript:;" class="filter" data-filter="all">All</a></li>
-                    <li><a href="javascript:;" class="filter" data-filter=".app">App</a></li>
-                    <li><a href="javascript:;" class="filter" data-filter=".photography">Photography</a></li>
-                    <li><a href="javascript:;" class="filter" data-filter=".web">Web</a></li>
-                    <li><a href="javascript:;" class="filter" data-filter=".print">Print</a></li>
+            <div class="carousel-item">
+              <div class="carousel-caption">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="card animated flipInX animation-delay-2 mb-4">
+                        <blockquote class="blockquote blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar d-none d-sm-block">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="card animated flipInX animation-delay-3 mb-4">
+                        <blockquote class="blockquote blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar d-none d-sm-block">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="card animated flipInX animation-delay-4 mb-4">
+                        <blockquote class="blockquote blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar d-none d-sm-block">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-caption">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="card animated flipInX animation-delay-2 mb-4">
+                        <blockquote class="blockquote blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar d-none d-sm-block">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="card animated flipInX animation-delay-3 mb-4">
+                        <blockquote class="blockquote blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar d-none d-sm-block">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="card animated flipInX animation-delay-4 mb-4">
+                        <blockquote class="blockquote blockquote-avatar withripple">
+                          <img src="assets/img/demo/avatar.png" alt="" class="avatar d-none d-sm-block">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                          <footer>Brian Krzanich, Intel CEO.</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Controls -->
+          <a class="left carousel-control-prev btn btn-white btn-raised" href="#carousel-example-generic" role="button" data-slide="next">
+            <i class="zmdi zmdi-arrow-left"></i>
+          </a>
+          <a class="right carousel-control-next btn btn-white btn-raised" href="#carousel-example-generic" role="button" data-slide="next">
+            <i class="zmdi zmdi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="container mt-6">
+        <h2 class="text-center color-primary mb-4">Our Latest Works</h2>
+        <div class="owl-dots"></div>
+        <div class="owl-carousel owl-theme">
+          <div class="card animation-delay-6">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port4.jpg" alt="..." class="img-fluid">
+              </a>
+            </div>
+            <div class="card-body">
+              <h3 class="color-primary">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-primary btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+          <div class="card card-dark-inverse animation-delay-8">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port24.jpg" alt="..." class="img-fluid">
+              </a>
+            </div>
+            <div class="card-body">
+              <h3 class="">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-info btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+          <div class="card animation-delay-10">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port7.jpg" alt="..." class="img-fluid">
+              </a>
+            </div>
+            <div class="card-body">
+              <h3 class="color-primary">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-primary btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+          <div class="card animation-delay-6">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port8.jpg" alt="..." class="img-fluid">
+              </a>
+            </div>
+            <div class="card-body">
+              <h3 class="color-primary">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-primary btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+          <div class="card card-dark-inverse animation-delay-8">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port9.jpg" alt="..." class="img-fluid">
+              </a>
+            </div>
+            <div class="card-body">
+              <h3 class="">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-info btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+          <div class="card animation-delay-10">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port5.jpg" alt="..." class="img-fluid">
+              </a>
+            </div>
+            <div class="card-body">
+              <h3 class="color-primary">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-primary btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+          <div class="card animation-delay-6">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port11.jpg" alt="..." class="img-fluid">
+              </a>
+            </div>
+            <div class="card-body">
+              <h3 class="color-primary">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-primary btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+          <div class="card card-dark-inverse animation-delay-8">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port3.jpg" alt="..." class="img-fluid">
+              </a>
+            </div>
+            <div class="card-body">
+              <h3 class="">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-info btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+          <div class="card animation-delay-10">
+            <div class="withripple zoom-img">
+              <a href="javascript:void()">
+                <img src="assets/img/demo/port14.jpg" alt="..." class="img-fluid">
+              </a>
+            </div>
+            <div class="card-body">
+              <h3 class="color-primary">Thumbnail label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, repellat, vitae porro ex expedita cumque nulla.</p>
+              <p class="text-right">
+                <a href="javascript:void()" class="btn btn-primary btn-raised text-right" role="button">
+                  <i class="zmdi zmdi-collection-image-o"></i> View More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside class="ms-footbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 ms-footer-col">
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title">Sitemap</h3>
+                <ul class="list-unstyled ms-icon-list three_cols">
+                  <li>
+                    <a href="index-2.html">
+                      <i class="zmdi zmdi-home"></i> Home</a>
+                  </li>
+                  <li>
+                    <a href="page-blog.html">
+                      <i class="zmdi zmdi-edit"></i> Blog</a>
+                  </li>
+                  <li>
+                    <a href="page-blog.html">
+                      <i class="zmdi zmdi-image-o"></i> Portafolio</a>
+                  </li>
+                  <li>
+                    <a href="portfolio-filters_sidebar.html">
+                      <i class="zmdi zmdi-case"></i> Works</a>
+                  </li>
+                  <li>
+                    <a href="page-timeline_left2.html">
+                      <i class="zmdi zmdi-time"></i> Timeline</a>
+                  </li>
+                  <li>
+                    <a href="page-pricing.html">
+                      <i class="zmdi zmdi-money"></i> Pricing</a>
+                  </li>
+                  <li>
+                    <a href="page-about.html">
+                      <i class="zmdi zmdi-favorite-outline"></i> About Us</a>
+                  </li>
+                  <li>
+                    <a href="page-team2.html">
+                      <i class="zmdi zmdi-accounts"></i> Our Team</a>
+                  </li>
+                  <li>
+                    <a href="page-services.html">
+                      <i class="zmdi zmdi-face"></i> Services</a>
+                  </li>
+                  <li>
+                    <a href="page-faq2.html">
+                      <i class="zmdi zmdi-help"></i> FAQ</a>
+                  </li>
+                  <li>
+                    <a href="page-login2.html">
+                      <i class="zmdi zmdi-lock"></i> Login</a>
+                  </li>
+                  <li>
+                    <a href="page-contact.html">
+                      <i class="zmdi zmdi-email"></i> Contact</a>
+                  </li>
                 </ul>
-            </nav>
-        -->
-       
-            <!-- Elastislide Carousel -->
-            
-            <!-- End Elastislide Carousel -->
-            <div class="container demo-1">
-            <div class="main">
-                <ul id="carousel" class="elastislide-list">
-                    <li><a href="#"><img src="img/icons/f.png" alt="image01" /></a></li>
-                    <li><a href="#"><img src="img/icons/cf.png" alt="image02" /></a></li>
-                    <li><a href="#"><img src="img/icons/dg.png" alt="image04" /></a></li>
-                    <li><a href="#"><img src="img/icons/ib.png" alt="image05" /></a></li>
-                    <li><a href="#"><img src="img/icons/m2.png" alt="image06" /></a></li>
-                    <li><a href="#"><img src="img/icons/md.png" alt="image07" /></a></li>
-                    <li><a href="#"><img src="img/icons/si.png" alt="image08" /></a></li>
-                    <li><a href="#"><img src="img/icons/uft.png" alt="image09" /></a></li>
-                    <li><a href="#"><img src="img/icons/acuaticos.png" alt="image10" /></a></li>
-                    <li><a href="#"><img src="img/icons/cosaMachos.png" alt="image11" /></a></li>
-                    <li><a href="#"><img src="img/icons/Crismar.png" alt="image12" /></a></li>
-                    <li><a href="#"><img src="img/icons/Delichon.png" alt="image13" /></a></li>
-                    <li><a href="#"><img src="img/icons/MBlanca.png" alt="image14" /></a></li>
-                    <li><a href="#"><img src="img/icons/uft.png" alt="image15" /></a></li>
-                    <li><a href="#"><img src="img/icons/teoma.png" alt="image16" /></a></li>
-                    <li><a href="#"><img src="img/icons/Ifacebol.png" alt="image17" /></a></li>
-                </ul>
-            </div> <!-- end #projects -->
-        </div> <!-- end #projects -->
-        </section>
-    
-        <section id="count">
-            <div class="container">
-                <div class="row">
-                    <div class="counter-section clearfix">
-
-                        <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.5s">
-                            <div class="fact-item text-center">
-                                <div class="fact-icon">
-                                    <i class="fa fa-check-square fa-lg"></i>
-                                </div>
-                                <span data-to="50">0</span>
-                                <p>Empresas y Negocios</p>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.8s">
-                            <div class="fact-item text-center">
-                                <div class="fact-icon">
-                                    <i class="fa fa-users fa-lg"></i>                                    
-                                </div>
-                                <span data-to="100">0</span>
-                                <p>Personas Afiliadas</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title">Subscribe</h3>
+                <p class="">Lorem ipsum Amet fugiat elit nisi anim mollit minim labore ut esse Duis ullamco ad dolor veniam velit.</p>
+                <form>
+                  <div class="form-group label-floating mt-2 mb-1">
+                    <div class="input-group ms-input-subscribe">
+                      <label class="control-label" for="ms-subscribe">
+                        <i class="zmdi zmdi-email"></i> Email Adress</label>
+                      <input type="email" id="ms-subscribe" class="form-control"> </div>
+                  </div>
+                  <button class="ms-subscribre-btn" type="button">Subscribe</button>
+                </form>
+              </div>
             </div>
-        </section>
-        <section id="about">
-            <div class="container">
-                <div class="row">
-
-                    <div class="section-title text-center wow fadeInUp">
-                            <h2>¡¡¡TRABAJA CON NOSOTROS!!!</h2>
-                            <h5>Puedes Trabajar desde tu celular o computadora dando informacion, haciendo publicidad o vendiendo productos de las empresas afilidas.</h5>
+            <div class="col-lg-5 col-md-7 ms-footer-col ms-footer-alt-color">
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title text-center mb-2">Last Articles</h3>
+                <div class="ms-footer-media">
+                  <div class="media">
+                    <div class="media-left media-middle">
+                      <a href="javascript:void(0)">
+                        <img class="media-object media-object-circle" src="assets/img/demo/p75.jpg" alt="..."> </a>
                     </div>
-                    
-                    <div class="about-us text-center wow fadeInDown">
-                        <img src="img/about.png" alt="About Us" class="img-responsive">
+                    <div class="media-body">
+                      <h4 class="media-heading">
+                        <a href="javascript:void(0)">Lorem ipsum dolor sit expedita cumque amet consectetur adipisicing repellat</a>
+                      </h4>
+                      <div class="media-footer">
+                        <span>
+                          <i class="zmdi zmdi-time color-info-light"></i> August 18, 2016</span>
+                        <span>
+                          <i class="zmdi zmdi-folder-outline color-warning-light"></i>
+                          <a href="javascript:void(0)">Design</a>
+                        </span>
+                      </div>
                     </div>
+                  </div>
+                  <div class="media">
+                    <div class="media-left media-middle">
+                      <a href="javascript:void(0)">
+                        <img class="media-object media-object-circle" src="assets/img/demo/p75.jpg" alt="..."> </a>
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading">
+                        <a href="javascript:void(0)">Labore ut esse Duis consectetur expedita cumque ullamco ad dolor veniam velit</a>
+                      </h4>
+                      <div class="media-footer">
+                        <span>
+                          <i class="zmdi zmdi-time color-info-light"></i> August 18, 2016</span>
+                        <span>
+                          <i class="zmdi zmdi-folder-outline color-warning-light"></i>
+                          <a href="javascript:void(0)">News</a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="media-left media-middle">
+                      <a href="javascript:void(0)">
+                        <img class="media-object media-object-circle" src="assets/img/demo/p75.jpg" alt="..."> </a>
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading">
+                        <a href="javascript:void(0)">voluptates deserunt ducimus expedita cumque quaerat molestiae labore</a>
+                      </h4>
+                      <div class="media-footer">
+                        <span>
+                          <i class="zmdi zmdi-time color-info-light"></i> August 18, 2016</span>
+                        <span>
+                          <i class="zmdi zmdi-folder-outline color-warning-light"></i>
+                          <a href="javascript:void(0)">Productivity</a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
-        <section id="ganancia">
-            <section id="service">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title text-center wow fadeInDown">
-                            <h2>¿Formas de Ganancia?</h2>    
-                        </div>
-                    </div>
+            <div class="col-lg-3 col-md-5 ms-footer-col ms-footer-text-right">
+              <div class="ms-footbar-block">
+                <div class="ms-footbar-title">
+                  <span class="ms-logo ms-logo-white ms-logo-sm mr-1">M</span>
+                  <h3 class="no-m ms-site-title">Material
+                    <span>Style</span>
+                  </h3>
                 </div>
-                <div class="row">
-
-                    <div class="col-md-6 col-sm-12 wow fadeInLeft">
-                        <div class="media">
-                            <a href="#" class="pull-left">
-                                <img src="img/icons/cog.png" class="media-object" alt="Monitor">
-                            </a>
-                            <div class="media-body">
-                                <h3>Ganancia</h3>
-                                <p>Ganas hasta 20% del valor total de los productos que vendas. Ganas hasta 5% de todas las ventas de las personas que afilies.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="0.2s">
-                        <div class="media">
-                            <a href="#" class="pull-left">
-                                <img src="img/icons/cog.png" class="media-object" alt="Monitor">
-                            </a>
-                            <div class="media-body">
-                                <h3>Bono de Afiliacion</h3>
-                                <p>Ganas el 20% al 45% del pago de afiliacion de todas las personas que ingreses a la empresa.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6 col-sm-12 wow fadeInLeft" >
-                        <div class="media">
-                            <a href="#" class="pull-left">
-                                <img src="img/icons/cog.png" alt="Cog">
-                            </a>
-                            <div class="media-body">
-                                <h3>Bonos de Promocion</h3>
-                                <p>Participas de todas las promociones que realiza la empresa pudiendo ganar becas de estudio, viajes, dinero en efectivo y mucho mas.</p>
-                            </div>
-                        </div>    
-                    </div>
-                    <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="0.2s">
-                        <div class="media">
-                            <a href="#" class="pull-left">
-                                <img src="img/icons/cog.png" alt="Cog">
-                            </a>
-                            <div class="media-body">
-                                <h3>Bonos de Ascenso</h3>
-                                <p>Si muestras dedicacion y empeño podras ser de nuestro equipo tecnico o administrativo, podras ganar un porcentaje de los ingresos totales.</p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="0.2s">
-                        <div class="media">
-                            <a href="#" class="pull-left">
-                                <img src="img/icons/cog.png" alt="Cog">
-                            </a>
-                            <div class="media-body">
-                                <h3>Beneficios</h3>
-                                <p> 
-                                    - Costo unico de afiliacion<br>
-                                    - Increibles descuentos en todos nuestro productos<br>
-                                    - Si te destacas tendras acceso a cursos gratuitos y apoyo para que inviertas en bonos, bolsa de valores y bienes raices.Tambien aprenderas a generar ingresos por internet con ClickBank, Youtube, Google, Facebook, Blogs y mucho mas.<br>
-                                    - Te desarrollaras profesionalmente aprendiendo a liderar equipos de ventas.<br>
-                                    - No requiere trabajo de tiempo completo<br>
-                                    - Te pagamos la primera semana de cada mes, sin descuentos a tu cuenta bancaria o en efectivo.
-                                </p>
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                </div> <!-- end .row -->
-            </div> <!-- end .container -->
-        </section>
-        </section>
-        <section id="quotes">
-            <div class="container">
-                <div class="row wow zoomIn">
-                    <div class="col-lg-12">
-                        <div class="call-to-action text-center">
-                            <p>“UNETE AL EQUIPO”</p>
-                            <span>Facebol</span>
-                        </div>
-                    </div>
+                <address class="no-mb">
+                  <p>
+                    <i class="color-danger-light zmdi zmdi-pin mr-1"></i> 795 Folsom Ave, Suite 600</p>
+                  <p>
+                    <i class="color-warning-light zmdi zmdi-map mr-1"></i> San Francisco, CA 94107</p>
+                  <p>
+                    <i class="color-info-light zmdi zmdi-email mr-1"></i>
+                    <a href="mailto:joe@example.com">example@domain.com</a>
+                  </p>
+                  <p>
+                    <i class="color-royal-light zmdi zmdi-phone mr-1"></i>+34 123 456 7890 </p>
+                  <p>
+                    <i class="color-success-light fa fa-fax mr-1"></i>+34 123 456 7890 </p>
+                </address>
+              </div>
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title">Social Media</h3>
+                <div class="ms-footbar-social">
+                  <a href="javascript:void(0)" class="btn-circle btn-facebook">
+                    <i class="zmdi zmdi-facebook"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn-circle btn-twitter">
+                    <i class="zmdi zmdi-twitter"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn-circle btn-youtube">
+                    <i class="zmdi zmdi-youtube-play"></i>
+                  </a>
+                  <br>
+                  <a href="javascript:void(0)" class="btn-circle btn-google">
+                    <i class="zmdi zmdi-google"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn-circle btn-instagram">
+                    <i class="zmdi zmdi-instagram"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn-circle btn-github">
+                    <i class="zmdi zmdi-github"></i>
+                  </a>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </aside>
+      <footer class="ms-footer">
+        <div class="container">
+          <p>Copyright &copy; Material Style 2017</p>
+        </div>
+      </footer>
+      <div class="btn-back-top">
+        <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised ">
+          <i class="zmdi zmdi-long-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+    <!-- ms-site-container -->
+   @include('inicio.partes.footer')
+   @include('inicio.partes.styles.js')
+  </body>
 
-
-        <section id="pricing">
-            <div class="container">
-                <div class="row">
-
-                    <div class="section-title text-center wow fadeInUp">
-                        <h2>Precios unico afiliacion</h2>    
-                        <p>Afilia tu emprendimiento, negocio, empresa.</p>
-                    </div>
-
-                    <div class="col-md-12 col-sm-12 col-xs-12 wow fadeInUp">
-                        <div class="pricing-table text-center">
-                            <div class="price">
-                                <span class="plan">Precio Unico por lanzamiento a tan solo</span>
-                                <span class="value"><small>Bs</small><strong>200</strong></span>
-                            </div>
-                            <ul class="text-center">
-                                <li>Acceso Cursos Gratuitos</li>
-                                <li>Aprenderas a Generar Ingresos</li>
-                                <li>Descuentos en productos</li>
-                                <li>Tarjeta Personal de la Empresa</li>
-                                <li>Plataforma de ventas</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!--
-        #subscribe
-        ========================== -->
-        <section id="subscribe">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-md-7 wow fadeInLeft">
-                        {!!Form::open(['route'=>'suscribir','method'=>'POST','class'=>'subscription-form'])!!}
-                            <i class="fa fa-envelope-o fa-lg"></i>
-                            {!!Form::email('email', null,['class' => 'subscribe','placeholder'=>'Escribe tu correo electronico','required'])!!}
-                            {!!Form::submit('ENVIAR',['id'=>'mail-submit'])!!}
-                        {!!Form::close()!!}
-                    </div>
-
-                    <div class="col-md-4 text-left wow fadeInRight">
-                        <p>Al proporcionarnos tu correo podemos informarte de cualquier novedad como seminarios, charlas, cursos, eventos, etc</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--
-        End #subscribe
-        ========================== -->
-
-
-        <!--
-        #contact
-        ========================== -->
-        <section id="contact">
-            <div class="container">
-                <div class="row">
-
-                    <div class="section-title text-center wow fadeInDown">
-                        <h2>Contactanos para ser parte del equipo</h2>
-                        <p>Si quieres unirte a nosotors contactanos por correo o por alguna de nuestras redes sociales o los numeros telelefonicos.</p>
-                    </div>
-                    
-                    <div class="col-md-8 col-sm-9 wow fadeInLeft">
-                        <div class="contact-form clearfix">
-                            {!!Form::open(['route'=>'email_post','method'=>'POST'])!!}
-                                <div class="input-field">
-                                    {!!Form::text('nombre',null,['class'=>'form-control','placeholder'=>'Tu nombre completo','required'])!!}
-                                </div>
-                                <div class="input-field">
-                                    {!!Form::email('email',null,['class'=>'form-control','placeholder'=>'Tu correo','required'])!!}
-                                </div>
-                                <div class="input-field message">
-                                    {!!Form::textarea('mensaje',null,['class'=>'form-control','placeholder'=>'Tu mensaje','required'])!!}
-                                </div>
-                                    {!!Form::submit('Enviar Mensaje',['class'=>'btn btn-blue pull-right','id'=>'msg-submit'])!!}
-                            {!!Form::close()!!}
-                        </div> <!-- end .contact-form -->
-                    </div> <!-- .col-md-8 -->
-
-                    <div class="col-md-4 col-sm-3 wow fadeInRight">
-                        <div class="contact-details">
-                            <span>Llamanos</span>
-                            <p>76266570 Ing. Luis Fernando Ilaquita<br>
-                        </div> <!-- end .contact-details -->
-                    </div> <!-- .col-md-4 -->
-
-                </div>
-            </div>
-        </section>
-        <!--
-        End #contact
-        ========================== -->
-
-        <!--
-        #footer
-        ========================== -->
-        <footer id="footer" class="text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-
-                        <div class="footer-logo wow fadeInDown">
-                            <img src="img/facebol-logo.png" alt="logo">
-                        </div>
-
-                        <div class="footer-social wow fadeInUp">
-                            <h3>Hazlo Diferente</h3>
-                            <ul class="text-center list-inline">
-                                <li><a href="https://www.facebook.com/facebolsrl/"><i class="fa fa-facebook fa-lg"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
-                            </ul>
-                        </div>
-
-                        <div class="copyright">
-                            <p>Facebol</a></p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!--
-        End #footer
-        ========================== -->
-
-
-        <!--
-        JavaScripts
-        ========================== -->
-        
-        <!-- main jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- Bootstrap -->
-        <script src="../js/bootstrap.min.js"></script>
-        <!-- jquery.nav -->
-        <script src="../js/jquery.nav.js"></script>
-        <!-- Portfolio Filtering -->
-        <script src="../js/jquery.mixitup.min.js"></script>
-        <!-- Fancybox -->
-        <script src="../js/jquery.fancybox.pack.js"></script>
-        <!-- Parallax sections -->
-        <script src="../js/jquery.parallax-1.1.3.js"></script>
-        <!-- jQuery Appear -->
-        <script src="../js/jquery.appear.js"></script>
-        <!-- countTo -->
-        <script src="../js/jquery-countTo.js"></script>
-        <!-- owl carousel -->
-        <script src="../js/owl.carousel.min.js"></script>
-        <!-- WOW script -->
-        <script src="../js/wow.min.js"></script>
-        <!-- theme custom scripts -->
-        <script src="../js/main.js"></script>
-       
-		<script type="text/javascript" src="../js/jquerypp.custom.js"></script>
-		<script type="text/javascript" src="../js/jquery.elastislide.js"></script>
-		<script type="text/javascript">
-			
-			$( '#carousel' ).elastislide();
-			
-		</script>
-    </body>
+<!-- Mirrored from agmstudio.io/themes/material-style/2.2.2/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 23:09:42 GMT -->
 </html>
