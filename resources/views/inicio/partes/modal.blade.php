@@ -17,15 +17,15 @@
             <ul class="nav nav-tabs nav-tabs-full nav-tabs-3 nav-tabs-primary" role="tablist">
               <li class="nav-item" role="presentation">
                 <a href="#ms-login-tab" aria-controls="ms-login-tab" role="tab" data-toggle="tab" class="nav-link active withoutripple">
-                  <i class="zmdi zmdi-account"></i> Login</a>
+                  <i class="zmdi zmdi-account"></i> Entrar</a>
               </li>
               <li class="nav-item" role="presentation">
                 <a href="#ms-register-tab" aria-controls="ms-register-tab" role="tab" data-toggle="tab" class="nav-link withoutripple">
-                  <i class="zmdi zmdi-account-add"></i> Register</a>
+                  <i class="zmdi zmdi-account-add"></i> Registrar</a>
               </li>
               <li class="nav-item" role="presentation">
                 <a href="#ms-recovery-tab" aria-controls="ms-recovery-tab" role="tab" data-toggle="tab" class="nav-link withoutripple">
-                  <i class="zmdi zmdi-key"></i> Recovery Pass</a>
+                  <i class="zmdi zmdi-key"></i> Olvide mi contraseña</a>
               </li>
             </ul>
           </div>
@@ -40,7 +40,7 @@
                       <span class="input-group-addon">
                         <i class="zmdi zmdi-account"></i>
                       </span>
-                      <label class="control-label" for="ms-form-user">Username</label>
+                      <label class="control-label" for="ms-form-user">Email</label>
                       <input type="text" id="ms-form-user" class="form-control"> </div>
                   </div>
                   <div class="form-group label-floating">
@@ -48,7 +48,7 @@
                       <span class="input-group-addon">
                         <i class="zmdi zmdi-lock"></i>
                       </span>
-                      <label class="control-label" for="ms-form-pass">Password</label>
+                      <label class="control-label" for="ms-form-pass">Contraseña</label>
                       <input type="password" id="ms-form-pass" class="form-control"> </div>
                   </div>
                   <div class="row mt-2">
@@ -56,7 +56,7 @@
                       <div class="form-group no-mt">
                         <div class="checkbox">
                           <label>
-                            <input type="checkbox"> Remember Me </label>
+                            <input type="checkbox"> Recuerdame </label>
                         </div>
                       </div>
                     </div>
@@ -66,15 +66,6 @@
                   </div>
                 </fieldset>
               </form>
-              <div class="text-center">
-                <h3>Login with</h3>
-                <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-facebook">
-                  <i class="zmdi zmdi-facebook"></i> Facebook</a>
-                <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-twitter">
-                  <i class="zmdi zmdi-twitter"></i> Twitter</a>
-                <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-google">
-                  <i class="zmdi zmdi-google"></i> Google</a>
-              </div>
             </div>
             <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
               <form>
@@ -117,14 +108,6 @@
             </div>
             <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
               <fieldset>
-                <div class="form-group label-floating">
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="zmdi zmdi-account"></i>
-                    </span>
-                    <label class="control-label" for="ms-form-user-re">Username</label>
-                    <input type="text" id="ms-form-user-re" class="form-control"> </div>
-                </div>
                 <div class="form-group label-floating">
                   <div class="input-group">
                     <span class="input-group-addon">
