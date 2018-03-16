@@ -2,11 +2,11 @@
     <div class="container container-full">
       <div class="navbar-header">
         <a class="navbar-brand" href="index-2.html">
-          <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> -->
-          <span class="ms-logo ms-logo-sm">F</span>
+          <img src="assets/img/demo/logo-navbar.png" alt=""> 
+         <!-- <span class="ms-logo ms-logo-sm">F</span>
           <span class="ms-title">ace
             <strong>Bol</strong>
-          </span>
+          </span>-->
         </a>
       </div>
       <div class="collapse navbar-collapse" id="ms-navbar">

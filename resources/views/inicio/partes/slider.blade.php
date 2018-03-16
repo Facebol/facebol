@@ -11,9 +11,9 @@
                   <div class="ms-hero-material-text-container">
                     <header class="ms-hero-material-title animated slideInLeft animation-delay-5">
                       <h1 class="animated fadeInLeft animation-delay-15 font-smoothing">The
-                        <strong>power design</strong> amazing projects</h1>
-                      <h2 class="animated fadeInLeft animation-delay-18">The most customizable
-                        <span class="color-warning">material design</span> template.</h2>
+                        <strong>Lorem laborum labore fugiat non. Ut ad non esse quis adipisicing eiusmod.</strong> amazing projects</h1>
+                      <h2 class="animated fadeInLeft animation-delay-18">Cillum cupidatat aliquip 
+                        <span class="color-warning">mollit quis enim.</span> mollit quis enim..</h2>
                     </header>
                     <ul class="ms-hero-material-list">
                       <li class="">
@@ -41,12 +41,12 @@
                         <div class="ms-list-text animated fadeInRight animation-delay-23">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit sequi est repudianda.</div>
                       </li>
                     </ul>
-                    <div class="ms-hero-material-buttons text-right">
+                   <div class="ms-hero-material-buttons text-right">
                       <div class="ms-hero-material-buttons text-right">
-                        <a href="javascript:void(0);" class="btn btn-warning btn-raised animated fadeInLeft animation-delay-24 mr-2">
-                          <i class="zmdi zmdi-settings"></i> Personalize</a>
+                        <!--<a href="javascript:void(0);" class="btn btn-warning btn-raised animated fadeInLeft animation-delay-24 mr-2">
+                          <i class="zmdi zmdi-settings"></i> Personalize</a>-->
                         <a href="javascript:void(0);" class="btn btn-success btn-raised animated fadeInRight animation-delay-24">
-                          <i class="zmdi zmdi-download"></i> Download</a>
+                          <i class="zmdi zmdi-account"></i> Iniciar Session</a>
                       </div>
                     </div>
                   </div>
