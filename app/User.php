@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'ciudad_id','nombre', 'apellido','direccion','celular','email', 'password','imagen','codigo','tipo','activo'
     ];
 
     /**
@@ -26,4 +26,17 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function setImagenAttribute($imagen){
+        if(! empty($imagen)){
+              $name = Carbon::now()->second.$imagen->getClientOriginalName();
+              $this->attributes['imagen'] = $name;
+              \Storage::disk('local')->put($name, \File::get($imagen));
+        }
+    }
+    public function setPasswordAttribute($valor){
+        if(!empty($valor)){
+            $this->attributes['password'] = \Hash::make($valor);
+        }
+    }
 }
