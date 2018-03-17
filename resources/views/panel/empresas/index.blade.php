@@ -4,8 +4,13 @@
         <div class="col-xs-12">                            
             <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">Lista de Empresas</h3>
+                    <h2 class="text-center">Lista de Empresas</h2>
                 </div><!-- /.box-header -->
+                <div class="col-xs-12 col-md-6" style="padding-left: 920px;">
+                    <a href="{{('create')}}">
+                        <button type="button" class="btn btn-success"><i class="fa fa-plus"></i>  &nbsp;&nbsp;&nbsp;&nbsp; Agregar</button>
+                    </a>
+                </div><br><br><br>
                 <div class="box-body table-responsive">
                     <table class="table table-bordered table-striped">
                         <thead>

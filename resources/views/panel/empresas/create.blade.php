@@ -12,8 +12,10 @@
 
 		<div class="box-footer col-md-12 text-center">
 			{{Form::submit('Guardar',['class'=>'btn btn-primary'])}}
-		    <button type="submit" class="btn btn-danger"><i class="fa fa-close"></i> Cancelar</button>
-		</div>
+            <a href="{{('./')}}">
+		      <button type="button" class="btn btn-danger"><i class="fa fa-close"></i> Cancelar</button>
+		    </a>
+        </div>
 		{{Form::close()}}
     </div><!-- /.box -->
 </div>
