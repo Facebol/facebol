@@ -8,7 +8,6 @@ class Empresa extends Model
 {
     protected $table="empresas";
     protected $fillable=['ciudad_id','nombre','descripcion','telefono','email','facebook','web','imagen'];
-    ];
     public function setImagenAttribute($imagen){
         if(! empty($imagen)){
               $name = Carbon::now()->second.$imagen->getClientOriginalName();
