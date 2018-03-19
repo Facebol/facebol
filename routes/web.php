@@ -9,6 +9,8 @@ Route::post('log','controllerLogin@log')->name('log');
 Route::get('logout','controllerLogin@logout')->name('logout');
 Route::post('reset','controllerInicio@emailReset')->name('reset');
 //panel
+Route::resource('panel/ciudad','controladorCiudad');
+Route::resource('panel/pais','controladorPais');
 Route::resource('panel/empresas','controllerEmpresa');
 Route::resource('panel/usuarios','controllerUsuario');
 Route::resource('panel/institucion','controllerInstitucion');
