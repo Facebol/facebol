@@ -47,7 +47,7 @@ class controllerEmpresa extends Controller
 
    	public function update(Request $request, $id){
 
-   		$empresa = Empresa::find($id);
+		$empresa = Empresa::find($id);
    		$empresa->fill([
    			'nombre'=>$request->nombre,
    			'descripcion'=>$request->descripcion,
@@ -57,7 +57,8 @@ class controllerEmpresa extends Controller
    			'web'=>$request->web,
    			'imagen'=>$request->imagen,
    			'ciudad_id'=>$request->ciudad_id
-   		]);
+		   ]);
+		$empresa->save();
    		return redirect()->route('empresas.index');
    	} 
 }

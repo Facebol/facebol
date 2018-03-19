@@ -45,7 +45,7 @@
                       <div class="ms-hero-material-buttons text-right">
                         <!--<a href="javascript:void(0);" class="btn btn-warning btn-raised animated fadeInLeft animation-delay-24 mr-2">
                           <i class="zmdi zmdi-settings"></i> Personalize</a>-->
-                        <a href="javascript:void(0);" class="btn btn-success btn-raised animated fadeInRight animation-delay-24">
+                        <a href="javascript:void(0);" class="btn btn-success btn-raised animated fadeInRight animation-delay-24" data-toggle="modal" data-target="#ms-account-modal">
                           <i class="zmdi zmdi-account"></i> Iniciar Session</a>
                       </div>
                     </div>
@@ -90,10 +90,8 @@
                     </ul>
                     <div class="ms-hero-material-buttons text-right">
                       <div class="ms-hero-material-buttons text-right">
-                        <a href="javascript:void(0);" class="btn btn-warning btn-raised animated fadeInLeft animation-delay-24 mr-2">
-                          <i class="zmdi zmdi-settings"></i> Personalize</a>
-                        <a href="javascript:void(0);" class="btn btn-success btn-raised animated fadeInRight animation-delay-24">
-                          <i class="zmdi zmdi-download"></i> Download</a>
+                        <a href="javascript:void(0);" class="btn btn-success btn-raised animated fadeInRight animation-delay-24" data-toggle="modal" data-target="#ms-account-modal">
+                          <i class="zmdi zmdi-account"></i> Iniciar Session</a>
                       </div>
                     </div>
                   </div>
@@ -136,10 +134,8 @@
                       </li>
                     </ul>
                     <div class="ms-hero-material-buttons text-right">
-                      <a href="javascript:void(0);" class="btn btn-warning btn-raised animated fadeInLeft animation-delay-24 mr-2">
-                        <i class="zmdi zmdi-settings"></i> Personalize</a>
-                      <a href="javascript:void(0);" class="btn btn-success btn-raised animated fadeInRight animation-delay-24">
-                        <i class="zmdi zmdi-download"></i> Download</a>
+                      <a href="javascript:void(0);" class="btn btn-success btn-raised animated fadeInRight animation-delay-24" data-toggle="modal" data-target="#ms-account-modal">
+                        <i class="zmdi zmdi-account"></i> Iniciar Session</a>
                     </div>
                   </div>
                   <!-- ms-hero-material-text-container -->

@@ -7,7 +7,7 @@
                     <h2 class="text-center">Lista de Empresas</h2>
                 </div><!-- /.box-header -->
                 <div class="col-xs-12 col-md-6" style="padding-left: 920px;">
-                    <a href="{{('create')}}">
+                    <a href="{{route('empresas.create')}}">
                         <button type="button" class="btn btn-success"><i class="fa fa-plus"></i>  &nbsp;&nbsp;&nbsp;&nbsp; Agregar</button>
                     </a>
                 </div><br><br><br>
