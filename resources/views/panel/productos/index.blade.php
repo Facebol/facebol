@@ -36,8 +36,8 @@
                                 <td>{{$productos->comision}}</td>
                                 <td>{{$productos->tipo}}</td>
                                 <td><img src="{{asset('imagen')}}/{{$productos->imagen}}" width="50px" height="50px"></td>
-                                <td>
                                 <td>{{$productos->estado}}</td>
+                                <td>
                                   {!!Form::open(['route'=>['productos.destroy', $productos->id], 'method' => 'DELETE'])!!}
                                   <a href="{{route('productos.edit',$productos->id)}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
                                   <button class="btn btn-success"><i class="fa fa-check"></i></button>

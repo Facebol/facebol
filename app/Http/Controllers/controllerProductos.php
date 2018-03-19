@@ -37,10 +37,11 @@ class controllerProductos extends Controller
 
 	}
 
-	public function edit(){
+	public function edit($id){
 
+		$producto = Producto::find($id);
 		$tipo = ['Normal','Servicio'];
-		return view('panel.productos.edit',compact('tipo'));
+		return view('panel.productos.edit',compact('producto','tipo'));
 
 	}	
 
