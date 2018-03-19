@@ -33,15 +33,15 @@
         <div class="modal-body">
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade active show" id="ms-login-tab">
-              <form autocomplete="off">
+                {!!Form::open(['route'=>'log','method'=>'POST'])!!}
                 <fieldset>
                   <div class="form-group label-floating">
                     <div class="input-group">
                       <span class="input-group-addon">
                         <i class="zmdi zmdi-account"></i>
                       </span>
-                      <label class="control-label" for="ms-form-user">Email</label>
-                      <input type="text" id="ms-form-user" class="form-control"> </div>
+                      <label class="control-label" for="ms-form-user">Correo</label>
+                      {!!Form::email('email',null,['id'=>'ms-form-user','class'=>'form-control','required'])!!}
                   </div>
                   <div class="form-group label-floating">
                     <div class="input-group">
@@ -49,7 +49,8 @@
                         <i class="zmdi zmdi-lock"></i>
                       </span>
                       <label class="control-label" for="ms-form-pass">Contraseña</label>
-                      <input type="password" id="ms-form-pass" class="form-control"> </div>
+                      {!!Form::password('password',['id'=>'ms-form-pass','class'=>'form-control'])!!}
+                    </div>
                   </div>
                   <div class="row mt-2">
                     <div class="col-md-6">
@@ -61,11 +62,11 @@
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <button class="btn btn-raised btn-primary pull-right">Login</button>
+                      {!!Form::submit('Entrar',['class'=>'btn btn-raised btn-primary pull-right'])!!}
                     </div>
                   </div>
                 </fieldset>
-              </form>
+              {!!Form::close()!!}
             </div>
             <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
               <form>
@@ -75,7 +76,7 @@
                       <span class="input-group-addon">
                         <i class="zmdi zmdi-account"></i>
                       </span>
-                      <label class="control-label" for="ms-form-user-r">Username</label>
+                      <label class="control-label" for="ms-form-user-r">Nombre</label>
                       <input type="text" id="ms-form-user-r" class="form-control"> </div>
                   </div>
                   <div class="form-group label-floating">
@@ -83,7 +84,7 @@
                       <span class="input-group-addon">
                         <i class="zmdi zmdi-email"></i>
                       </span>
-                      <label class="control-label" for="ms-form-email-r">Email</label>
+                      <label class="control-label" for="ms-form-email-r">Correo</label>
                       <input type="email" id="ms-form-email-r" class="form-control"> </div>
                   </div>
                   <div class="form-group label-floating">
@@ -91,7 +92,7 @@
                       <span class="input-group-addon">
                         <i class="zmdi zmdi-lock"></i>
                       </span>
-                      <label class="control-label" for="ms-form-pass-r">Password</label>
+                      <label class="control-label" for="ms-form-pass-r">Contraseña</label>
                       <input type="password" id="ms-form-pass-r" class="form-control"> </div>
                   </div>
                   <div class="form-group label-floating">
@@ -99,26 +100,28 @@
                       <span class="input-group-addon">
                         <i class="zmdi zmdi-lock"></i>
                       </span>
-                      <label class="control-label" for="ms-form-pass-rn">Re-type Password</label>
+                      <label class="control-label" for="ms-form-pass-rn">Confirmar Contraseña</label>
                       <input type="password" id="ms-form-pass-rn" class="form-control"> </div>
                   </div>
-                  <button class="btn btn-raised btn-block btn-primary">Register Now</button>
+                  <button class="btn btn-raised btn-block btn-primary">Registrar Ahora</button>
                 </fieldset>
               </form>
             </div>
             <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
+              {!!Form::open(['route'=>'reset','method'=>'POST'])!!}
               <fieldset>
                 <div class="form-group label-floating">
                   <div class="input-group">
                     <span class="input-group-addon">
                       <i class="zmdi zmdi-email"></i>
                     </span>
-                    <label class="control-label" for="ms-form-email-re">Email</label>
-                    <input type="email" id="ms-form-email-re" class="form-control"> </div>
+                    <label class="control-label" for="ms-form-email-re">Correo</label>
+                    {!!Form::email('email',null,['id'=>'ms-form-email-re','class'=>'form-control'])!!}
+                    
                 </div>
-                <button class="btn btn-raised btn-block btn-primary">Send Password</button>
+                    {!!Form::submit('Restablecer',['class'=>'btn btn-raised btn-block btn-primary'])!!}
               </fieldset>
-              </form>
+              {!!Form::close()!!}
             </div>
           </div>
         </div>

@@ -5,9 +5,9 @@ Route::get('/','controllerInicio@inicio')->name('inicio');
 Route::post('suscribir','controllerInicio@suscribir')->name('suscribir');
 Route::post('email_post','controllerInicio@emailPost')->name('email_post');
 
-Route::get('login','controllerLogin@start')->name('start');
 Route::post('log','controllerLogin@log')->name('log');
 Route::get('logout','controllerLogin@logout')->name('logout');
+Route::post('reset','controllerInicio@emailReset')->name('reset');
 //panel
 Route::resource('panel/institucion','controllerInstitucion');
 Route::get('panel','controllerPanel@startAdmin')->name('start-a');

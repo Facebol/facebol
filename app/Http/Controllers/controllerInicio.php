@@ -7,6 +7,8 @@ use App\Email;
 use Storage;
 use Mail;
 use App\Institucion;
+use App\User;
+
 class controllerInicio extends Controller
 {
     public function Inicio()
@@ -38,6 +40,19 @@ class controllerInicio extends Controller
             $message->to('facebol@facebolsrl.com','Facebol')
             ->subject('Mensaje de Usuario');
         });
+        return redirect()->route('inicio');
+    }
+    public function emailReset(Request $datos)
+    {
+        $usuario = User::where('email',$datos->email)->first();
+        if($usuario)
+        {   
+            Mail::send('emails.emailReset',$usuario,function($msj) use ($usuario){
+                $message->to($usuario->email,$data->nombre)
+                ->subject('Recuperacion de Contraseña');
+            });
+        }
+       
         return redirect()->route('inicio');
     }
 }
