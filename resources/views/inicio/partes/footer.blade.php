@@ -7,7 +7,7 @@
             <ul class="list-unstyled ms-icon-list three_cols">
               <li>
                 <a href="index-2.html">
-                  <i class="zmdi zmdi-home"></i> Home</a>
+                  <i class="zmdi zmdi-home"></i> Howme</a>
               </li>
               <li>
                 <a href="page-blog.html">
@@ -56,25 +56,25 @@
             </ul>
           </div>
           <div class="ms-footbar-block">
-            <h3 class="ms-footbar-title">Subscribe</h3>
-            <p class="">Lorem ipsum Amet fugiat elit nisi anim mollit minim labore ut esse Duis ullamco ad dolor veniam velit.</p>
+            <h3 class="ms-footbar-title">Suscribite</h3>
+            <p class="">Para recibir mas informacion acerca de la empresa envianos tu correo electronico. Ademas te enviaremos un correo de invitacion para distintos seminarios, actividades que proporciona la empresa.</p>
             <form>
               <div class="form-group label-floating mt-2 mb-1">
                 <div class="input-group ms-input-subscribe">
                   <label class="control-label" for="ms-subscribe">
-                    <i class="zmdi zmdi-email"></i> Email Adress</label>
+                    <i class="zmdi zmdi-email"></i> Correo Electronico</label>
                   <input type="email" id="ms-subscribe" class="form-control"> </div>
               </div>
-              <button class="ms-subscribre-btn" type="button">Subscribe</button>
+              <button class="ms-subscribre-btn" type="button">Suscribir</button>
             </form>
           </div>
         </div>
         <div class="col-lg-3 col-md-5 ms-footer-col ms-footer-text-right">
           <div class="ms-footbar-block">
             <div class="ms-footbar-title">
-              <span class="ms-logo ms-logo-white ms-logo-sm mr-1">M</span>
-              <h3 class="no-m ms-site-title">Material
-                <span>Style</span>
+              <span class="ms-logo ms-logo-white ms-logo-sm mr-1">F</span>
+              <h3 class="no-m ms-site-title">ace
+                <span>bol</span>
               </h3>
             </div>
             <address class="no-mb">

@@ -25,7 +25,7 @@
                 <p>Para recuperar su contraseña solo haga click en el siguiente enlace:</p>
             </div>
 		    <div style="border-bottom: 1px solid #eff2f7; padding-bottom: 15px; margin-bottom: 15px;">
-                <a href="{{ url('/reset/password/' . $codigo) }}">Restablecer COntraseña</a>
+                <a href="{{ url('panel/reset/' . $codigo) }}">Restablecer Contraseña</a>
 	    	</div>
 	    </div>
 	 </div>

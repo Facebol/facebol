@@ -51,8 +51,11 @@ class controllerInicio extends Controller
                 $message->to($usuario->email,$data->nombre)
                 ->subject('Recuperacion de Contraseña');
             });
-        }
-       
+        }      
         return redirect()->route('inicio');
+    }
+    public function passwordReset($dato)
+    {
+        return view('panel.reset.index',compact('codigo'));
     }
 }

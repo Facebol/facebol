@@ -9,6 +9,7 @@ Route::post('log','controllerLogin@log')->name('log');
 Route::get('logout','controllerLogin@logout')->name('logout');
 Route::post('reset','controllerInicio@emailReset')->name('reset');
 //panel
+Route::get('panel/reset/{codigo}','controllerInicio@passwordReset')->name('passwordReset');
 Route::resource('panel/empresas','controllerEmpresa');
 Route::resource('panel/usuarios','controllerUsuario');
 Route::resource('panel/institucion','controllerInstitucion');

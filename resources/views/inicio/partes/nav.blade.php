@@ -12,7 +12,7 @@
       <div class="collapse navbar-collapse" id="ms-navbar">
         <ul class="navbar-nav">
           <li class="nav-item dropdown active">
-            <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="home">Home
+            <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="home">Inicio
               <i class="zmdi zmdi-chevron-down"></i>
             </a>
             <ul class="dropdown-menu">
@@ -230,7 +230,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="page">Pages
+            <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="page">Paginas
               <i class="zmdi zmdi-chevron-down"></i>
             </a>
             <ul class="dropdown-menu">
@@ -410,7 +410,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown dropdown-megamenu-container">
-            <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="component">UI Elements
+            <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="component">Elementos
               <i class="zmdi zmdi-chevron-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-megamenu animated fadeIn animated-2x">
