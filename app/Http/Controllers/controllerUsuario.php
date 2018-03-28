@@ -23,7 +23,7 @@ class controllerUsuario extends Controller
      */
     public function create()
     {
-        //
+        return view('panel.usuarios.create');
     }
 
     /**

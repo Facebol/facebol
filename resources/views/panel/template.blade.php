@@ -11,7 +11,7 @@
         <!-- Ionicons -->
         <link href="{{asset('css/ionicons.min.css')}}" rel="stylesheet" type="text/css" />
 
-        <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
 
         <!-- Theme style -->
         <link href="{{asset('css/AdminLTE.css')}}" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@
         <script src="{{asset('js/AdminLTE/app.js')}}" type="text/javascript"></script>
 
         <!-- DATA TABES SCRIPT -->
-        <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
         @yield('scripts')
         <!-- Page script -->
         <!-- page script -->
