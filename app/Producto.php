@@ -3,11 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Producto extends Model
 {
-     protected $table="producto";
-    protected $fillable=['nombre','descripcion','precio','imagen','activo','descuento','tipo','comision'];
+     protected $table="productos";
+    protected $fillable=['empresa_id','nombre','descripcion','precio','imagen','activo','descuento','tipo','comision'];
 
     public function setImagenAttribute($imagen){
         if(! empty($imagen)){

@@ -11,7 +11,7 @@
         <!-- Ionicons -->
         <link href="{{asset('css/ionicons.min.css')}}" rel="stylesheet" type="text/css" />
 
-        <link href="{{asset('css/datatables/dataTables.bootstrap.css')}}" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
 
         <!-- Theme style -->
         <link href="{{asset('css/AdminLTE.css')}}" rel="stylesheet" type="text/css" />
@@ -67,23 +67,9 @@
         <script src="{{asset('js/AdminLTE/app.js')}}" type="text/javascript"></script>
 
         <!-- DATA TABES SCRIPT -->
-        <script src="{{asset('js/plugins/datatables/jquery.dataTables.js')}}" type="text/javascript"></script>
-        <script src="{{asset('js/plugins/datatables/dataTables.bootstrap.js')}}" type="text/javascript"></script>
-
+        <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+        @yield('scripts')
         <!-- Page script -->
         <!-- page script -->
-        <script type="text/javascript">
-            $(function() {
-                $("#example1").dataTable();
-                $('#example2').dataTable({
-                    "bPaginate": true,
-                    "bLengthChange": false,
-                    "bFilter": false,
-                    "bSort": true,
-                    "bInfo": true,
-                    "bAutoWidth": false
-                });
-            });
-        </script>
     </body>
 </html>

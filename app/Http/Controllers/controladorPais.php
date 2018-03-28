@@ -3,17 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\DataTables\dataTableUsuario;
-class controllerUsuario extends Controller
+use App\Pais;
+class controladorPais extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(dataTableUsuario $dataTable)
+    public function index()
     {
-        return $dataTable->render('panel.usuarios.index');
+      $pais=Pais::orderBy('id','desc')->paginate('5');
+      return view('panel.pais.index',compact('pais'));
     }
 
     /**
@@ -23,7 +24,10 @@ class controllerUsuario extends Controller
      */
     public function create()
     {
-        //
+       
+        $pais = Pais::orderBy('id','desc')->pluck('nombre');
+        return view('panel.pais.create', compact('pais'));
+
     }
 
     /**
@@ -34,7 +38,14 @@ class controllerUsuario extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Pais::create(
+            [
+                'nombre'=>$request->nombre,
+
+            ]
+
+        );
+        return redirect()->route('pais.index');
     }
 
     /**
@@ -56,7 +67,8 @@ class controllerUsuario extends Controller
      */
     public function edit($id)
     {
-        //
+        $pais=Pais::find($id);
+        return view('panel.pais.edit',compact('pais'));
     }
 
     /**
@@ -68,7 +80,14 @@ class controllerUsuario extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $pais= Pais::find($id);
+        $pais->fill(
+            [
+                'nombre'=>$request->nombre,
+            ]
+        );
+        $pais->save();
+        return redirect()->route('pais.index'); 
     }
 
     /**
@@ -79,6 +98,8 @@ class controllerUsuario extends Controller
      */
     public function destroy($id)
     {
-        //
+         $pais= Pais::find($id);
+        $pais->delete();
+        return redirect()->route('pais.index');
     }
 }

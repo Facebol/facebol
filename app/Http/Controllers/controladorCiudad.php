@@ -3,17 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\DataTables\dataTableUsuario;
-class controllerUsuario extends Controller
+use App\Ciudad;
+class controladorCiudad extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(dataTableUsuario $dataTable)
+    public function index()
     {
-        return $dataTable->render('panel.usuarios.index');
+        $ciudad=Ciudad::orderBy('id','desc')->paginate('5');
+      return view('panel.ciudad.index',compact('ciudad'));
     }
 
     /**
@@ -23,7 +24,8 @@ class controllerUsuario extends Controller
      */
     public function create()
     {
-        //
+       $ciudad = Ciudad::orderBy('id','desc')->pluck('nombre');
+        return view('panel.pais.create', compact('ciudad'));
     }
 
     /**
@@ -34,7 +36,15 @@ class controllerUsuario extends Controller
      */
     public function store(Request $request)
     {
-        //
+       Ciudad::create(
+      [
+        'nombre'=>$request->nombre,
+
+      ]
+
+       );
+
+       return redirect()->route('ciudad.index');
     }
 
     /**
@@ -56,7 +66,9 @@ class controllerUsuario extends Controller
      */
     public function edit($id)
     {
-        //
+        $ciudad=Ciudad::Find($id);
+        return view('panel.ciudad.edit',compact('ciudad'));
+
     }
 
     /**
@@ -68,7 +80,14 @@ class controllerUsuario extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ciudad= Cidad::find($id);
+        $ciudad->fill(
+            [
+               'nombre'=>$request->nombre,
+            ]
+        );
+         $ciudad->save();
+        return redirect()->route('ciudad.index'); 
     }
 
     /**
@@ -79,6 +98,8 @@ class controllerUsuario extends Controller
      */
     public function destroy($id)
     {
-        //
+         $ciudad= Ciudad::find($id);
+        $ciudad->delete();
+        return redirect()->route('ciudad.index');
     }
 }

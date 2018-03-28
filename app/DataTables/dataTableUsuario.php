@@ -27,7 +27,7 @@ class dataTableUsuario extends DataTable
      */
     public function query(User $model)
     {
-        return $model->newQuery()->select('id', 'add-your-columns-here', 'created_at', 'updated_at');
+        return $model->newQuery()->select('id', 'nombre', 'created_at', 'updated_at');
     }
 
     /**
@@ -53,7 +53,7 @@ class dataTableUsuario extends DataTable
     {
         return [
             'id',
-            'add your columns',
+            'nombre',
             'created_at',
             'updated_at'
         ];
