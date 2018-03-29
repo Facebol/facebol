@@ -14,9 +14,6 @@
 
   </head>
   <body>
-    <a href="javascript:void(0)" class="ms-conf-btn ms-configurator-btn btn-circle btn-circle-raised btn-circle-primary animated rubberBand">
-      <i class="fa fa-gears"></i>
-    </a>
     @include('inicio.partes.conf')
     <div id="ms-preload" class="ms-preload">
       <div id="status">
