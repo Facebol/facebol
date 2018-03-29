@@ -22,7 +22,9 @@ class CreateEmpresasTable extends Migration
             $table->string('facebook')->unique();
             $table->string('web')->unique();
             $table->string('imagen')->unique();
+            $table->integer('usuario_id')->unsigned();
             $table->integer('ciudad_id')->unsigned();
+            $table->foreign('usuario_id')->references('id')->on('users');
             $table->foreign('ciudad_id')->references('id')->on('ciudads');
             $table->timestamps();
         });

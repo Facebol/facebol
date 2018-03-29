@@ -37,7 +37,7 @@ return [
      * Snappy package: barryvdh/laravel-snappy
      * Excel package: maatwebsite/excel
      */
-    'pdf_generator' => 'snappy',
+    'pdf_generator' => 'DomPDF',
 
     /*
      * Snappy PDF options.
@@ -61,7 +61,7 @@ return [
         'order'   => [[0, 'desc']],
         'buttons' => [
             'create',
-            'export',
+            'excel',
             'print',
             'reset',
             'reload',

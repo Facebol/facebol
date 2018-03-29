@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('imagen');
             $table->string('codigo');
-            $table->enum('tipo',['usuario','administrador']);
+            $table->enum('tipo',['usuario','administrador','empresa']);
             $table->boolean('activo');
             $table->integer('ciudad_id')->unsigned();
             $table->foreign('ciudad_id')->references('id')->on('ciudads');

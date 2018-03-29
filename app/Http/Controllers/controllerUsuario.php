@@ -45,7 +45,7 @@ class controllerUsuario extends Controller
      */
     public function show($id)
     {
-        //
+        dd($id);
     }
 
     /**
@@ -56,7 +56,7 @@ class controllerUsuario extends Controller
      */
     public function edit($id)
     {
-        //
+        dd($id);
     }
 
     /**
@@ -79,6 +79,6 @@ class controllerUsuario extends Controller
      */
     public function destroy($id)
     {
-        //
+        dd($id);
     }
 }
