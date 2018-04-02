@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Institucion;
+use Carbon\Carbon;
 class seedInstitucion extends Seeder
 {
     /**
@@ -13,15 +14,25 @@ class seedInstitucion extends Seeder
     {
         $datos=array(
             [
-                'nombre'=>'facebol',
-                'mision'=>'Brindar a las personas la oportunidad de aumentar sus ingresos e impulsar su educacion e inteligencia financiera.',
-                'vision'=>'Ser una de las empresas Bolivianas mas reconocidas a nivel nacional y tener una fuerte presencia a nivel Internacional.',
-                'direccion'=>'calle1',
-                'email'=>'facebol@facebolsrl.com',
-                'imagen'=>'facebol-logo.png',
-                'facebook'=>'facebook',
-                'twitter'=>'twitter',
-                'telefono'=>345678234,
+                'qSomos'=>'',
+                'frase1'=>'',
+                'frase2'=>'',
+                'frase3'=>'',
+                'trabaja'=>'',
+                'direccion'=>'',
+                'celular'=>'',
+                'telefono'=>'',
+                'email'=>'',
+                'facebook'=>'',
+                'twitter'=>'',
+                'youtube'=>'',
+                'instagram'=>'',
+                'google'=>'',
+                'imagen'=>'',
+                'vision'=>'',
+                'mision'=>'',
+                'created_at'=>Carbon::now(),
+                'update_at'=>Carbon::now(),
             ]
         );
         Institucion::insert($datos);

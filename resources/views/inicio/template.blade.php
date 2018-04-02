@@ -38,5 +38,6 @@
     <!-- ms-site-container -->
     @include('inicio.partes.menuL')
     @include('inicio.partes.styles.js')
+    </div>
     </body>
 </html>

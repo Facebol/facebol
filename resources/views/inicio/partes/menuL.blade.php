@@ -24,12 +24,12 @@
       </header>
       <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
         <li class="card" role="tab" id="sch1">
-          <a class="collapsed" role="button" data-toggle="collapse" href="#sc1" aria-expanded="false" aria-controls="sc1">
+          <a class="collapsed" role="button" data-toggle="collapse" href="{{route('inicio')}}" aria-expanded="false" aria-controls="sc1">
             <i class="zmdi zmdi-home"></i> Inicio </a>
         </li>
         <li class="card" role="tab" id="sch2">
           <a class="collapsed" role="button" data-toggle="collapse" href="#sc2" aria-expanded="false" aria-controls="sc2">
-            <i class="zmdi zmdi-desktop-mac"></i> Empresas </a>
+            <i class="zmdi zmdi-city-alt"></i> Empresas </a>
         </li>
         <li class="card" role="tab" id="sch4">
           <a class="collapsed" role="button" data-toggle="collapse" href="#sc4" aria-expanded="false" aria-controls="sc4">
@@ -63,7 +63,11 @@
         </li>
         <li class="card" role="tab" id="sch5">
           <a class="collapsed" role="button" data-toggle="collapse" href="#sc5" aria-expanded="false" aria-controls="sc5">
-            <i class="zmdi zmdi-shopping-basket"></i> Actividades </a>
+            <i class="zmdi zmdi-toys"></i> Actividades </a>
+        </li>
+        <li class="card" role="tab" id="sch5">
+          <a class="collapsed" role="button" data-toggle="collapse" href="#sc5" aria-expanded="false" aria-controls="sc5">
+            <i class="zmdi zmdi-accounts-alt"></i> Nuestro Equipo </a>
         </li>
         <li class="card" role="tab" id="sch6">
           <a class="collapsed" role="button" data-toggle="collapse" href="#sc6" aria-expanded="false" aria-controls="sc6">
