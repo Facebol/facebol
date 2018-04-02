@@ -16,11 +16,11 @@
                         <thead>
                             <tr>
                                 <th>Imagen</th>
-                                <th>Nombre</th>
-                                <th>Direccion</th>
+                                <th>Vision</th>
+                                <th>Mision</th>
                                 <th>Telefono</th>
+                                <th>Direccion</th>
                                 <th>Email</th>
-                                <th>Facebook</th>
                                 <th>Opciones</th>
                             </tr>
                         </thead>
@@ -28,28 +28,30 @@
                             @foreach($institucion as $instituciones)
                             <tr>
                                 <td><img src="{{asset('imagen')}}/{{$instituciones->imagen}}" width="50px" height="50px"></td>
-                                <td>{{$instituciones->nombre}}</td>
-                                <td>{{$instituciones->direccion}}</td>
+                                <td>{{$instituciones->vision}}</td>
+                                <td>{{$instituciones->mision}}</td>
                                 <td>{{$instituciones->telefono}}</td>
+                                <td>{{$instituciones->direccion}}</td>
                                 <td>{{$instituciones->email}}</td>
-                                <td>{{$instituciones->facebook}}</td>
                                 <td>
-                                  
+                                  <a href="{{route('institucion.show',$instituciones->id)}}">
+                                  <button type="button" class="btn btn-warning"><i class="fa fa-eye"></i></button> 
+                                  </a>   
                                   <a href="{{route('institucion.edit',$instituciones->id)}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                                  <button class="btn btn-success"><i class="fa fa-check"></i></button>
                                   {!!Form::close()!!}
                                 </td> 
-                            </tr>                        
+                            </tr>
+                                                    
                             @endforeach                   
                         </tbody>
                         <tfoot>
                             <tr>
                                 <th>Imagen</th>
-                                <th>Nombre</th>
-                                <th>Direccion</th>
+                                <th>Vision</th>
+                                <th>Mision</th>
                                 <th>Telefono</th>
+                                <th>Direccion</th>
                                 <th>Email</th>
-                                <th>Facebook</th>
                                 <th>Opciones</th>
                             </tr>
                         </tfoot>

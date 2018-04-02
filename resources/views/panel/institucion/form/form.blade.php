@@ -1,15 +1,31 @@
 <div class="box-body">
     <div class="form-group col-md-6">
-        <label>Nombre </label>
-        {{Form::text('nombre',null,['class'=>'form-control','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
+        <label>Quienes Somos </label>
+        {{Form::text('qSomos',null,['class'=>'form-control','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
     </div>
     <div class="form-group col-md-6">
-        <label>Descripcion</label>
-        {{Form::text('descripcion',null,['class'=>'form-control','autofocus','requerid'])}}
+        <label>Primera Frase</label>
+        {{Form::text('frase1',null,['class'=>'form-control','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
+    </div>
+    <div class="form-group col-md-6">
+        <label>Segunda Frase </label>
+        {{Form::text('frase2',null,['class'=>'form-control','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
+    </div>
+    <div class="form-group col-md-6">
+        <label>Tercera Frase </label>
+        {{Form::text('frase3',null,['class'=>'form-control','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
+    </div>
+    <div class="form-group col-md-6">
+        <label>Trabaja con Nosotros </label>
+        {{Form::text('trabaja',null,['class'=>'form-control','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
     </div>
     <div class="form-group col-md-6">
         <label>Direccion</label>
         {{Form::text('direccion',null,['class'=>'form-control','requerid','autofocus'])}}
+    </div>
+    <div class="form-group col-md-6">
+        <label>Celular</label>
+        {{Form::text('celular',null,['class'=>'form-control','autofocus','requerid'])}}
     </div>
     <div class="form-group col-md-6">
         <label>Telefono</label>
@@ -19,19 +35,31 @@
         <label>Email</label>
         {{Form::text('email',null,['class'=>'form-control','autofocus','requerid'])}}
     </div>
-    <div class="form-group col-md-12">
+    <div class="form-group col-md-6">
         <label>Facebook</label>
         {{Form::text('facebook',null,['class'=>'form-control','autofocus','requerid'])}}
     </div>
-    <div class="form-group col-md-12">
+    <div class="form-group col-md-6">
         <label>Twiter</label>
-        {{Form::text('twiter',null,['class'=>'form-control','autofocus','requerid'])}}
+        {{Form::text('twitter',null,['class'=>'form-control','autofocus','requerid'])}}
     </div>
-    <div class="form-group col-md-12">
+    <div class="form-group col-md-6">
+        <label>Youtube</label>
+        {{Form::text('youtube',null,['class'=>'form-control','autofocus','requerid'])}}
+    </div>
+    <div class="form-group col-md-6">
+        <label>Instagram</label>
+        {{Form::text('instagram',null,['class'=>'form-control','autofocus','requerid'])}}
+    </div>
+    <div class="form-group col-md-6">
+        <label>Google</label>
+        {{Form::text('google',null,['class'=>'form-control','autofocus','requerid'])}}
+    </div>
+    <div class="form-group col-md-6">
         <label>Vision</label>
         {{Form::text('vision',null,['class'=>'form-control','autofocus','requerid'])}}
     </div>
-    <div class="form-group col-md-12">
+    <div class="form-group col-md-6">
         <label>Mision</label>
         {{Form::text('mision',null,['class'=>'form-control','autofocus','requerid'])}}
     </div>
