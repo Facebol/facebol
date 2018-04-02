@@ -14,8 +14,8 @@ class controllerInstitucion extends Controller
      */
     public function index()
     {
-        $instituciones = Institucion::orderBy('id','desc')->paginate(5);
-        return view('panel.panel-a.institucion.index',compact('instituciones'));
+        $institucion = Institucion::orderBy('id','desc')->paginate(5);
+        return view('panel.institucion.index',compact('institucion'));
     }
 
     /**
@@ -25,7 +25,8 @@ class controllerInstitucion extends Controller
      */
     public function create()
     {
-        
+        return view('panel.institucion.create');
+    
     }
 
     /**
@@ -36,7 +37,19 @@ class controllerInstitucion extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Institucion::create([
+            'nombre'=>$request->nombre,
+            'descripcion'=>$request->descripcion,
+            'direccion'=>$request->direccion,
+            'telefono'=>$request->telefono,
+            'email'=>$request->email,
+            'facebook'=>$request->facebook,
+            'twiter'=>$request->twiter,
+            'vision'=>$request->vision,
+            'mision'=>$request->mision,
+            'imagen'=>$request->imagen,
+        ]);
+        return redirect()->route('institucion.index');
     }
 
     /**
@@ -47,7 +60,7 @@ class controllerInstitucion extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -59,7 +72,7 @@ class controllerInstitucion extends Controller
     public function edit($id)
     {
         $institucion=Institucion::find($id);
-        return view('panel.panel-a.institucion.edit',compact('institucion'));
+        return view('panel.institucion.edit',compact('institucion'));
     }
 
     /**
@@ -72,7 +85,19 @@ class controllerInstitucion extends Controller
     public function update(Request $request, $id)
     {
         $institucion=Institucion::find($id);
-        $institucion->fill($request->all());
+        $institucion->fill([
+            'nombre'=>$request->nombre,
+            'descripcion'=>$request->descripcion,
+            'direccion'=>$request->direccion,
+            'telefono'=>$request->telefono,
+            'email'=>$request->email,
+            'facebook'=>$request->facebook,
+            'twiter'=>$request->twiter,
+            'vision'=>$request->vision,
+            'mision'=>$request->mision,
+            'imagen'=>$request->imagen,
+        ]);
+        $institucion->save();
         return redirect()->route('institucion.index');
     }
 
