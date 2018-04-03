@@ -79,18 +79,23 @@ class controllerInicio extends Controller
     }
     public function newCodigo()
     {
-        
+        $codigo=str_random(25);
+        $user=User::where('codigo',$codigo)->first();
+        if($user)
+        {
+            $this->newCodigo();
+        }else
+        {
+            return $codigo;
+        }
     }
     public function passwordSave(Request $datos)
     {
-        $codigo=str_random(25);
-        $user=User::where('codigo',$codigo)->first();
-        if($usu)
         $usuario=User::where('codigo',$datos->codigo)->first();
         $usuario->fill(
             [
                 'password'=>$datos->password,
-                'codigo'=>str_random(25),
+                'codigo'=>$this->newCodigo(),
             ]
         );
         $usuario->save();
