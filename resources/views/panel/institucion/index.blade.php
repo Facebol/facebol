@@ -34,14 +34,14 @@
                                 <td>{{$instituciones->direccion}}</td>
                                 <td>{{$instituciones->email}}</td>
                                 <td>
-                                  <a href="{{route('institucion.show',$instituciones->id)}}">
-                                  <button type="button" class="btn btn-warning"><i class="fa fa-eye"></i></button> 
-                                  </a>   
+                                 <a data-toggle="modal" href="#myModal{{$instituciones->id}}">
+                                    <button class="btn btn-warning" type="button"><i class="fa fa-eye"></i></button>
+                                  </a>
                                   <a href="{{route('institucion.edit',$instituciones->id)}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
                                   {!!Form::close()!!}
                                 </td> 
                             </tr>
-                                                    
+                            @include('panel.institucion.show')                  
                             @endforeach                   
                         </tbody>
                         <tfoot>
