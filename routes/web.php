@@ -10,6 +10,8 @@ Route::get('logout','controllerLogin@logout')->name('logout');
 Route::post('reset','controllerInicio@emailReset')->name('reset');
 //panel
 Route::get('panel/reset/{codigo}','controllerInicio@passwordReset')->name('passwordReset');
+Route::resource('panel/equipo','controladorEquipo');
+Route::resource('panel/actividades','controladorActividades');
 Route::resource('panel/ciudad','controladorCiudad');
 Route::resource('panel/pais','controladorPais');
 Route::resource('panel/productos','controllerProductos');
