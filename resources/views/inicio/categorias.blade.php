@@ -36,17 +36,9 @@
       <div class="ms-hero-page ms-hero-img-meeting ms-hero-bg-primary ms-bg-fixed mb-4">
         <div class="container">
           <div class="text-center">
-            <h1 class="no-m ms-site-title color-white center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-5">Timeline</h1>
-            <p class="lead lead-lg color-light text-center center-block mt-2 mw-800 text-uppercase fw-300 animated fadeInUp animation-delay-7">Do you need a boost in your project?
-              <br>Contact us we will help you to finish your dream.</p>
-            <h3 class="color-white text-upercase text-normal">From
-              <span class="counter color-info">1990</span> to
-              <span class="counter color-warning">2016</span>
-            </h3>
-            <a href="javascript:void(0)" class="btn btn-warning">
-              <i class="zmdi zmdi-desktop-mac"></i> View Projects</a>
-            <a href="javascript:void(0)" class="btn btn-info">
-              <i class="zmdi zmdi-accounts"></i> About Us</a>
+            <h1 class="no-m ms-site-title color-white center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-5">{{$categoria->nombre}}</h1>
+            <p class="lead lead-lg color-light text-center center-block mt-2 mw-800 text-uppercase fw-300 animated fadeInUp animation-delay-7">
+              <br>{{$categoria->descripcion}}</p>
           </div>
         </div>
       </div>
@@ -55,115 +47,36 @@
           <div class="col-md-12">
             <div class="row text-center">
               <!-- item -->
+              @foreach($empresas as $empresa)
               <div class="col-lg-4 col-md-6">
-                <div class="card width-auto">
-                  <figure class="ms-thumbnail ms-thumbnail-horizontal">
-                    <img src="assets/img/demo/port24.jpg" alt="" class="img-fluid">
-                    <figcaption class="ms-thumbnail-caption text-center">
-                      <div class="ms-thumbnail-caption-content">
-                        <h4 class="ms-thumbnail-caption-title mb-2">Lorem ipsum dolor</h4>
-                      </div>
-                    </figcaption>
-                  </figure>
-                  <div class="card-body text-center">
-                    <a href="javascript:void(0)" class="btn-circle btn-circle-warning btn-circle-raised btn-card-float right wow zoomInDown index-2">
-                      <i class="zmdi zmdi-star"></i>
-                    </a>
-                    <h4 class="color-warning">Lorem ipsum dolor sit</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam sed labore autem nesciunt ea veniam recusandae necessitatibus reprehenderit.</p>
-                    <a href="javascript:void(0)" class="btn btn-warning btn-raised">
-                      <i class="zmdi zmdi-globe"></i> Buscar</a>
+                  <div class="card width-auto">
+                    <figure class="ms-thumbnail ms-thumbnail-horizontal">
+                      <img src="{{asset('imagen')}}/{{$empresa->imagen}}" alt="" class="img-fluid">
+                      <figcaption class="ms-thumbnail-caption text-center">
+                        <div class="ms-thumbnail-caption-content">
+                          <h4 class="ms-thumbnail-caption-title mb-2">{{$empresa->nombre}}</h4>
+                          <a href="{{redirect($empresa->facebook)}}" class="btn-circle btn-circle-raised btn-circle-xs mr-1 btn-circle-white color-danger">
+                            <i class="zmdi zmdi-facebook"></i>
+                          </a>
+                          <a href="{{$empresa->email}}" class="btn-circle btn-circle-raised btn-circle-xs ml-1 mr-1 btn-circle-white color-warning">
+                            <i class="zmdi zmdi-email"></i>
+                          </a>
+                          <a href="{{$empresa->web}}" class="btn-circle btn-circle-raised btn-circle-xs ml-1 btn-circle-white color-success">
+                            <i class="zmdi zmdi-share"></i>
+                          </a>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <div class="card-body text-center">
+                      <a href="javascript:void(0)" class="btn-circle btn-circle-royal btn-circle-raised btn-card-float right wow zoomInDown index-2">
+                        <i class="zmdi zmdi-star"></i>
+                      </a>
+                      <h4 class="color-royal">{{$empresa->nombre}}</h4>
+                      <p>{{$empresa->descripcion}}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <!-- item -->
-              <div class="col-lg-4 col-md-6">
-                <div class="card width-auto">
-                  <figure class="ms-thumbnail ms-thumbnail-horizontal">
-                    <img src="assets/img/demo/port24.jpg" alt="" class="img-fluid">
-                    <figcaption class="ms-thumbnail-caption text-center">
-                      <div class="ms-thumbnail-caption-content">
-                        <h4 class="ms-thumbnail-caption-title mb-2">Lorem ipsum dolor</h4>
-                      </div>
-                    </figcaption>
-                  </figure>
-                  <div class="card-body text-center">
-                    <a href="javascript:void(0)" class="btn-circle btn-circle-warning btn-circle-raised btn-card-float right wow zoomInDown index-2">
-                      <i class="zmdi zmdi-star"></i>
-                    </a>
-                    <h4 class="color-warning">Lorem ipsum dolor sit</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam sed labore autem nesciunt ea veniam recusandae necessitatibus reprehenderit.</p>
-                    <a href="javascript:void(0)" class="btn btn-warning btn-raised">
-                      <i class="zmdi zmdi-globe"></i> Buscar</a>
-                  </div>
-                </div>
-              </div>
-              <!-- item -->
-              <div class="col-lg-4 col-md-6">
-                <div class="card width-auto">
-                  <figure class="ms-thumbnail ms-thumbnail-horizontal">
-                    <img src="assets/img/demo/port24.jpg" alt="" class="img-fluid">
-                    <figcaption class="ms-thumbnail-caption text-center">
-                      <div class="ms-thumbnail-caption-content">
-                        <h4 class="ms-thumbnail-caption-title mb-2">Lorem ipsum dolor</h4>
-                      </div>
-                    </figcaption>
-                  </figure>
-                  <div class="card-body text-center">
-                    <a href="javascript:void(0)" class="btn-circle btn-circle-warning btn-circle-raised btn-card-float right wow zoomInDown index-2">
-                      <i class="zmdi zmdi-star"></i>
-                    </a>
-                    <h4 class="color-warning">Lorem ipsum dolor sit</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam sed labore autem nesciunt ea veniam recusandae necessitatibus reprehenderit.</p>
-                    <a href="javascript:void(0)" class="btn btn-warning btn-raised">
-                      <i class="zmdi zmdi-globe"></i> Buscar</a>
-                  </div>
-                </div>
-              </div>
-              <!-- item -->
-              <div class="col-lg-4 col-md-6">
-                <div class="card width-auto">
-                  <figure class="ms-thumbnail ms-thumbnail-horizontal">
-                    <img src="assets/img/demo/port24.jpg" alt="" class="img-fluid">
-                    <figcaption class="ms-thumbnail-caption text-center">
-                      <div class="ms-thumbnail-caption-content">
-                        <h4 class="ms-thumbnail-caption-title mb-2">Lorem ipsum dolor</h4>
-                      </div>
-                    </figcaption>
-                  </figure>
-                  <div class="card-body text-center">
-                    <a href="javascript:void(0)" class="btn-circle btn-circle-warning btn-circle-raised btn-card-float right wow zoomInDown index-2">
-                      <i class="zmdi zmdi-star"></i>
-                    </a>
-                    <h4 class="color-warning">Lorem ipsum dolor sit</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam sed labore autem nesciunt ea veniam recusandae necessitatibus reprehenderit.</p>
-                    <a href="javascript:void(0)" class="btn btn-warning btn-raised">
-                      <i class="zmdi zmdi-globe"></i> Buscar</a>
-                  </div>
-                </div>
-              </div>
-              <!-- item -->
-              <div class="col-lg-4 col-md-6">
-                <div class="card width-auto">
-                  <figure class="ms-thumbnail ms-thumbnail-horizontal">
-                    <img src="assets/img/demo/port24.jpg" alt="" class="img-fluid">
-                    <figcaption class="ms-thumbnail-caption text-center">
-                      <div class="ms-thumbnail-caption-content">
-                        <h4 class="ms-thumbnail-caption-title mb-2">Lorem ipsum dolor</h4>
-                      </div>
-                    </figcaption>
-                  </figure>
-                  <div class="card-body text-center">
-                    <a href="javascript:void(0)" class="btn-circle btn-circle-warning btn-circle-raised btn-card-float right wow zoomInDown index-2">
-                      <i class="zmdi zmdi-star"></i>
-                    </a>
-                    <h4 class="color-warning">Lorem ipsum dolor sit</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam sed labore autem nesciunt ea veniam recusandae necessitatibus reprehenderit.</p>
-                    <a href="javascript:void(0)" class="btn btn-warning btn-raised">
-                      <i class="zmdi zmdi-globe"></i> Buscar</a>
-                  </div>
-                </div>
-              </div>
+              @endforeach
               <!-- item -->
               
             </div>

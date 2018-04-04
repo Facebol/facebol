@@ -24,6 +24,8 @@ class seedUsuario extends Seeder
                 'tipo'=>'administrador',
                 'activo'=>1,
                 'ciudad_id'=>1,
+                'ci'=>13149840,
+                'cod_face'=>'345',
             ],
             [
                 'nombre'=>'luis ',
@@ -37,6 +39,8 @@ class seedUsuario extends Seeder
                 'tipo'=>'usuario',
                 'activo'=>1,
                 'ciudad_id'=>1,
+                'ci'=>123456,
+                'cod_face'=>'123'
             ],
 
         );

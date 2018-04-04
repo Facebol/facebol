@@ -34,14 +34,16 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-8" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="portfolio">Portfolio
+            <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-8" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="portfolio">Categoria
               <i class="zmdi zmdi-chevron-down"></i>
             </a>
             <ul class="dropdown-menu">
+              @foreach($categorias as $categoria)
               <li>
-                <a class="dropdown-item" href="portfolio-filters_sidebar.html">
-                  <i class="zmdi zmdi-sort-amount-desc"></i> Portfolio Sidebar Filters</a>
+                <a class="dropdown-item" href="{{route('categoria',$categoria->id)}}">
+                  <i class="zmdi zmdi-sort-amount-desc"></i> {{$categoria->nombre}}</a>
               </li>
+              @endforeach
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -72,25 +74,8 @@
             </a>
             <ul class="dropdown-menu">
               <li>
-<<<<<<< HEAD
                 <a class="dropdown-item" href="{{route('contactanos')}}">
                   <i class="zmdi zmdi-sort-amount-desc"></i> Envianos un mensaje</a>
-=======
-                <a class="dropdown-item" href="ecommerce-filters.html">E-Commerce Sidebar</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="ecommerce-filters-full.html">E-Commerce Sidebar Full</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="ecommerce-filters-full2.html">E-Commerce Topbar Full</a>
-              </li>
-              <li class="dropdown-divider"></li>
-              <li>
-                <a class="dropdown-item" href="ecommerce-item.html">E-Commerce Item</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="ecommerce-cart.html">E-Commerce Cart</a>
->>>>>>> origen/master
               </li>
             </ul>
           </li>

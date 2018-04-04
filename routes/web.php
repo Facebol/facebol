@@ -1,10 +1,14 @@
 <?php
 // pagina principal
-Route::get('/equipo','controllerInicio@equipo')->name('equipo');
-Route::get('/empresa','controllerInicio@empresa')->name('empresa');
-Route::get('/categoria','controllerInicio@categoria')->name('categoria');
-Route::get('/actividad','controllerInicio@actividad')->name('actividad');
-Route::get('/contacto','controllerInicio@contactanos')->name('contactanos');
+Route::get('mensage',function(){
+    return view('inicio.mensage');
+});
+Route::post('preregistro','controllerInicio@preRegistro')->name('preregistro');
+Route::get('equipo','controllerInicio@equipo')->name('equipo');
+Route::get('empresa','controllerInicio@empresa')->name('empresa');
+Route::get('categoria/{id}','controllerInicio@categoria')->name('categoria');
+Route::get('actividad','controllerInicio@actividad')->name('actividad');
+Route::get('contacto','controllerInicio@contactanos')->name('contactanos');
 Route::get('/','controllerInicio@inicio')->name('inicio');
 //envio de emails de la pagina principal
 Route::post('suscribir','controllerInicio@suscribir')->name('suscribir');
