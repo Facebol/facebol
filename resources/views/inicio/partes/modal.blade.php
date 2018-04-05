@@ -69,43 +69,51 @@
               {!!Form::close()!!}
             </div>
             <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
-              <form>
+              {{Form::open(['route'=>'preregistro','method'=>'POST'])}}
                 <fieldset>
                   <div class="form-group label-floating">
                     <div class="input-group">
                       <span class="input-group-addon">
                         <i class="zmdi zmdi-account"></i>
                       </span>
-                      <label class="control-label" for="ms-form-user-r">Nombre</label>
-                      <input type="text" id="ms-form-user-r" class="form-control"> </div>
+                      <label class="control-label" for="ms-form-user-r">Nombres</label>
+                      <input name="nombre" type="text" id="ms-form-user-r" class="form-control"> </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="zmdi zmdi-account"></i>
+                      </span>
+                      <label class="control-label" for="ms-form-email-r">Apellidos</label>
+                      <input name="apellido" type="text" id="ms-form-email-r" class="form-control"> </div>
                   </div>
                   <div class="form-group label-floating">
                     <div class="input-group">
                       <span class="input-group-addon">
                         <i class="zmdi zmdi-email"></i>
                       </span>
-                      <label class="control-label" for="ms-form-email-r">Correo</label>
-                      <input type="email" id="ms-form-email-r" class="form-control"> </div>
+                      <label class="control-label" for="ms-form-pass-r">Correo</label>
+                      <input name="email" type="email" id="ms-form-pass-r" class="form-control"> </div>
                   </div>
+                  <div class="form-group label-floating">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="zmdi zmdi-phone"></i>
+                        </span>
+                        <label class="control-label" for="ms-form-pass-r">Celular</label>
+                        <input name="celular" type="number" id="ms-form-pass-r" class="form-control"></div>
+                    </div>
                   <div class="form-group label-floating">
                     <div class="input-group">
                       <span class="input-group-addon">
                         <i class="zmdi zmdi-lock"></i>
                       </span>
-                      <label class="control-label" for="ms-form-pass-r">Contraseña</label>
-                      <input type="password" id="ms-form-pass-r" class="form-control"> </div>
+                      <label class="control-label" for="ms-form-pass-rn">Codigo de Usuario(Opcional)</label>
+                      <input name="codigo" type="text" id="ms-form-pass-rn" class="form-control"> </div>
                   </div>
-                  <div class="form-group label-floating">
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="zmdi zmdi-lock"></i>
-                      </span>
-                      <label class="control-label" for="ms-form-pass-rn">Confirmar Contraseña</label>
-                      <input type="password" id="ms-form-pass-rn" class="form-control"> </div>
-                  </div>
-                  <button class="btn btn-raised btn-block btn-primary">Registrar Ahora</button>
+                  {{Form::submit('Registrar Ahora',['class'=>'btn btn-raised btn-block btn-primary'])}}
                 </fieldset>
-              </form>
+              {{Form::close()}}
             </div>
             <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
               {!!Form::open(['route'=>'reset','method'=>'POST'])!!}

@@ -1,10 +1,14 @@
 <?php
 // pagina principal
-Route::get('/equipo','controllerInicio@equipo')->name('equipo');
-Route::get('/empresa','controllerInicio@empresa')->name('empresa');
-Route::get('/categoria','controllerInicio@categoria')->name('categoria');
-Route::get('/actividad','controllerInicio@actividad')->name('actividad');
-Route::get('/contacto','controllerInicio@contactanos')->name('contactanos');
+Route::get('mensage',function(){
+    return view('inicio.mensage');
+});
+Route::post('preregistro','controllerInicio@preRegistro')->name('preregistro');
+Route::get('equipo','controllerInicio@equipo')->name('equipo');
+Route::get('empresa','controllerInicio@empresa')->name('empresa');
+Route::get('categoria/{id}','controllerInicio@categoria')->name('categoria');
+Route::get('actividad','controllerInicio@actividad')->name('actividad');
+Route::get('contacto','controllerInicio@contactanos')->name('contactanos');
 Route::get('/','controllerInicio@inicio')->name('inicio');
 //envio de emails de la pagina principal
 Route::post('suscribir','controllerInicio@suscribir')->name('suscribir');
@@ -17,12 +21,18 @@ Route::post('reset/password/save','controllerInicio@passwordSave')->name('passwo
 Route::get('reset/password/{codigo}','controllerInicio@passwordReset')->name('passwordReset');
 Route::post('reset','controllerInicio@emailReset')->name('reset');
 //panel
+<<<<<<< HEAD
 //<<<<<<< HEAD
 Route::get('panel/reset/{codigo}','controllerInicio@passwordReset')->name('passwordReset');
 Route::resource('panel/equipo','controladorEquipo');
 Route::resource('panel/actividades','controladorActividades');
 //=======
 //>>>>>>> 29207cf891ce5ec3cb0a0cac1c56a874e0d7279c
+=======
+Route::get('panel/reset/{codigo}','controllerInicio@passwordReset')->name('passwordReset');
+Route::resource('panel/equipo','controladorEquipo');
+Route::resource('panel/actividades','controladorActividades');
+>>>>>>> origen/master
 Route::resource('panel/ciudad','controladorCiudad');
 Route::resource('panel/pais','controladorPais');
 Route::resource('panel/productos','controllerProductos');

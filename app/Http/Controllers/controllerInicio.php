@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Email;
 use Storage;
 use Mail;
+use App\PreRegistro;
 use App\Institucion;
 use App\User;
 use App\Categoria;
@@ -14,7 +15,7 @@ use App\Equipo;
 use App\Planes;
 use App\PlanesDetalle;
 use App\Actividad;
-
+use Session;
 class controllerInicio extends Controller
 {
     public function Inicio()
@@ -22,7 +23,8 @@ class controllerInicio extends Controller
         $institucion=Institucion::all();
         $planes= Planes::all();
         $planesDetalle = PlanesDetalle::all();
-        return view('inicio.index',compact('planes','planesDetalle'));
+        $categorias=Categoria::all();
+        return view('inicio.index',compact('planes','planesDetalle','categorias'));
     }
     public function suscribir(Request $datos)
     {
@@ -79,45 +81,78 @@ class controllerInicio extends Controller
     }
     public function newCodigo()
     {
-        
+        $codigo=str_random(25);
+        $user=User::where('codigo',$codigo)->first();
+        if($user)
+        {
+            $this->newCodigo();
+        }else
+        {
+            return $codigo;
+        }
     }
     public function passwordSave(Request $datos)
     {
-        $codigo=str_random(25);
-        $user=User::where('codigo',$codigo)->first();
-        if($usu)
         $usuario=User::where('codigo',$datos->codigo)->first();
         $usuario->fill(
             [
                 'password'=>$datos->password,
-                'codigo'=>str_random(25),
+                'codigo'=>$this->newCodigo(),
             ]
         );
         $usuario->save();
         return redirect()->route('inicio');
     }
+    public function preRegistro(Request $datos)
+    {
+        $usuario=User::where('cod_face',$datos->codigo)->first();
+        if($usuario)
+        {
+        PreRegistro::create(
+            [
+                'nombre'=>$datos->nombre,
+                'apellido'=>$datos->apellido,
+                'email'=>$datos->email,
+                'celular'=>$datos->celular,
+                'usuario_id'=>$usuario->id,
+            ]);
+            Session::flash('title','El Pre Registro fue un Éxito');
+            Session::flash('body','Su pre registro fue un éxito, le mandamos un mensaje a su correo electrónico para mas información revíselo');
+            return view('inicio.mensaje');
+        }else{
+            Session::flash('title','El Pre Registro No Fue Realizado');
+            Session::flash('body','No se pudo realizar el pre registro ya que el codigo de usuario no fue encontrado, por favor vuelva a realizar el registro y verifique el el codigo.');
+            return view('inicio.mensaje');
+        }
+    }
     public function contactanos()
     {
-        return view('inicio.contacto');
+        $categorias=Categoria::all();
+        return view('inicio.contacto',compact('categorias','categorias'));
     }
     public function empresa()
     {
+        $categorias=Categoria::all();
         $empresas=Empresa::all();
-        return view('inicio.empresas',compact('empresas'));
+        return view('inicio.empresas',compact('empresas','categorias'));
     }
-    public function categoria()
+    public function categoria($id)
     {
+        $empresas=Empresa::where('categoria_id',$id)->orderBy('id','desc')->get();
+        $categoria=Categoria::find($id);
         $categorias = Categoria::all();
-        return view('inicio.categorias',compact('categorias'));
+        return view('inicio.categorias',compact('categorias','categoria','empresas'));
     }
     public function actividad()
     {
+        $categorias=Categoria::all();
         $actividad = Actividad::all();
-        return view('inicio.actividades',compact('actividad'));
+        return view('inicio.actividades',compact('actividad','categorias'));
     }
     public function equipo()
     {
+        $categorias=Categoria::all();
         $equipo = Equipo::all();
-        return view('inicio.equipo',compact('equipo'));
+        return view('inicio.equipo',compact('equipo','categorias'));
     }
 }

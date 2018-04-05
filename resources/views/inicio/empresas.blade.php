@@ -117,14 +117,14 @@
                     <img src="assets/img/demo/port21.jpg" alt="" class="img-fluid">
                     <figcaption class="ms-thumbnail-caption text-center">
                       <div class="ms-thumbnail-caption-content">
-                        <h4 class="ms-thumbnail-caption-title mb-2">Lorem ipsum dolor</h4>
+                        <h4 class="ms-thumbnail-caption-title mb-2"> ipsum dolor</h4>
                         <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mr-1 btn-circle-white color-danger">
-                          <i class="zmdi zmdi-favorite"></i>
+                          <i class="zmdi zmdi-facebook"></i>
                         </a>
                         <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs ml-1 mr-1 btn-circle-white color-warning">
-                          <i class="zmdi zmdi-star"></i>
+                          <i class="zmdi zmdi-email"></i>
                         </a>
-                        <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs ml-1 btn-circle-white color-success">
+                        <a href="https://www.facebook.com" class="btn-circle btn-circle-raised btn-circle-xs ml-1 btn-circle-white color-success">
                           <i class="zmdi zmdi-share"></i>
                         </a>
                       </div>

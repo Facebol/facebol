@@ -1,23 +1,23 @@
 <div class="box-body">
     <div class="form-group col-md-6">
         <label>Quienes Somos </label>
-        {{Form::text('qSomos',null,['class'=>'form-control','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
+        {{Form::textarea('qSomos',null,['class'=>'form-control','cols'=>'50','rows'=>'7', 'autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
     </div>
     <div class="form-group col-md-6">
         <label>Primera Frase</label>
-        {{Form::text('frase1',null,['class'=>'form-control','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
+        {{Form::textarea('frase1',null,['class'=>'form-control','cols'=>'50','rows'=>'7','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
     </div>
     <div class="form-group col-md-6">
         <label>Segunda Frase </label>
-        {{Form::text('frase2',null,['class'=>'form-control','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
+        {{Form::textarea('frase2',null,['class'=>'form-control','cols'=>'50','rows'=>'7','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
     </div>
     <div class="form-group col-md-6">
         <label>Tercera Frase </label>
-        {{Form::text('frase3',null,['class'=>'form-control','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
+        {{Form::textarea('frase3',null,['class'=>'form-control','cols'=>'50','rows'=>'7','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
     </div>
     <div class="form-group col-md-6">
         <label>Trabaja con Nosotros </label>
-        {{Form::text('trabaja',null,['class'=>'form-control','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
+        {{Form::textarea('trabaja',null,['class'=>'form-control','cols'=>'50','rows'=>'7','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
     </div>
     <div class="form-group col-md-6">
         <label>Direccion</label>

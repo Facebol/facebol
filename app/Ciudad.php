@@ -8,4 +8,10 @@ class Ciudad extends Model
 {
     protected $table='ciudads';
     protected $fillable=['nombre','pais_id'];
+
+    public function usuarios()
+    {
+        return $this->hasMany(User::class);
+    }
 }
+

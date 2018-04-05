@@ -15,11 +15,11 @@ class CreateInstitucionsTable extends Migration
     {
         Schema::create('institucions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('qSomos');
-            $table->string('frase1');
-            $table->string('frase2');
-            $table->string('frase3');
-            $table->string('trabaja');
+            $table->text('qSomos');
+            $table->text('frase1');
+            $table->text('frase2');
+            $table->text('frase3');
+            $table->text('trabaja');
             $table->string('direccion');
             $table->integer('celular');
             $table->integer('telefono');

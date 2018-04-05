@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
+use Carbon\Carbon;
 class User extends Authenticatable
 {
     use Notifiable;
@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'ciudad_id','nombre', 'apellido','direccion','celular','email', 'password','imagen','codigo','tipo','activo'
+        'ciudad_id','nombre', 'apellido','ci','direccion','celular','email', 'password','imagen','codigo','tipo','activo','cod_face'   
     ];
 
     /**
@@ -38,5 +38,9 @@ class User extends Authenticatable
     if(!empty($valor)){
             $this->attributes['password'] = \Hash::make($valor);
         }
+    }
+    public function ciudad()
+    {
+        return $this->belongsTo(Ciudad::class);
     }
 }
