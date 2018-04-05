@@ -3,7 +3,7 @@
     <div class="container container-full">
       <div class="ms-title">
         <a href="index-2.html">
-          <img src="img/facebol.png" alt="" width="220px" height="80px"> 
+          <img src="{{asset('img/facebol.png')}}" alt="" width="220px" height="80px"> 
           <!-- <span class="ms-logo animated zoomInDown animation-delay-5">F</span>
           <h1 class="animated fadeInRight animation-delay-6">ace
             <span>Bol</span>

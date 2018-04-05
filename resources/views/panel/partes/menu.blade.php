@@ -42,6 +42,9 @@
             <ul class="treeview-menu">
                 <li><a href="{{route('productos.index')}}"><i class="fa fa-angle-double-right"></i> Productos</a></li>
             </ul>
+            <ul class="treeview-menu">
+                <li><a href="{{route('institucion.index')}}"><i class="fa fa-angle-double-right"></i> Institucion</a></li>
+            </ul>
         </li>
         <li class="treeview">
             <a href="#">

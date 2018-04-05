@@ -24,6 +24,14 @@
       </header>
       <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
         <li class="card" role="tab" id="sch1">
+<<<<<<< HEAD
+          <a class="collapsed" role="button" data-toggle="collapse" href="{{route('inicio')}}" aria-expanded="false" aria-controls="sc1">
+            <i class="zmdi zmdi-home"></i> Inicio </a>
+        </li>
+        <li class="card" role="tab" id="sch2">
+          <a class="collapsed" role="button" data-toggle="collapse" href="#sc2" aria-expanded="false" aria-controls="sc2">
+            <i class="zmdi zmdi-city-alt"></i> Empresas </a>
+=======
           <a class="collapsed" role="button" data-toggle="collapse" href="#sc1" aria-expanded="false" aria-controls="sc1">
             <i class="zmdi zmdi-home"></i> Home </a>
           <ul id="sc1" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch1" data-parent="#slidebar-menu">
@@ -79,6 +87,7 @@
               <a href="page-coming.html">Coming Soon</a>
             </li>
           </ul>
+>>>>>>> origen/master
         </li>
         <li class="card" role="tab" id="sch4">
           <a class="collapsed" role="button" data-toggle="collapse" href="#sc4" aria-expanded="false" aria-controls="sc4">
@@ -112,6 +121,13 @@
         </li>
         <li class="card" role="tab" id="sch5">
           <a class="collapsed" role="button" data-toggle="collapse" href="#sc5" aria-expanded="false" aria-controls="sc5">
+<<<<<<< HEAD
+            <i class="zmdi zmdi-toys"></i> Actividades </a>
+        </li>
+        <li class="card" role="tab" id="sch5">
+          <a class="collapsed" role="button" data-toggle="collapse" href="#sc5" aria-expanded="false" aria-controls="sc5">
+            <i class="zmdi zmdi-accounts-alt"></i> Nuestro Equipo </a>
+=======
             <i class="zmdi zmdi-shopping-basket"></i> E-Commerce </a>
           <ul id="sc5" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch5" data-parent="#slidebar-menu">
             <li>
@@ -130,6 +146,7 @@
               <a href="ecommerce-cart.html">E-Commerce Cart</a>
             </li>
           </ul>
+>>>>>>> origen/master
         </li>
         <li class="card" role="tab" id="sch6">
           <a class="collapsed" role="button" data-toggle="collapse" href="#sc6" aria-expanded="false" aria-controls="sc6">

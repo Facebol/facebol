@@ -1,75 +1,48 @@
 <aside class="ms-footbar">
     <div class="container">
       <div class="row">
-        <div class="col-lg-9 ms-footer-col">
+        <div class="col-lg-8 ms-footer-col">
           <div class="ms-footbar-block">
-            <h3 class="ms-footbar-title">Sitemap</h3>
+            <h3 class="ms-footbar-title">Menu</h3>
             <ul class="list-unstyled ms-icon-list three_cols">
               <li>
                 <a href="index-2.html">
-                  <i class="zmdi zmdi-home"></i> Howme</a>
+                  <i class="zmdi zmdi-home"></i> Inicio</a>
               </li>
               <li>
                 <a href="page-blog.html">
-                  <i class="zmdi zmdi-edit"></i> Blog</a>
+                  <i class="zmdi zmdi-edit"></i> Empresas</a>
               </li>
               <li>
                 <a href="page-blog.html">
-                  <i class="zmdi zmdi-image-o"></i> Portafolio</a>
+                  <i class="zmdi zmdi-image-o"></i> Categorias</a>
               </li>
               <li>
                 <a href="portfolio-filters_sidebar.html">
-                  <i class="zmdi zmdi-case"></i> Works</a>
+                  <i class="zmdi zmdi-case"></i> Actividades</a>
               </li>
               <li>
                 <a href="page-timeline_left2.html">
-                  <i class="zmdi zmdi-time"></i> Timeline</a>
-              </li>
-              <li>
-                <a href="page-pricing.html">
-                  <i class="zmdi zmdi-money"></i> Pricing</a>
-              </li>
-              <li>
-                <a href="page-about.html">
-                  <i class="zmdi zmdi-favorite-outline"></i> About Us</a>
-              </li>
-              <li>
-                <a href="page-team2.html">
-                  <i class="zmdi zmdi-accounts"></i> Our Team</a>
-              </li>
-              <li>
-                <a href="page-services.html">
-                  <i class="zmdi zmdi-face"></i> Services</a>
-              </li>
-              <li>
-                <a href="page-faq2.html">
-                  <i class="zmdi zmdi-help"></i> FAQ</a>
-              </li>
-              <li>
-                <a href="page-login2.html">
-                  <i class="zmdi zmdi-lock"></i> Login</a>
-              </li>
-              <li>
-                <a href="page-contact.html">
-                  <i class="zmdi zmdi-email"></i> Contact</a>
+                  <i class="zmdi zmdi-time"></i> Contactanos</a>
               </li>
             </ul>
           </div>
           <div class="ms-footbar-block">
             <h3 class="ms-footbar-title">Suscribite</h3>
             <p class="">Para recibir mas informacion acerca de la empresa envianos tu correo electronico. Ademas te enviaremos un correo de invitacion para distintos seminarios, actividades que proporciona la empresa.</p>
-            <form>
+            {{Form::open(['route'=>'suscribir','method'=>'POST'])}}
               <div class="form-group label-floating mt-2 mb-1">
                 <div class="input-group ms-input-subscribe">
                   <label class="control-label" for="ms-subscribe">
                     <i class="zmdi zmdi-email"></i> Correo Electronico</label>
-                  <input type="email" id="ms-subscribe" class="form-control"> </div>
+                  <input type="email" id="ms-subscribe" class="form-control" name="email"> </div>
               </div>
-              <button class="ms-subscribre-btn" type="button">Suscribir</button>
-            </form>
+              {{Form::submit('Suscribir',['class'=>'ms-subscribre-btn'])}}
+              
+            {{Form::close()}}
           </div>
         </div>
-        <div class="col-lg-3 col-md-5 ms-footer-col ms-footer-text-right">
+        <div class="col-lg-4 col-md-5 ms-footer-col ms-footer-text-right">
           <div class="ms-footbar-block">
             <div class="ms-footbar-title">
               <span class="ms-logo ms-logo-white ms-logo-sm mr-1">F</span>
@@ -93,7 +66,7 @@
             </address>
           </div>
           <div class="ms-footbar-block">
-            <h3 class="ms-footbar-title">Social Media</h3>
+            <h3 class="ms-footbar-title">Redes Sociales</h3>
             <div class="ms-footbar-social">
               <a href="javascript:void(0)" class="btn-circle btn-facebook">
                 <i class="zmdi zmdi-facebook"></i>
