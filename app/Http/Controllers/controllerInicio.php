@@ -20,11 +20,13 @@ class controllerInicio extends Controller
 {
     public function Inicio()
     { 
+        $plan=Planes::first();
+        $planDetalle=PlanesDetalle::all();
         $institucion=Institucion::first();
         $planes= Planes::all();
         $planesDetalle = PlanesDetalle::all();
         $categorias=Categoria::all();
-        return view('inicio.index',compact('planes','planesDetalle','categorias','institucion'));
+        return view('inicio.index',compact('planes','planesDetalle','categorias','institucion','plan','planDetalle'));
     }
     public function suscribir(Request $datos)
     {
@@ -157,7 +159,7 @@ class controllerInicio extends Controller
     {
         $institucion=Institucion::first();
         $categorias=Categoria::all();
-        $equipo = Equipo::all();
-        return view('inicio.equipo',compact('institucion','equipo','categorias'));
+        $equipos = Equipo::all();
+        return view('inicio.equipo',compact('institucion','equipos','categorias'));
     }
 }

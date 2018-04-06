@@ -41,6 +41,10 @@ class controladorEquipo extends Controller
             'nombre'=>$request->nombre,
             'descripcion'=>$request->descripcion,
             'imagen'=>$request->imagen,
+            'facebook'=>$request->facebook,
+            'twitter'=>$request->twitter,
+            'instagram'=>$request->instagram,
+            'cargo'=>$request->cargo
         ]);
         return redirect()->route('equipo.index');
     }
@@ -64,8 +68,7 @@ class controladorEquipo extends Controller
      */
     public function edit($id)
     {
-          $equipo = Equipo::orderBy('id','desc')->pluck('nombre','id');
-      
+        $equipo = Equipo::find($id);
         return view('panel.equipo.edit',compact('equipo'));
     }
 
@@ -83,6 +86,10 @@ class controladorEquipo extends Controller
             'nombre'=>$request->nombre,
             'descripcion'=>$request->descripcion,
             'imagen'=>$request->imagen,
+            'facebook'=>$request->facebook,
+            'twitter'=>$request->twitter,
+            'instagram'=>$request->instagram,
+            'cargo'=>$request->cargo
            ]);
         $equipo->save();
         return redirect()->route('equipo.index');
@@ -97,7 +104,7 @@ class controladorEquipo extends Controller
     public function destroy($id)
     {
         $equipo= Equipo::find($id);
-        $eequipo->delete();
+        $equipo->delete();
         return redirect()->route('equipo.index');
     }
 }

@@ -404,6 +404,8 @@ class ComposerStaticInite2733bfd7e625f1176dadf6e831bc5ae
         'App\\Http\\Controllers\\controllerInstitucion' => __DIR__ . '/../..' . '/app/Http/Controllers/controllerInstitucion.php',
         'App\\Http\\Controllers\\controllerLogin' => __DIR__ . '/../..' . '/app/Http/Controllers/controllerLogin.php',
         'App\\Http\\Controllers\\controllerPanel' => __DIR__ . '/../..' . '/app/Http/Controllers/controllerPanel.php',
+        'App\\Http\\Controllers\\controllerPlanes' => __DIR__ . '/../..' . '/app/Http/Controllers/controllerPlanes.php',
+        'App\\Http\\Controllers\\controllerPlanesDetalle' => __DIR__ . '/../..' . '/app/Http/Controllers/controllerPlanesDetalle.php',
         'App\\Http\\Controllers\\controllerProductos' => __DIR__ . '/../..' . '/app/Http/Controllers/controllerProductos.php',
         'App\\Http\\Controllers\\controllerUsuario' => __DIR__ . '/../..' . '/app/Http/Controllers/controllerUsuario.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -4008,8 +4010,11 @@ class ComposerStaticInite2733bfd7e625f1176dadf6e831bc5ae
         'seedCategoria' => __DIR__ . '/../..' . '/database/seeds/seedCategoria.php',
         'seedCiudad' => __DIR__ . '/../..' . '/database/seeds/seedCiudad.php',
         'seedEmpresa' => __DIR__ . '/../..' . '/database/seeds/seedEmpresa.php',
+        'seedEquipo' => __DIR__ . '/../..' . '/database/seeds/seedEquipo.php',
         'seedInstitucion' => __DIR__ . '/../..' . '/database/seeds/seedInstitucion.php',
         'seedPais' => __DIR__ . '/../..' . '/database/seeds/seedPais.php',
+        'seedPlanes' => __DIR__ . '/../..' . '/database/seeds/seedPlanes.php',
+        'seedPlanesDetalle' => __DIR__ . '/../..' . '/database/seeds/seedPlanesDetalle.php',
         'seedUsuario' => __DIR__ . '/../..' . '/database/seeds/seedUsuario.php',
     );
 

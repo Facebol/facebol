@@ -27,11 +27,13 @@
                                 <td><img src="{{asset('imagen')}}/{{$equipo->imagen}}" width="50px" height="50px"></td>
                                 <td>
                                   {!!Form::open(['route'=>['equipo.destroy', $equipo->id], 'method' => 'DELETE'])!!}
-                                  <a href="{{route('equipo.edit',$equipo->id)}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                                  <button class="btn btn-success"><i class="fa fa-check"></i></button>
+                                  <a href="{{route('equipo.edit',$equipo->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></a>
+                                  <a class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modal-detalle-{{$equipo->id}}"><i class="fa fa-eye"></i></a>
+                                  <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
                                   {!!Form::close()!!}
                                 </td> 
-                            </tr>                        
+                            </tr>
+                            @include('panel.equipo.show')                        
                             @endforeach                   
                         </tbody>
                         <tfoot>

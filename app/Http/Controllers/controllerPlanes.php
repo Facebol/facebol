@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Planes;
+use Session;
+use Auth;
+use App\PlanesDetalle;
 class controllerPlanes extends Controller
 {
     /**
@@ -13,7 +16,9 @@ class controllerPlanes extends Controller
      */
     public function index()
     {
-        //
+        $planDetalle=PlanesDetalle::all();
+        $planes=Planes::orderBy('id','desc')->paginate(5);
+        return view('panel.planes.index',compact('planes','planDetalle'));
     }
 
     /**
@@ -23,7 +28,7 @@ class controllerPlanes extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -56,7 +61,9 @@ class controllerPlanes extends Controller
      */
     public function edit($id)
     {
-        //
+        $plan=Planes::find($id);
+        $planDetalle=PlanesDetalle::all();
+        return view('panel.planes.edit',compact('plan','planDetalle'));
     }
 
     /**
@@ -68,7 +75,24 @@ class controllerPlanes extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $planDetalle=PlanesDetalle::all();
+        foreach ($planDetalle as $descripcion)
+        {
+
+            $descripcion->fill([
+                'descripcion'=>$request['nombre-'.$descripcion->id],
+            ]);
+            $descripcion->save();
+        }
+        $plan=Planes::find($id);
+        $plan->fill([
+            'nombre'=>$request->nombre,
+            'precio'=>$request->precio,
+            'plan'=>$request->plan,
+            'moneda'=>$request->moneda
+        ]);
+        $plan->save();
+        return redirect()->route('planes.index');
     }
 
     /**

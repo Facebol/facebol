@@ -84,17 +84,17 @@
                 </div>
                 <address class="no-mb">
                   <p>
-                    <i class="color-danger-light zmdi zmdi-pin mr-1"></i> 795 Folsom Ave, Suite 600</p>
+                    <i class="color-danger-light zmdi zmdi-pin mr-1"></i> {{$institucion->direccion}}</p>
                   <p>
-                    <i class="color-warning-light zmdi zmdi-map mr-1"></i> San Francisco, CA 94107</p>
+                    <i class="color-warning-light zmdi zmdi-map mr-1"></i> La Paz / Bolivia</p>
                   <p>
                     <i class="color-info-light zmdi zmdi-email mr-1"></i>
-                    <a href="mailto:joe@example.com">example@domain.com</a>
+                    <a href="mailto:{{$institucion->email}}">{{$institucion->email}}</a>
                   </p>
                   <p>
-                    <i class="color-royal-light zmdi zmdi-phone mr-1"></i>+34 123 456 7890 </p>
+                    <i class="color-royal-light zmdi zmdi-phone mr-1"></i>{{$institucion->celular}} </p>
                   <p>
-                    <i class="color-success-light fa fa-fax mr-1"></i>+34 123 456 7890 </p>
+                    <i class="color-success-light fa fa-fax mr-1"></i> {{$institucion->telefono}} </p>
                 </address>
               </div>
             </div>

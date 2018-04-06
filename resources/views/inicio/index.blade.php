@@ -40,32 +40,26 @@
 <!-- container -->
 <div class="container mt-6">
   <div class="text-center mb-4">
-    <h2 class="uppercase color-primary">See our subscription plans</h2>
-    <p class="lead uppercase">Surprise with our unique features</p>
+    <h2 class="uppercase color-primary">Este es nuestro Plan</h2>
+    <p class="lead uppercase">Con el cual puedes accerder a muchos beneficios</p>
   </div>
   <div class="row no-gutters">
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
       <div class="price-table price-table-warning wow zoomInUp animation-delay-2">
         <header class="price-table-header">
-          <span class="price-table-category">Business</span>
+          <span class="price-table-category">{{$plan->nombre}}</span>
           <h3>
-            <sup>$</sup>99.99
-            <sub>/mo.</sub>
+            <sup>{{$plan->moneda}}</sup>{{$plan->precio}}
+            <sub>/{{$plan->plan}}</sub>
           </h3>
         </header>
         <div class="price-table-body">
           <ul class="price-table-list">
+            @foreach($planDetalle as $descripcion)
             <li>
-              <i class="zmdi zmdi-code"></i> Lorem ipsum dolor sit amet.</li>
-            <li>
-              <i class="zmdi zmdi-globe"></i> Voluptate ex quam autem dolor.</li>
-            <li>
-              <i class="zmdi zmdi-settings"></i> Dignissimos velit reic cumque.</li>
-            <li>
-              <i class="zmdi zmdi-cloud"></i> Nihil corrupti soluta vitae non.</li>
-            <li>
-              <i class="zmdi zmdi-star"></i> Atque molestiae, blanditiis ratione.</li>
+              <i class="zmdi zmdi-star"></i> {{$descripcion->descripcion}}</li>
+            @endforeach
           </ul>
           <div class="text-center">
             <a href="javascript:void(0)" class="btn btn-warning btn-raised">

@@ -31,13 +31,11 @@
                                 <td>{{$empresas->telefono}}</td>
                                 <td>{{$empresas->email}}</td>
                                 <td>{{$empresas->facebook}}</td>
-                                <td>{{$empresas->ciudad_id}}</td>
+                                <td>{{$empresas->ciudad->nombre}}</td>
                                 <td><img src="{{asset('imagen')}}/{{$empresas->imagen}}" width="50px" height="50px"></td>
                                 <td>
-                                  {!!Form::open(['route'=>['empresas.destroy', $empresas->id], 'method' => 'DELETE'])!!}
                                   <a href="{{route('empresas.edit',$empresas->id)}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                                  <button class="btn btn-success"><i class="fa fa-check"></i></button>
-                                  {!!Form::close()!!}
+                                  <a class="btn btn-success" href="{{route('empresas.show',$empresas->id)}}"><i class="fa fa-check"></i></a>
                                 </td> 
                             </tr>                        
                             @endforeach                   

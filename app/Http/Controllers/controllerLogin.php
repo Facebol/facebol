@@ -12,13 +12,7 @@ class controllerLogin extends Controller
     {
         if(Auth::attempt(['email'=>$request['email'],'password'=>$request['password']]))
         {   
-            if(Auth::user()->tipo =='administrador')
-            {
-               
-                return "logueo";
-            }else{
-                return "logueo";
-            }
+            return redirect()->route('start-a');
         }else{
             return redirect()->route('inicio');
         }

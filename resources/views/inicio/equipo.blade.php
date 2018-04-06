@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   
 <!-- Mirrored from agmstudio.io/themes/material-style/2.2.2/page-team2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 23:12:15 GMT -->
 <head>
@@ -42,120 +42,29 @@
       </div>
       <div class="container">
         <div class="row d-flex justify-content-center card-top">
-          <div class="col-lg-4 col-sm-6">
-            <div class="card mt-4 card-danger wow zoomInUp animation-delay-7">
-              <div class="ms-hero-bg-danger ms-hero-img-city">
-                <img src="assets/img/demo/avatar1.jpg" alt="..." class="img-avatar-circle"> </div>
-              <div class="card-body pt-6 text-center">
-                <h3 class="color-danger">Victoria Smith</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur alter adipisicing elit. Facilis, natuse inse voluptates officia repudiandae beatae magni es magnam autem molestias.</p>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-facebook">
-                  <i class="zmdi zmdi-facebook"></i>
-                </a>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-twitter">
-                  <i class="zmdi zmdi-twitter"></i>
-                </a>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-instagram">
-                  <i class="zmdi zmdi-instagram"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+          @foreach($equipos as $equipo)
           <div class="col-lg-4 col-sm-6">
             <div class="card mt-4 card-info wow zoomInUp animation-delay-7">
               <div class="ms-hero-bg-info ms-hero-img-city">
-                <img src="assets/img/demo/avatar2.jpg" alt="..." class="img-avatar-circle"> </div>
+                <img src="{{asset('imagen')}}/{{$equipo->imagen}}" alt="..." class="img-avatar-circle"> </div>
               <div class="card-body pt-6 text-center">
-                <h3 class="color-info">Charlie Durant</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur alter adipisicing elit. Facilis, natuse inse voluptates officia repudiandae beatae magni es magnam autem molestias.</p>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-facebook">
+                <h4 class="color-info">{{$equipo->nombre}}</h3>
+                <h4 class="color-warning">{{$equipo->cargo}}</h3>
+                <p>{{$equipo->descripcion}}</p>
+                <a href="{{$equipo->facebook}}" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-facebook">
                   <i class="zmdi zmdi-facebook"></i>
                 </a>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-twitter">
+                <a href="{{$equipo->twitter}}" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-twitter">
                   <i class="zmdi zmdi-twitter"></i>
                 </a>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-instagram">
+                <a href="{{$equipo->instagram}}" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-instagram">
                   <i class="zmdi zmdi-instagram"></i>
                 </a>
               </div>
             </div>
+
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="card mt-4 card-warning wow zoomInUp animation-delay-7">
-              <div class="ms-hero-bg-warning ms-hero-img-city">
-                <img src="assets/img/demo/avatar3.jpg" alt="..." class="img-avatar-circle"> </div>
-              <div class="card-body pt-6 text-center">
-                <h3 class="color-warning">Joan Fawert</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur alter adipisicing elit. Facilis, natuse inse voluptates officia repudiandae beatae magni es magnam autem molestias.</p>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-facebook">
-                  <i class="zmdi zmdi-facebook"></i>
-                </a>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-twitter">
-                  <i class="zmdi zmdi-twitter"></i>
-                </a>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-instagram">
-                  <i class="zmdi zmdi-instagram"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="card mt-4 card-royal wow zoomInUp animation-delay-7">
-              <div class="ms-hero-bg-royal ms-hero-img-city">
-                <img src="assets/img/demo/avatar4.jpg" alt="..." class="img-avatar-circle"> </div>
-              <div class="card-body pt-6 text-center">
-                <h3 class="color-royal">Sophie Marks</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur alter adipisicing elit. Facilis, natuse inse voluptates officia repudiandae beatae magni es magnam autem molestias.</p>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-facebook">
-                  <i class="zmdi zmdi-facebook"></i>
-                </a>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-twitter">
-                  <i class="zmdi zmdi-twitter"></i>
-                </a>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-instagram">
-                  <i class="zmdi zmdi-instagram"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="card mt-4 card-success wow zoomInUp animation-delay-7">
-              <div class="ms-hero-bg-success ms-hero-img-city">
-                <img src="assets/img/demo/avatar5.jpg" alt="..." class="img-avatar-circle"> </div>
-              <div class="card-body pt-6 text-center">
-                <h3 class="color-success">Cris Polner</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur alter adipisicing elit. Facilis, natuse inse voluptates officia repudiandae beatae magni es magnam autem molestias.</p>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-facebook">
-                  <i class="zmdi zmdi-facebook"></i>
-                </a>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-twitter">
-                  <i class="zmdi zmdi-twitter"></i>
-                </a>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-instagram">
-                  <i class="zmdi zmdi-instagram"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="card mt-4 card-primary wow zoomInUp animation-delay-7">
-              <div class="ms-hero-bg-primary ms-hero-img-city">
-                <img src="assets/img/demo/avatar6.jpg" alt="..." class="img-avatar-circle"> </div>
-              <div class="card-body pt-6 text-center">
-                <h3 class="color-primary">Julia Robert</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur alter adipisicing elit. Facilis, natuse inse voluptates officia repudiandae beatae magni es magnam autem molestias.</p>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-facebook">
-                  <i class="zmdi zmdi-facebook"></i>
-                </a>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-twitter">
-                  <i class="zmdi zmdi-twitter"></i>
-                </a>
-                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mt-1 mr-1 no-mr-md btn-instagram">
-                  <i class="zmdi zmdi-instagram"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
       </div>
       <!-- container -->

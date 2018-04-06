@@ -20,7 +20,7 @@ Route::get('reset/password/{codigo}','controllerInicio@passwordReset')->name('pa
 Route::post('reset','controllerInicio@emailReset')->name('reset');
 
 Route::get('panel/reset/{codigo}','controllerInicio@passwordReset')->name('passwordReset');
-Route::resource('panel/planes','controladorEquipo');
+Route::resource('panel/planes','controllerPlanes');
 Route::resource('panel/categoria','controladorEquipo');
 Route::resource('panel/equipo','controladorEquipo');
 Route::resource('panel/actividades','controladorActividades');
