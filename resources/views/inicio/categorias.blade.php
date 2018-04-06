@@ -55,24 +55,32 @@
                       <figcaption class="ms-thumbnail-caption text-center">
                         <div class="ms-thumbnail-caption-content">
                           <h4 class="ms-thumbnail-caption-title mb-2">{{$empresa->nombre}}</h4>
-                          <a href="{{redirect($empresa->facebook)}}" class="btn-circle btn-circle-raised btn-circle-xs mr-1 btn-circle-white color-danger">
+                          <a href="{{$empresa->facebook}}" class="btn-circle btn-circle-raised btn-circle-xs mr-1 btn-circle-white color-danger">
                             <i class="zmdi zmdi-facebook"></i>
                           </a>
-                          <a href="{{$empresa->email}}" class="btn-circle btn-circle-raised btn-circle-xs ml-1 mr-1 btn-circle-white color-warning">
+                          <a href="mailto:{{$empresa->email}}" class="btn-circle btn-circle-raised btn-circle-xs ml-1 mr-1 btn-circle-white color-warning">
                             <i class="zmdi zmdi-email"></i>
                           </a>
                           <a href="{{$empresa->web}}" class="btn-circle btn-circle-raised btn-circle-xs ml-1 btn-circle-white color-success">
-                            <i class="zmdi zmdi-share"></i>
+                            <i class="zmdi zmdi-globe"></i>
                           </a>
                         </div>
                       </figcaption>
                     </figure>
                     <div class="card-body text-center">
-                      <a href="javascript:void(0)" class="btn-circle btn-circle-royal btn-circle-raised btn-card-float right wow zoomInDown index-2">
+                      <a href="javascript:void(0)" class="btn-circle btn-circle-warning btn-circle-raised btn-card-float right wow zoomInDown index-2">
                         <i class="zmdi zmdi-star"></i>
                       </a>
-                      <h4 class="color-royal">{{$empresa->nombre}}</h4>
-                      <p>{{$empresa->descripcion}}</p>
+                      <h4 class="color-warning">{{$empresa->nombre}}</h4>
+                      <p><strong>Descripcion :</strong>{{$empresa->descripcion}}</p>
+                      <p><strong>Promocion :</strong> {{$empresa->promocion}}</p>
+                      <p><strong>Horario :</strong> {{$empresa->horario}}</p>
+                      <p><strong>Direccion :</strong> {{$empresa->direccion}}</p>
+                      <p><strong>Contacto :</strong> {{$empresa->telefono}}</p>
+                      <a href="javascript:void(0)" class="btn btn-warning">
+                        <i class="zmdi zmdi-star"></i> {{$empresa->descuento}}</a>
+                      <a href="javascript:void(0)" class="btn btn-warning btn-raised">
+                        <i class="zmdi zmdi-globe"></i> {{$empresa->ciudad->nombre}}</a>
                     </div>
                   </div>
                 </div>

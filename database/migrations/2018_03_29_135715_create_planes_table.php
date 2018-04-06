@@ -17,6 +17,8 @@ class CreatePlanesTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->decimal('precio');
+            $table->string('plan');
+            $table->string('moneda');
             $table->timestamps();
         });
     }

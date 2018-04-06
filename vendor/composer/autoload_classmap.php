@@ -3634,6 +3634,7 @@ return array(
     'phpDocumentor\\Reflection\\Types\\Void_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Void_.php',
     'seedCategoria' => $baseDir . '/database/seeds/seedCategoria.php',
     'seedCiudad' => $baseDir . '/database/seeds/seedCiudad.php',
+    'seedEmpresa' => $baseDir . '/database/seeds/seedEmpresa.php',
     'seedInstitucion' => $baseDir . '/database/seeds/seedInstitucion.php',
     'seedPais' => $baseDir . '/database/seeds/seedPais.php',
     'seedUsuario' => $baseDir . '/database/seeds/seedUsuario.php',

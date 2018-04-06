@@ -56,7 +56,7 @@ class controllerEmpresa extends Controller
    			'facebook'=>$request->facebook,
    			'web'=>$request->web,
    			'imagen'=>$request->imagen,
-   			'ciudad_id'=>$request->ciudad_id
+			'ciudad_id'=>$request->ciudad_id
 		   ]);
 		$empresa->save();
    		return redirect()->route('empresas.index');

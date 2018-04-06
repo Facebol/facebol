@@ -13,5 +13,10 @@ class Ciudad extends Model
     {
         return $this->hasMany(User::class);
     }
+
+    public function empresas()
+    {
+        return $this->hasMany(User::class);
+    }
 }
 

@@ -17,10 +17,14 @@ class CreateEmpresasTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('descripcion');
-            $table->integer('telefono');
+            $table->integer('telefono')->nullable();
             $table->string('email')->unique();
             $table->string('facebook')->unique();
-            $table->string('web')->unique();
+            $table->string('direccion')->nullable();
+            $table->string('promocion')->nullable();
+            $table->string('descuento')->nullable();
+            $table->string('horario');
+            $table->string('web')->unique()->nullable();
             $table->integer('categoria_id')->unsigned();
             $table->string('imagen')->unique();
             $table->integer('usuario_id')->unsigned();

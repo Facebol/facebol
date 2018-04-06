@@ -4007,6 +4007,7 @@ class ComposerStaticInite2733bfd7e625f1176dadf6e831bc5ae
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
         'seedCategoria' => __DIR__ . '/../..' . '/database/seeds/seedCategoria.php',
         'seedCiudad' => __DIR__ . '/../..' . '/database/seeds/seedCiudad.php',
+        'seedEmpresa' => __DIR__ . '/../..' . '/database/seeds/seedEmpresa.php',
         'seedInstitucion' => __DIR__ . '/../..' . '/database/seeds/seedInstitucion.php',
         'seedPais' => __DIR__ . '/../..' . '/database/seeds/seedPais.php',
         'seedUsuario' => __DIR__ . '/../..' . '/database/seeds/seedUsuario.php',
