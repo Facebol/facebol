@@ -7,7 +7,7 @@ use Carbon\Carbon;
 class Empresa extends Model
 {
     protected $table="empresas";
-    protected $fillable=['ciudad_id','nombre','descripcion','telefono','email','facebook','web','imagen','categoria_id','direccion','horario','promocion','descuento'];
+    protected $fillable=['nombre','descripcion','telefono','email','facebook','direccion','promocion','descuento','horario','web','categoria_id','imagen','usuario_id','ciudad_id'];
     public function setImagenAttribute($imagen){
         if(! empty($imagen)){
               $name = Carbon::now()->second.$imagen->getClientOriginalName();
@@ -15,8 +15,5 @@ class Empresa extends Model
               \Storage::disk('local')->put($name, \File::get($imagen));
         }
     } 
-    public function ciudad()
-    {
-        return $this->belongsTo(Ciudad::class); 
-    }
+    
 }
