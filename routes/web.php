@@ -1,8 +1,6 @@
 <?php
 // pagina principal
-Route::get('mensage',function(){
-    return view('inicio.mensage');
-});
+
 Route::post('preregistro','controllerInicio@preRegistro')->name('preregistro');
 Route::get('equipo','controllerInicio@equipo')->name('equipo');
 Route::get('empresa','controllerInicio@empresa')->name('empresa');
@@ -22,6 +20,8 @@ Route::get('reset/password/{codigo}','controllerInicio@passwordReset')->name('pa
 Route::post('reset','controllerInicio@emailReset')->name('reset');
 //panel
 Route::get('panel/reset/{codigo}','controllerInicio@passwordReset')->name('passwordReset');
+Route::resource('panel/planes','controladorEquipo');
+Route::resource('panel/categoria','controladorEquipo');
 Route::resource('panel/equipo','controladorEquipo');
 Route::resource('panel/actividades','controladorActividades');
 Route::resource('panel/ciudad','controladorCiudad');

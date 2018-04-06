@@ -2,8 +2,7 @@
 @section('contenido')
 <div class="container mt-4">
   <h2 class="text-center color-primary mb-2 wow fadeInDown animation-delay-4">Quienes Somos</h2>
-  <p class="lead text-center aco wow fadeInDown animation-delay-5 mw-800 center-block mb-4"> Lorem ipsum dolor sit amet,
-    <span class="color-primary">consectetur adipisicing</span> elit. Dolor alias provident excepturi eligendi, nam numquam iusto eum illum, ea quisquam.</p>
+  <p class="lead text-center aco wow fadeInDown animation-delay-5 mw-800 center-block mb-4">{{$institucion->qSomos}}.</p>
   <div class="row">
     <div class="ms-feature col-xl-6 col-lg-6 col-md-6 card wow flipInX animation-delay-4">
       <div class="text-center card-body">
@@ -11,7 +10,7 @@
           <i class="zmdi zmdi-cloud-outline"></i>
         </span>
         <h4 class="color-info">Mision</h4>
-        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
+        <p class="">{{$institucion->mision}}</p>
       </div>
     </div>
     <div class="ms-feature col-xl-6 col-lg-6 col-md-6 card wow flipInX animation-delay-8">
@@ -20,7 +19,7 @@
           <i class="zmdi zmdi-desktop-mac"></i>
         </span>
         <h4 class="color-warning">Vision</h4>
-        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
+        <p class="">{{$institucion->vision}}</p>
       </div>
     </div>
   </div>
@@ -33,10 +32,7 @@
       <div class="col-lg-6 order-lg-2 mb-4  center-block">
         <img src="assets/img/demo/mock.png" alt="" class="img-fluid center-block wow zoomIn animation-delay-12 "> </div>
       <div class="col-lg-6 order-lg-1 pr-6">
-        <p class="wow fadeInLeft animation-delay-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam sint officiis odio tempora natus, sed voluptas facilis ullam suscipit. Ducimus quas, eius ut, dolores mollitia sapiente doloremque aliquid sequi eaque.</p>
-        <p class="wow fadeInLeft animation-delay-7">Adipisicing elit. Sapiente porro voluptatem rerum modi quibusdam accusantium nihil facere cupiditate quam! Ipsa.</p>
-        <p class="wow fadeInLeft animation-delay-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quasi voluptatem, similique corrupti necessitatibus nihil error, nemo delectus voluptates deserunt ducimus quaerat molestiae labore id repellat exercitationem asperiores neque
-          quibusdam.</p>
+        {{htmlentities($institucion->trabaja)}}
       </div>
     </div>
   </div>

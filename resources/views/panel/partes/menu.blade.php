@@ -3,10 +3,10 @@
     <!-- Sidebar user panel -->
     <div class="user-panel">
         <div class="pull-left image">
-            <img src="{{asset('img/avatar3.png')}}" class="img-circle" alt="User Image" />
+            <img src="{{asset('imagen')}}/{{Auth::user()->imagen}}" class="img-circle" alt="User Image" />
         </div>
         <div class="pull-left info">
-            <p>Hola!, Admin</p>
+            <p>Hola!, {{ucwords(Auth::user()->nombre)}}</p>
 
             <a href="#"><i class="fa fa-circle text-success"></i> En Linea</a>
         </div>
@@ -24,13 +24,8 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu">
         <li class="active">
-            <a href="index.html">
-                <i class="fa fa-dashboard"></i> <span>Escritorio</span>
-            </a>
-        </li>
-        <li>
-            <a href="{{route('empresas.index')}}">
-                <i class="fa fa-dashboard"></i> <span>Empresas</span>
+            <a href="{{route('start-a')}}">
+                <i class="fa fa-dashboard"></i> <span>Inicio</span>
             </a>
         </li>
         <li class="treeview">
@@ -40,10 +35,18 @@
                 <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
-                <li><a href="{{route('productos.index')}}"><i class="fa fa-angle-double-right"></i> Productos</a></li>
-            </ul>
-            <ul class="treeview-menu">
+               
+                <li><a href="{{route('usuarios.index')}}"><i class="fa fa-angle-double-right"></i> Usuarios</a></li>
+                <li><a href="{{route('empresas.index')}}"><i class="fa fa-angle-double-right"></i> Empresas</a></li>
+                <li><a href=""><i class="fa fa-angle-double-right"></i> Correos</a></li>
+                <li><a href="{{route('actividades.index')}}"><i class="fa fa-angle-double-right"></i> Actividades</a></li>
+                <li><a href="{{route('pais.index')}}"><i class="fa fa-angle-double-right"></i> Pais</a></li>
+                <li><a href="{{route('ciudad.index')}}"><i class="fa fa-angle-double-right"></i> Ciudad</a></li>
+                <li><a href="{{route('equipo.index')}}"><i class="fa fa-angle-double-right"></i> Equipo</a></li>
+                <li><a href="{{route('planes.index')}}"><i class="fa fa-angle-double-right"></i> Planes</a></li>
                 <li><a href="{{route('institucion.index')}}"><i class="fa fa-angle-double-right"></i> Institucion</a></li>
+                <li><a href="{{route('categoria.index')}}"><i class="fa fa-angle-double-right"></i> Categorias</a></li>
+                <li><a href="{{route('productos.index')}}"><i class="fa fa-angle-double-right"></i> Productos</a></li>
             </ul>
         </li>
         <li class="treeview">

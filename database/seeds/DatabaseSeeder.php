@@ -15,6 +15,6 @@ class DatabaseSeeder extends Seeder
         $this->call(seedCiudad::class);
         $this->call(seedUsuario::class);
         $this->call(seedCategoria::class);
-       // $this->call(seedInstitucion::class);
+        $this->call(seedInstitucion::class);
     }
 }

@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 class Institucion extends Model
-{
+    {
     protected $table="institucions";
     protected $fillable=['qSomos','frase1','frase2','frase3','trabaja','direccion','celular','telefono','email','facebook','twitter','youtube','instagram','google','imagen','vision','mision'];
     public function setImagenAttribute($imagen){

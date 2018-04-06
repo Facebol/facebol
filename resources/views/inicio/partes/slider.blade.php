@@ -10,35 +10,25 @@
                 <div class="carousel-caption">
                   <div class="ms-hero-material-text-container">
                     <header class="ms-hero-material-title animated slideInLeft animation-delay-5">
-                      <h1 class="animated fadeInLeft animation-delay-15 font-smoothing">The
-                        <strong>Lorem laborum labore fugiat non. Ut ad non esse quis adipisicing eiusmod.</strong> amazing projects</h1>
-                      <h2 class="animated fadeInLeft animation-delay-18">Cillum cupidatat aliquip 
-                        <span class="color-warning">mollit quis enim.</span> mollit quis enim..</h2>
+                      <h1 class="animated fadeInLeft animation-delay-15 font-smoothing"><strong>FACEBOL SRL</strong></h1>
+                      <h2 class="animated fadeInLeft animation-delay-18">¡¡¡¡ Hazlo Diferente !!!!</h2>
                     </header>
                     <ul class="ms-hero-material-list">
                       <li class="">
                         <div class="ms-list-icon animated zoomInUp animation-delay-18">
-                          <span class="ms-icon ms-icon-circle ms-icon-xlg color-warning shadow-3dp">
-                            <i class="zmdi zmdi-airplane"></i>
+                          <span class="ms-icon ms-icon-circle ms-icon-xlg color-danger shadow-3dp">
+                            <i class="zmdi zmdi-check"></i>
                           </span>
                         </div>
-                        <div class="ms-list-text animated fadeInRight animation-delay-19">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, fugit sit nesciunt cum rerum iusto.</div>
+                        <div class="ms-list-text animated fadeInRight animation-delay-19">{{$institucion->frase1}}</div>
                       </li>
                       <li class="">
                         <div class="ms-list-icon animated zoomInUp animation-delay-20">
-                          <span class="ms-icon ms-icon-circle ms-icon-xlg color-success shadow-3dp">
-                            <i class="zmdi zmdi-bike"></i>
+                          <span class="ms-icon ms-icon-circle ms-icon-xlg color-warning shadow-3dp">
+                            <i class="zmdi zmdi-check"></i>
                           </span>
                         </div>
-                        <div class="ms-list-text animated fadeInRight animation-delay-21">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi laborum dignissimos fuga maxime facere.</div>
-                      </li>
-                      <li class="">
-                        <div class="ms-list-icon animated zoomInUp animation-delay-22">
-                          <span class="ms-icon ms-icon-circle ms-icon-xlg color-danger shadow-3dp">
-                            <i class="zmdi zmdi-album"></i>
-                          </span>
-                        </div>
-                        <div class="ms-list-text animated fadeInRight animation-delay-23">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit sequi est repudianda.</div>
+                        <div class="ms-list-text animated fadeInRight animation-delay-21">{{$institucion->frase2}}</div>
                       </li>
                     </ul>
                    <div class="ms-hero-material-buttons text-right">
@@ -57,35 +47,25 @@
                 <div class="carousel-caption">
                   <div class="ms-hero-material-text-container">
                     <header class="ms-hero-material-title animated slideInLeft animation-delay-5">
-                      <h1 class="animated fadeInLeft animation-delay-15">A template with
-                        <strong>infinite</strong> possibilities</h1>
-                      <h2 class="animated fadeInLeft animation-delay-18">Unlimited combinations to create
-                        <span class="color-warning">unique designs</span> .</h2>
+                      <h1 class="animated fadeInLeft animation-delay-15 font-smoothing"><strong>FACEBOL SRL</strong></h1>
+                      <h2 class="animated fadeInLeft animation-delay-18">¡¡¡¡ Hazlo Diferente !!!!</h2>
                     </header>
                     <ul class="ms-hero-material-list">
                       <li class="">
-                        <div class="ms-list-icon animated zoomInUp animation-delay-18">
-                          <span class="ms-icon ms-icon-circle ms-icon-xlg color-info shadow-3dp">
-                            <i class="zmdi zmdi-city"></i>
-                          </span>
-                        </div>
-                        <div class="ms-list-text animated fadeInRight animation-delay-19">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, fugit sit nesciunt cum rerum iusto.</div>
-                      </li>
-                      <li class="">
                         <div class="ms-list-icon animated zoomInUp animation-delay-20">
                           <span class="ms-icon ms-icon-circle ms-icon-xlg color-royal shadow-3dp">
-                            <i class="zmdi zmdi-car-taxi"></i>
+                            <i class="zmdi zmdi-check"></i>
                           </span>
                         </div>
-                        <div class="ms-list-text animated fadeInRight animation-delay-21">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi laborum dignissimos fuga maxime facere.</div>
+                        <div class="ms-list-text animated fadeInRight animation-delay-21">{{$institucion->frase1}}</div>
                       </li>
                       <li class="">
                         <div class="ms-list-icon animated zoomInUp animation-delay-22">
                           <span class="ms-icon ms-icon-circle ms-icon-xlg color-warning shadow-3dp">
-                            <i class="zmdi zmdi-coffee"></i>
+                            <i class="zmdi zmdi-check"></i>
                           </span>
                         </div>
-                        <div class="ms-list-text animated fadeInRight animation-delay-23">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit sequi est repudianda.</div>
+                        <div class="ms-list-text animated fadeInRight animation-delay-23">{{$institucion->frase3}}</div>
                       </li>
                     </ul>
                     <div class="ms-hero-material-buttons text-right">
@@ -102,35 +82,25 @@
                 <div class="carousel-caption">
                   <div class="ms-hero-material-text-container">
                     <header class="ms-hero-material-title animated slideInLeft animation-delay-5">
-                      <h1 class="animated fadeInLeft animation-delay-15">Commitment of
-                        <strong>monthly updates</strong>.</h1>
-                      <h2 class="animated fadeInLeft animation-delay-18">There will soon be a version for
-                        <span class="color-warning">Bootstrap 4</span>.</h2>
+                      <h1 class="animated fadeInLeft animation-delay-15 font-smoothing"><strong>FACEBOL SRL</strong></h1>
+                      <h2 class="animated fadeInLeft animation-delay-18">¡¡¡¡ Hazlo Diferente !!!!</h2>
                     </header>
                     <ul class="ms-hero-material-list">
                       <li class="">
                         <div class="ms-list-icon animated zoomInUp animation-delay-18">
                           <span class="ms-icon ms-icon-circle ms-icon-xlg color-danger shadow-3dp">
-                            <i class="zmdi zmdi-cutlery"></i>
+                            <i class="zmdi zmdi-check"></i>
                           </span>
                         </div>
-                        <div class="ms-list-text animated fadeInRight animation-delay-19">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, fugit sit nesciunt cum rerum iusto.</div>
+                        <div class="ms-list-text animated fadeInRight animation-delay-19">{{$institucion->frase3}}</div>
                       </li>
                       <li class="">
                         <div class="ms-list-icon animated zoomInUp animation-delay-20">
                           <span class="ms-icon ms-icon-circle ms-icon-xlg color-info shadow-3dp">
-                            <i class="zmdi zmdi-dns"></i>
+                            <i class="zmdi zmdi-check"></i>
                           </span>
                         </div>
-                        <div class="ms-list-text animated fadeInRight animation-delay-21">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi laborum dignissimos fuga maxime facere.</div>
-                      </li>
-                      <li class="">
-                        <div class="ms-list-icon animated zoomInUp animation-delay-22">
-                          <span class="ms-icon ms-icon-circle ms-icon-xlg color-success shadow-3dp">
-                            <i class="zmdi zmdi-compass"></i>
-                          </span>
-                        </div>
-                        <div class="ms-list-text animated fadeInRight animation-delay-23">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit sequi est repudianda.</div>
+                        <div class="ms-list-text animated fadeInRight animation-delay-21">{{$institucion->frase2}}.</div>
                       </li>
                     </ul>
                     <div class="ms-hero-material-buttons text-right">
@@ -145,11 +115,11 @@
                 <!-- Controls -->
                 <a class="left carousel-control animated zoomIn animation-delay-30" href="#carousel-hero" role="button" data-slide="prev">
                   <i class="zmdi zmdi-chevron-left"></i>
-                  <span class="sr-only">Previous</span>
+                  <span class="sr-only">Anterior</span>
                 </a>
                 <a class="right carousel-control animated zoomIn animation-delay-30" href="#carousel-hero" role="button" data-slide="next">
                   <i class="zmdi zmdi-chevron-right"></i>
-                  <span class="sr-only">Next</span>
+                  <span class="sr-only">Siguiente</span>
                 </a>
                 <!-- Indicators -->
                 <ol class="carousel-indicators">

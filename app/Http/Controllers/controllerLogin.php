@@ -26,6 +26,6 @@ class controllerLogin extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('start');
+        return redirect()->route('inicio');
     }
 }

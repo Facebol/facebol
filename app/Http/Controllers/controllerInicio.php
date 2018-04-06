@@ -19,12 +19,12 @@ use Session;
 class controllerInicio extends Controller
 {
     public function Inicio()
-    {
-        $institucion=Institucion::all();
+    { 
+        $institucion=Institucion::first();
         $planes= Planes::all();
         $planesDetalle = PlanesDetalle::all();
         $categorias=Categoria::all();
-        return view('inicio.index',compact('planes','planesDetalle','categorias'));
+        return view('inicio.index',compact('planes','planesDetalle','categorias','institucion'));
     }
     public function suscribir(Request $datos)
     {
@@ -127,32 +127,37 @@ class controllerInicio extends Controller
     }
     public function contactanos()
     {
+        $institucion=Institucion::first();
         $categorias=Categoria::all();
-        return view('inicio.contacto',compact('categorias','categorias'));
+        return view('inicio.contacto',compact('institucion','categorias','categorias'));
     }
     public function empresa()
     {
+        $institucion=Institucion::first();
         $categorias=Categoria::all();
         $empresas=Empresa::all();
-        return view('inicio.empresas',compact('empresas','categorias'));
+        return view('inicio.empresas',compact('institucion','empresas','categorias'));
     }
     public function categoria($id)
     {
+        $institucion=Institucion::first();
         $empresas=Empresa::where('categoria_id',$id)->orderBy('id','desc')->get();
         $categoria=Categoria::find($id);
         $categorias = Categoria::all();
-        return view('inicio.categorias',compact('categorias','categoria','empresas'));
+        return view('inicio.categorias',compact('institucion','categorias','categoria','empresas'));
     }
     public function actividad()
     {
+        $institucion=Institucion::first();
         $categorias=Categoria::all();
         $actividad = Actividad::all();
-        return view('inicio.actividades',compact('actividad','categorias'));
+        return view('inicio.actividades',compact('institucion','actividad','categorias'));
     }
     public function equipo()
     {
+        $institucion=Institucion::first();
         $categorias=Categoria::all();
         $equipo = Equipo::all();
-        return view('inicio.equipo',compact('equipo','categorias'));
+        return view('inicio.equipo',compact('institucion','equipo','categorias'));
     }
 }

@@ -13,10 +13,7 @@
                 <a href="page-blog.html">
                   <i class="zmdi zmdi-edit"></i> Empresas</a>
               </li>
-              <li>
-                <a href="page-blog.html">
-                  <i class="zmdi zmdi-image-o"></i> Categorias</a>
-              </li>
+
               <li>
                 <a href="portfolio-filters_sidebar.html">
                   <i class="zmdi zmdi-case"></i> Actividades</a>
@@ -52,36 +49,36 @@
             </div>
             <address class="no-mb">
               <p>
-                <i class="color-danger-light zmdi zmdi-pin mr-1"></i> 795 Folsom Ave, Suite 600</p>
+                <i class="color-danger-light zmdi zmdi-pin mr-1"></i> {{$institucion->direccion}}</p>
               <p>
-                <i class="color-warning-light zmdi zmdi-map mr-1"></i> San Francisco, CA 94107</p>
+                <i class="color-warning-light zmdi zmdi-map mr-1"></i> La Paz / Bolivia</p>
               <p>
                 <i class="color-info-light zmdi zmdi-email mr-1"></i>
-                <a href="mailto:joe@example.com">example@domain.com</a>
+                <a href="mailto:{{$institucion->email}}">{{$institucion->email}}</a>
               </p>
               <p>
-                <i class="color-royal-light zmdi zmdi-phone mr-1"></i>+34 123 456 7890 </p>
+                <i class="color-royal-light zmdi zmdi-phone mr-1"></i>{{$institucion->celular}} </p>
               <p>
-                <i class="color-success-light fa fa-fax mr-1"></i>+34 123 456 7890 </p>
+                <i class="color-success-light fa fa-fax mr-1"></i>{{$institucion->telefono}} </p>
             </address>
           </div>
           <div class="ms-footbar-block">
             <h3 class="ms-footbar-title">Redes Sociales</h3>
             <div class="ms-footbar-social">
-              <a href="javascript:void(0)" class="btn-circle btn-facebook">
+              <a href="{{$institucion->facebook}}" class="btn-circle btn-facebook">
                 <i class="zmdi zmdi-facebook"></i>
               </a>
-              <a href="javascript:void(0)" class="btn-circle btn-twitter">
+              <a href="{{$institucion->twitter}}" class="btn-circle btn-twitter">
                 <i class="zmdi zmdi-twitter"></i>
               </a>
-              <a href="javascript:void(0)" class="btn-circle btn-youtube">
+              <a href="{{$institucion->youtube}}" class="btn-circle btn-youtube">
                 <i class="zmdi zmdi-youtube-play"></i>
               </a>
               <br>
-              <a href="javascript:void(0)" class="btn-circle btn-google">
+              <a href="{{$institucion->google}}" class="btn-circle btn-google">
                 <i class="zmdi zmdi-google"></i>
               </a>
-              <a href="javascript:void(0)" class="btn-circle btn-instagram">
+              <a href="{{$institucion->instagram}}" class="btn-circle btn-instagram">
                 <i class="zmdi zmdi-instagram"></i>
               </a>
             </div>
