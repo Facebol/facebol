@@ -3,15 +3,24 @@
         <label>Nombre </label>
         {{Form::text('nombre',null,['class'=>'form-control','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
     </div>
-    <div class="form-group col-md-12">
+
+
+
+
+
+
+<div class="form-group col-md-9">
         <label>Descripcion</label>
-        {{Form::text('descripcion',null,['class'=>'form-control','autofocus','requerid'])}}
+        {{Form::text('descripcion',null,['class'=>'form-control','autofocus','requerid','placeholder'=>'Introducir descripcion'])}}
     </div>
+
+
+
     <div class="form-group col-md-12">
         <label>Imagen</label>
         {{Form::file('imagen',null,['class'=>'form-control','requerid'])}}
     </div>
     <div class="form-group">
-        <p class="help-block">Example block-level help text here.</p>
+        <p class="help-block"></p>
     </div>  
 </div><!-- /.box-body -->

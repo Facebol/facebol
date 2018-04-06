@@ -19,11 +19,20 @@ Route::post('reset/password/save','controllerInicio@passwordSave')->name('passwo
 Route::get('reset/password/{codigo}','controllerInicio@passwordReset')->name('passwordReset');
 Route::post('reset','controllerInicio@emailReset')->name('reset');
 //panel
+<<<<<<< HEAD
+//<<<<<<< HEAD
 Route::get('panel/reset/{codigo}','controllerInicio@passwordReset')->name('passwordReset');
 Route::resource('panel/planes','controladorEquipo');
 Route::resource('panel/categoria','controladorEquipo');
 Route::resource('panel/equipo','controladorEquipo');
 Route::resource('panel/actividades','controladorActividades');
+//=======
+//>>>>>>> 29207cf891ce5ec3cb0a0cac1c56a874e0d7279c
+=======
+Route::get('panel/reset/{codigo}','controllerInicio@passwordReset')->name('passwordReset');
+Route::resource('panel/equipo','controladorEquipo');
+Route::resource('panel/actividades','controladorActividades');
+>>>>>>> origen/master
 Route::resource('panel/ciudad','controladorCiudad');
 Route::resource('panel/pais','controladorPais');
 Route::resource('panel/productos','controllerProductos');

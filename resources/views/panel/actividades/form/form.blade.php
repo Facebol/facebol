@@ -12,6 +12,6 @@
         {{Form::file('imagen',null,['class'=>'form-control','requerid'])}}
     </div>
     <div class="form-group">
-        <p class="help-block">Example block-level help text here.</p>
+        <p class="help-block"></p>
     </div>  
 </div><!-- /.box-body -->
