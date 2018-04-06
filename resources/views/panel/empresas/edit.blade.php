@@ -1,8 +1,7 @@
 @extends('panel.template')
 @section('contenido')
-<div class="col-xs-12 col-md-12">
+<div class="box box-primary col-xs-12 col-md-12">
     <!-- general form elements -->
-    <div class="box box-primary">
         <div class="box-header">
             <h3 class="box-title">Editar empresa</h3>
         </div><!-- /.box-header -->
@@ -15,6 +14,5 @@
 		    <button type="submit" class="btn btn-danger"><i class="fa fa-close"></i> Cancelar</button>
         </div>
 		{{Form::close()}}
-    </div><!-- /.box -->
 </div>
 @stop

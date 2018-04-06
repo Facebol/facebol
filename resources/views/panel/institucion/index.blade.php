@@ -35,10 +35,11 @@
                                 <td>{{$instituciones->email}}</td>
                                 <td>
                                  <a data-toggle="modal" href="#myModal{{$instituciones->id}}">
-                                    <button class="btn btn-warning" type="button"><i class="fa fa-eye"></i></button>
+                                    <button class="btn btn-warning btn-sm"><i class="fa fa-eye"></i></button>
                                   </a>
-                                  <a href="{{route('institucion.edit',$instituciones->id)}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                                  {!!Form::close()!!}
+                                  <a href="{{route('institucion.edit',$instituciones->id)}}">
+                                    <button class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></button> 
+                                  </a>
                                 </td> 
                             </tr>
                             @include('panel.institucion.show')                  
