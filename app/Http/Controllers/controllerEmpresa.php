@@ -10,7 +10,7 @@ use App\User;
 class controllerEmpresa extends Controller
 {
     public function index(){
-
+  
     	$empresa = Empresa::orderBy('id','desc')->paginate('5');
     	return view('panel.empresas.index',compact('empresa'));
 
@@ -41,12 +41,26 @@ class controllerEmpresa extends Controller
         'categoria_id'=>$request->categoria_id,
    			'imagen'=>$request->imagen,
         'usuario_id'=>$request->usuario_id,
-   			'ciudad_id'=>$request->ciudad_id
+   			'ciudad_id'=>$request->ciudad_id,
+        'estado'=>1
    		]);
 
    		return redirect()->route('empresas.index');
 
    	}
+
+    function show(Request $request, $id){
+      $empresa = Empresa::find($id);
+      if($empresa->estado == 1){
+        $empresa->fill(['estado'=>$request=0]);
+        $empresa->save();
+        return redirect()->route('empresas.index');
+      }else{
+        $empresa->fill(['estado'=>$request=1]);
+        $empresa->save();
+        return redirect()->route('empresas.index');        
+      } 
+    }
 
    	public function edit($id){
 
@@ -75,7 +89,7 @@ class controllerEmpresa extends Controller
         'categoria_id'=>$request->categoria_id,
         'imagen'=>$request->imagen,
         'usuario_id'=>$request->usuario_id,
-        'ciudad_id'=>$request->ciudad_id
+        'ciudad_id'=>$request->ciudad_id,
 		   ]);
 		$empresa->save();
    		return redirect()->route('empresas.index');

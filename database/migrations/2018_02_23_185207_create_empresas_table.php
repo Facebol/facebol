@@ -32,6 +32,7 @@ class CreateEmpresasTable extends Migration
             $table->foreign('categoria_id')->references('id')->on('categorias');
             $table->foreign('usuario_id')->references('id')->on('users');
             $table->foreign('ciudad_id')->references('id')->on('ciudads');
+            $table->boolean('estado');
             $table->timestamps();
         });
     }

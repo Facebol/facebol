@@ -10,7 +10,7 @@
                     <div class="modal-body">
                     <dl class="row">
                         <dt class="col-sm-4">Codigo de Usuario :</dt>
-                        <dd class="col-sm-6" disabled="">{{$empresas->usuario}}</dd>
+                        <dd class="col-sm-6" disabled="">{{$empresas->usuario_id}}</dd>
                     </dl>
                     <dl class="row">
                         <dt class="col-sm-4">Nombre de la empresa :</dt>
@@ -18,11 +18,11 @@
                     </dl>
                     <dl class="row">
                         <dt class="col-sm-4">Ciudad :</dt>
-                        <dd class="col-sm-6" disabled="">{{$empresas->ciudad}}</dd>
+                        <dd class="col-sm-6" disabled="">{{$empresas->ciudad_id}}</dd>
                     </dl>
                     <dl class="row">
                         <dt class="col-sm-4">Categoria :</dt>
-                        <dd class="col-sm-6" disabled="">{{$empresas->categoria}}</dd>
+                        <dd class="col-sm-6" disabled="">{{$empresas->categoria_id}}</dd>
                     </dl>
                     <dl class="row">
                         <dt class="col-sm-4">Descripcion :</dt>
@@ -59,10 +59,6 @@
                     <dl class="row">
                         <dt class="col-sm-4">Direccion :</dt>
                         <dd class="col-sm-6">{{$empresas->direccion}}</dd>      
-                    </dl>
-                     <dl class="row">
-                        <dt class="col-sm-4">Imagen :</dt>
-                        <dd class="col-sm-6">{{$empresas->imagen}}</dd>      
                     </dl>
                     </div>
                 <div class="modal-footer">

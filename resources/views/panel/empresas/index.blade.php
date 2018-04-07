@@ -34,13 +34,19 @@
                                 <td>{{$empresas->facebook}}</td>
                                 <td>{{$empresas->ciudad_id}}</td>
                                 <td>
-                                  {!!Form::open(['route'=>['empresas.destroy', $empresas->id], 'method' => 'DELETE'])!!}
                                   <a data-toggle="modal" href="#myModal{{$empresas->id}}">
                                     <button class="btn btn-warning btn-sm"><i class="fa fa-eye"></i></button>
                                   </a>
                                   <a href="{{route('empresas.edit',$empresas->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></a>
+                                  @if($empresas->estado == 1)
+                                  <a href="{{route('empresas.show',$empresas->id)}}">
+                                  <button class="btn btn-danger btn-sm"><i class="fa fa-close"></i></button>
+                                  </a>
+                                  @else
+                                  <a href="{{route('empresas.show',$empresas->id)}}">
                                   <button class="btn btn-success btn-sm"><i class="fa fa-check"></i></button>
-                                  {!!Form::close()!!}
+                                  </a>
+                                  @endif
                                 </td> 
                             </tr>  
                             @include('panel.empresas.show')                      
