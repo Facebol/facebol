@@ -25,8 +25,8 @@
                                 <td>{{$ciudad->nombre}}</td>
                                 <td>
                                   {!!Form::open(['route'=>['ciudad.destroy', $ciudad->id], 'method' => 'DELETE'])!!}
-                                  <a href="{{route('ciudad.edit',$pais->id)}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                                  <button class="btn btn-success"><i class="fa fa-check"></i></button>
+                                  <a href="{{route('ciudad.edit',$ciudad->id)}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+                                  <button class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
                                   {!!Form::close()!!}
                                 </td> 
                             </tr>                        
@@ -35,6 +35,7 @@
                         <tfoot>
                             <tr>
                                 <th>Nombre</th>
+                                <th>Opciones</th>
                             </tr>
                         </tfoot>
                     </table>

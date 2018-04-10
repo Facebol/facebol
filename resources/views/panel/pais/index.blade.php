@@ -35,6 +35,7 @@
                         <tfoot>
                             <tr>
                                 <th>Nombre</th>
+                                <th>Opciones</th>
                             </tr>
                         </tfoot>
                     </table>

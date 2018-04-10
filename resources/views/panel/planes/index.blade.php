@@ -6,11 +6,7 @@
                 <div class="box-header">
                     <h2 class="text-center">Lista de Planes</h2>
                 </div><!-- /.box-header -->
-                <div class="col-xs-12 col-md-6" style="padding-left: 920px;">
-                    <a href="{{route('institucion.create')}}">
-                        <a href="{{route('planes.create')}}" type="button" class="btn btn-success"><i class="fa fa-plus"></i>Agregar</a>
-                    </a>
-                </div><br><br><br>
+
                 <div class="box-body table-responsive">
                     <table class="table table-bordered table-striped">
                         <thead>

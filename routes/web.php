@@ -32,3 +32,7 @@ Route::resource('panel/usuarios','controllerUsuario');
 Route::resource('panel/institucion','controllerInstitucion');
 Route::get('panel','controllerPanel@startAdmin')->name('start-a');
 Route::get('panel-c','controllerPanel@startCurrier')->name('start-c');
+Route::get('prueba',function(){
+    Alert::success('hecho ','realizado');
+    return view('pueba');
+});

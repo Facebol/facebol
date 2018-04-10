@@ -24,6 +24,7 @@ class CreateEmpresasTable extends Migration
             $table->string('promocion')->nullable();
             $table->string('descuento')->nullable();
             $table->string('horario');
+            $table->boolean('activo');
             $table->string('web')->unique()->nullable();
             $table->integer('categoria_id')->unsigned();
             $table->string('imagen')->unique();

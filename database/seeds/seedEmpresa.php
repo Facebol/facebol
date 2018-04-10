@@ -26,6 +26,7 @@ class seedEmpresa extends Seeder
                 'horario'=>'De lunes a domingo de 9:00 a 17:00',
                 'imagen'=>'pampa.png',
                 'categoria_id'=>2,
+                'activo'=>1,
                 'usuario_id'=>1,
             ],
             [
@@ -38,6 +39,7 @@ class seedEmpresa extends Seeder
                 'descuento'=>'20% de descuento',
                 'facebook'=>'https://facebook.com/2',
                 'direccion'=>'Calle L. de la Vega entre c/Hermanas de Sta Cruz y Avenida Chacaltaya.',
+                'activo'=>1,
                 'horario'=>'Jueves y domingo de 8:00 a 19:00',
                 'web'=>'https://huajchilla.com',
                 'imagen'=>'crismar.png',
@@ -52,6 +54,7 @@ class seedEmpresa extends Seeder
                 'email'=>'pamp2a@gmail.com',
                 'promocion'=>'20% de descuento en cualquier producto',
                 'descuento'=>'20% de Descuento',
+                'activo'=>1,
                 'facebook'=>'https://facebook.com/3',
                 'direccion'=>'Calle',
                 'horario'=>'Atención permanente en la pagina de facebook',
@@ -75,6 +78,7 @@ class seedEmpresa extends Seeder
                 'imagen'=>'grapic.png',
                 'categoria_id'=>3,
                 'usuario_id'=>1,
+                'activo'=>1,
             ]
         );
         Empresa::insert($datos);

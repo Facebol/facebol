@@ -18,7 +18,7 @@
                     </dl>
                     <dl class="row">
                         <dt class="col-sm-4">Ciudad :</dt>
-                        <dd class="col-sm-6" disabled="">{{$empresas->ciudad}}</dd>
+                        <dd class="col-sm-6" disabled="">{{$empresas->ciudad->nombre}}</dd>
                     </dl>
                     <dl class="row">
                         <dt class="col-sm-4">Categoria :</dt>

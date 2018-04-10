@@ -16,10 +16,12 @@ use App\Planes;
 use App\PlanesDetalle;
 use App\Actividad;
 use Session;
+use Alert;
 class controllerInicio extends Controller
 {
     public function Inicio()
     { 
+        //Alert::success('Error Title', 'Error Message');
         $plan=Planes::first();
         $planDetalle=PlanesDetalle::all();
         $institucion=Institucion::first();
@@ -103,10 +105,14 @@ class controllerInicio extends Controller
             ]
         );
         $usuario->save();
-        return redirect()->route('inicio');
+        Session::flash('title','Éxito al cambiar la contraseña');
+        Session::flash('body','El cambio de contraseña fue un éxito, al identificarse nuevamente utilize  su nueva contraseña');
+        return view('inicio.mensaje');
     }
     public function preRegistro(Request $datos)
     {
+        $institucion=Institucion::first();
+        $categorias=Categoria::all();
         $usuario=User::where('cod_face',$datos->codigo)->first();
         if($usuario)
         {
@@ -120,11 +126,11 @@ class controllerInicio extends Controller
             ]);
             Session::flash('title','El Pre Registro fue un Éxito');
             Session::flash('body','Su pre registro fue un éxito, le mandamos un mensaje a su correo electrónico para mas información revíselo');
-            return view('inicio.mensaje');
+            return view('inicio.mensaje',compact('categorias','institucion'));
         }else{
             Session::flash('title','El Pre Registro No Fue Realizado');
             Session::flash('body','No se pudo realizar el pre registro ya que el codigo de usuario no fue encontrado, por favor vuelva a realizar el registro y verifique el el codigo.');
-            return view('inicio.mensaje');
+            return view('inicio.mensaje',compact('categorias','institucion'));
         }
     }
     public function contactanos()

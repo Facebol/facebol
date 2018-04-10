@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use Session;
-
+use Alert;
 class controllerLogin extends Controller
 {
     public function log(Request $request)
@@ -14,6 +14,7 @@ class controllerLogin extends Controller
         {   
             return redirect()->route('start-a');
         }else{
+            Alert::error('Error Title', 'Error Message');
             return redirect()->route('inicio');
         }
     }

@@ -2,17 +2,17 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>AdminLTE | Flot Charts</title>
-        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>FaceBol</title>
         <!-- bootstrap 3.0.2 -->
-        <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
         <!-- font Awesome -->
         <link href="{{asset('css/font-awesome.css')}}" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
         <link href="{{asset('css/ionicons.min.css')}}" rel="stylesheet" type="text/css" />
 
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
-
         <!-- Theme style -->
         <link href="{{asset('css/AdminLTE.css')}}" rel="stylesheet" type="text/css" />
 
@@ -50,7 +50,7 @@
                 <section class="content">
 
                     @yield('contenido')
-                
+                    @include('sweetalert::alert')
                 </section> 
 
                 
@@ -60,6 +60,7 @@
         
 
         <!-- jQuery 2.0.2 -->
+        
         <script src="{{asset('js/jquery.min.js')}}"></script>
         <!-- Bootstrap -->
         <script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript"></script>

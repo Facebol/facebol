@@ -32,23 +32,18 @@
                                 <td>{{$empresas->telefono}}</td>
                                 <td>{{$empresas->email}}</td>
                                 <td>{{$empresas->facebook}}</td>
-<<<<<<< HEAD
                                 <td>{{$empresas->ciudad->nombre}}</td>
-                                <td><img src="{{asset('imagen')}}/{{$empresas->imagen}}" width="50px" height="50px"></td>
                                 <td>
-                                  <a href="{{route('empresas.edit',$empresas->id)}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                                  <a class="btn btn-success" href="{{route('empresas.show',$empresas->id)}}"><i class="fa fa-check"></i></a>
-=======
-                                <td>{{$empresas->ciudad_id}}</td>
-                                <td>
-                                  {!!Form::open(['route'=>['empresas.destroy', $empresas->id], 'method' => 'DELETE'])!!}
+                                    @if($empresas->activo==1)
+                                    <a href="{{route('empresas.show',$empresas->id)}}" class="btn btn-success btn-sm"><i class="fa fa-check"></i></a>
+                                    @else
+                                    <a href="{{route('empresas.show',$empresas->id)}}" class="btn btn-danger btn-sm"><i class="fa fa-remove"></i></a>
+                                    @endif
+
                                   <a data-toggle="modal" href="#myModal{{$empresas->id}}">
                                     <button class="btn btn-warning btn-sm"><i class="fa fa-eye"></i></button>
                                   </a>
                                   <a href="{{route('empresas.edit',$empresas->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></a>
-                                  <button class="btn btn-success btn-sm"><i class="fa fa-check"></i></button>
-                                  {!!Form::close()!!}
->>>>>>> origen/master
                                 </td> 
                             </tr>  
                             @include('panel.empresas.show')                      

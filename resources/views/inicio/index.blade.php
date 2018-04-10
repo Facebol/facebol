@@ -1,5 +1,6 @@
 @extends('inicio.template')
 @section('contenido')
+
 <div class="container mt-4">
   <h2 class="text-center color-primary mb-2 wow fadeInDown animation-delay-4">Quienes Somos</h2>
   <p class="lead text-center aco wow fadeInDown animation-delay-5 mw-800 center-block mb-4">{{$institucion->qSomos}}.</p>

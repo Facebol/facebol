@@ -3,3 +3,4 @@
         <label>Nombre </label>
         {{Form::text('nombre',null,['class'=>'form-control','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
     </div>
+</div>

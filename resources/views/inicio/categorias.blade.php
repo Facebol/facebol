@@ -48,6 +48,7 @@
             <div class="row text-center">
               <!-- item -->
               @foreach($empresas as $empresa)
+              @if($empresa->activo==1)
               <div class="col-lg-4 col-md-6">
                   <div class="card width-auto">
                     <figure class="ms-thumbnail ms-thumbnail-horizontal">
@@ -84,7 +85,8 @@
                     </div>
                   </div>
                 </div>
-              @endforeach
+                @endif
+                @endforeach
               <!-- item -->
               
             </div>

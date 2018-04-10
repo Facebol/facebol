@@ -1,7 +1,7 @@
 <div class="box-body">
     <div class="form-group col-md-6">
-        <label>Usuario</label>
-        {{Form::select('usuario_id',$usuario,null,['class'=>'form-control','autofocus','requerid'])}}
+        <label>Codigo de Usuario</label>
+        {{Form::text('cod_user',null,['class'=>'form-control','autofocus','requerid'])}}
     </div>
     <div class="form-group col-md-6">
         <label>Nombre </label>
