@@ -69,7 +69,6 @@ class controllerEmpresa extends Controller
 			return redirect()->route('empresa.create');
 		}
    	}
-
    	public function edit($id){
 
       $usuario = User::orderBy('id','desc')->pluck('nombre','id');
@@ -97,7 +96,7 @@ class controllerEmpresa extends Controller
         'categoria_id'=>$request->categoria_id,
         'imagen'=>$request->imagen,
         'usuario_id'=>$request->usuario_id,
-        'ciudad_id'=>$request->ciudad_id
+        'ciudad_id'=>$request->ciudad_id,
 		   ]);
 		$empresa->save();
    		return redirect()->route('empresas.index');

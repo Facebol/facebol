@@ -19,7 +19,7 @@
             <p>Correo del Usuario: <strong> {{$email}}</strong></p>
             </div>
             <div style="border-bottom: 1px solid #eff2f7; padding-bottom: 15px; margin-bottom: 15px;">
-            <p>Correo del Usuario: <strong> {{$nombre}}</strong></p>
+            <p>Nombre del Usuario: <strong> {{$nombre}}</strong></p>
             </div>
             <div style="border-bottom: 1px solid #eff2f7; padding-bottom: 15px; margin-bottom: 15px;">
                 <p>Para recuperar su contraseña solo haga click en el siguiente enlace:</p>

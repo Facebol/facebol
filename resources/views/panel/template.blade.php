@@ -11,7 +11,7 @@
         <link href="{{asset('css/font-awesome.css')}}" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
         <link href="{{asset('css/ionicons.min.css')}}" rel="stylesheet" type="text/css" />
-
+        <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
         <!-- Theme style -->
         <link href="{{asset('css/AdminLTE.css')}}" rel="stylesheet" type="text/css" />

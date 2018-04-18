@@ -4,10 +4,10 @@
         <div class="col-xs-12">                            
             <div class="box">
                 <div class="box-header">
-                    <h2 class="text-center">Lista de Empresas</h2>
+                    <h2 class="text-center">Lista de Email</h2>
                 </div><!-- /.box-header -->
                 <div class="col-xs-12 col-md-6" style="padding-left: 920px;">
-                    <a href="{{route('pais.create')}}">
+                    <a href="{{route('email.create')}}">
                         <button type="button" class="btn btn-success"><i class="fa fa-plus"></i>  &nbsp;&nbsp;&nbsp;&nbsp; Agregar</button>
                     </a>
                 </div><br><br><br>
@@ -15,27 +15,25 @@
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th class="text-center">Nombre</th>
-                                <th class="text-center">Opciones</th>
+                                <th>Nombre</th>
+                                <th>Opciones</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($pais as $pais)
+                            @foreach($email as $emails)
                             <tr>
-                                <td class="text-center">{{$pais->nombre}}</td>
-                                <td class="text-center">
-                                  {!!Form::open(['route'=>['pais.destroy', $pais->id], 'method' => 'DELETE'])!!}
-                                  <a href="{{route('pais.edit',$pais->id)}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                                  <button class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
-                                  {!!Form::close()!!}
+                                <td>{{$emails->email}}</td>
+                                <td>
+                                  <a href="{{route('email.edit',$emails->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></a>
+                                  
                                 </td> 
-                            </tr>                        
+                            </tr>  
                             @endforeach                   
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th class="text-center">Nombre</th>
-                                <th class="text-center">Opciones</th>
+                                <th>Nombre</th>
+                                <th>Opciones</th>
                             </tr>
                         </tfoot>
                     </table>

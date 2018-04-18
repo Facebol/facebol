@@ -184,6 +184,7 @@ return [
         Barryvdh\DomPDF\ServiceProvider::class,
         Laraveles\Spanish\SpanishServiceProvider::class,
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+        
 
     ],
 
