@@ -6,7 +6,7 @@
             <h3 class="box-title">Editar Actividades</h3>
         </div><!-- /.box-header -->
         <!-- form start -->
-        {{Form::model($actividades,['route'=> ['actividades.update',$actividades->id],'method'=>'PUT','files'=>true])}} 
+        {{Form::model($actividad,['route'=> ['actividades.update',$actividad->id],'method'=>'PUT','files'=>true])}} 
         @include('panel.actividades.form.form')
 
         <div class="box-footer col-md-12 text-center">

@@ -7,11 +7,11 @@ use App\Institucion;
 
 class controllerInstitucion extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware('panel');
+        $this->middleware('sudo');
+    }
     public function index()
     {
         $institucion = Institucion::orderBy('id','desc')->paginate(5);

@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('imagen');
             $table->string('codigo')->unique();
             $table->string('cod_face')->unique();
-            $table->enum('tipo',['Usuario','Administrador','Empresa']);
+            $table->enum('tipo',['Usuario','Administrador','Empresa','Sadministrador']);
             $table->boolean('activo');
             $table->integer('ciudad_id')->unsigned();
             $table->integer('user_id')->unsigned()->nullable();

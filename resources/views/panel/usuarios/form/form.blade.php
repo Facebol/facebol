@@ -8,10 +8,6 @@
         {{Form::text('apellido',null,['class'=>'form-control','autofocus','requerid'])}}
     </div>
     <div class="form-group col-md-6">
-        <label>Codigo</label>
-        {{Form::text('cod_face',null,['class'=>'form-control','autofocus','requerid'])}}
-    </div>
-    <div class="form-group col-md-6">
         <label>Carnet de identidad</label>
         {{Form::number('ci',null,['class'=>'form-control','autofocus','requerid'])}}
     </div>

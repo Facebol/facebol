@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Email;
 class controllerEmail extends Controller
 {
+	public function __construct()
+    {
+        $this->middleware('panel');
+    }
     public function index(){
   
     	$email = Email::orderBy('id','desc')->paginate('5');

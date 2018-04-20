@@ -7,6 +7,10 @@ use App\Producto;
 use App\Empresa;
 class controllerProductos extends Controller
 {
+	public function __construct()
+    {
+        $this->middleware('panel');
+    }
 	public function index(){
 
 		$producto = Producto::orderBy('id','desc')->paginate('5');

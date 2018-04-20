@@ -144,11 +144,11 @@
               <!-- Wrapper for slides -->
               <div class="carousel-inner" role="listbox">
                 <div class="ms-hero-img-slider carousel-item active">
-                  <img src="assets/img/demo/hero1.png" alt="" class="img-fluid"> </div>
+                  <img src="{{asset('imagen/banner1.png')}}" alt="" class="img-fluid"> </div>
                 <div class="ms-hero-img-slider carousel-item">
-                  <img src="assets/img/demo/hero3.png" alt="" class="img-fluid"> </div>
+                  <img src="{{asset('imagen/banner2.png')}}" alt="" class="img-fluid"> </div>
                 <div class="ms-hero-img-slider carousel-item">
-                  <img src="assets/img/demo/hero2.png" alt="" class="img-fluid"> </div>
+                  <img src="{{asset('imagen/banner3.png')}}" alt="" class="img-fluid"> </div>
               </div>
             </div>
           </div>

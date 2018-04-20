@@ -19,6 +19,7 @@ use Session;
 use Alert;
 class controllerInicio extends Controller
 {
+    
     public function Inicio()
     { 
         //Alert::success('Error Title', 'Error Message');
@@ -29,6 +30,14 @@ class controllerInicio extends Controller
         $planesDetalle = PlanesDetalle::all();
         $categorias=Categoria::all();
         return view('inicio.index',compact('planes','planesDetalle','categorias','institucion','plan','planDetalle'));
+    }
+    public function detalleEmpresa($id)
+    {
+        $institucion=Institucion::first();
+        $categorias=Categoria::all();
+        $actividad = Actividad::all();
+        $empresa = Empresa::where('id',$id)->first();
+        return view('inicio.empresa-detalle',compact('empresa','categorias','institucion'));
     }
     public function suscribir(Request $datos)
     {
@@ -53,9 +62,9 @@ class controllerInicio extends Controller
                 'email'=>$datos->email,
             ]);
         }
-        Mail::send('emails.emailGet',$datos->all(),function($message){
+        Mail::send('emails.emailGet',$datos->all(),function($message) use($datos){
             $message->to('facebol@facebolsrl.com','Facebol')
-            ->subject('Mensaje de Usuario');
+            ->subject($datos->situacion);
         });
         return redirect()->route('inicio');
     }
@@ -154,12 +163,94 @@ class controllerInicio extends Controller
         $categorias = Categoria::all();
         return view('inicio.categorias',compact('institucion','categorias','categoria','empresas'));
     }
+    public function mes($numero)
+    {
+        if($numero=='01')
+        {
+            return $mes="Enero";
+        }else 
+        {
+            if($numero=='02')
+            {
+                return $mes="Febrero";
+            }else
+            {
+                if($numero=='03')
+                {
+                    return $mes="Marzo";
+                }else
+                {
+                    if($numero=='04')
+                    {
+                        return $mes="Abril";
+                    }else
+                    {
+                        if($numero=='05')
+                        {
+                            return $mes="Mayo";
+                        }else
+                        {
+                            if($numero=='06')
+                            {
+                                $actividad["mes"]="Junio";
+                            }else
+                            {
+                                if($numero=='07')
+                                {
+                                    $actividad["mes"]="Julio";
+                                }else
+                                {
+                                    if($numero=='08')
+                                    {
+                                        return $mes="Agosto";
+                                    }else
+                                    {
+                                        if($numero=='09')
+                                        {
+                                            return $mes="Septiembre";
+                                        }else
+                                        {
+                                            if($numero=='10')
+                                            {
+                                                return $mes="Octubre";
+                                            }else
+                                            {
+                                                if($numero=='11')
+                                                {
+                                                    return $mes="Noviembre";
+                                                }else
+                                                {
+                                                    if($numero=='13')
+                                                    {
+                                                        return $mes="Diciembre";
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     public function actividad()
     {
+        $actividades=Actividad::orderBy('id','desc')->get();
+        foreach($actividades as $actividad)
+        {
+            list($año,$mes,$dia)=explode("-",$actividad->fecha);
+            $actividad["dia"]=$dia;
+            $actividad["mes"]=$this->mes($mes);
+            $actividad["año"]=$año;
+        }
         $institucion=Institucion::first();
         $categorias=Categoria::all();
         $actividad = Actividad::all();
-        return view('inicio.actividades',compact('institucion','actividad','categorias'));
+        return view('inicio.actividades',compact('institucion','actividad','categorias','actividades'));
     }
     public function equipo()
     {
@@ -167,5 +258,20 @@ class controllerInicio extends Controller
         $categorias=Categoria::all();
         $equipos = Equipo::all();
         return view('inicio.equipo',compact('institucion','equipos','categorias'));
+    }
+    public function noticia()
+    {
+        $actividades=Actividad::orderBy('id','desc')->get();
+        foreach($actividades as $actividad)
+        {
+            list($año,$mes,$dia)=explode("-",$actividad->fecha);
+            $actividad["dia"]=$dia;
+            $actividad["mes"]=$this->mes($mes);
+            $actividad["año"]=$año;
+        }
+        $institucion=Institucion::first();
+        $categorias=Categoria::all();
+        $actividad = Actividad::all();
+        return view('inicio.noticias',compact('institucion','actividad','categorias','actividades'));
     }
 }

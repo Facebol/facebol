@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <!-- Mirrored from agmstudio.io/themes/material-style/2.2.2/portfolio-cards.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 23:13:23 GMT -->
 <head>
     <meta charset="utf-8">
@@ -43,17 +43,17 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class="row text-center">
+            <div class="row">
               <!-- item -->
               @foreach($empresas as $empresa)
               @if($empresa->activo==1)
               <div class="col-lg-4 col-md-6">
-                <div class="card width-auto">
+                <div class="card width-auto text-center">
                   <figure class="ms-thumbnail ms-thumbnail-horizontal">
                     <img src="{{asset('imagen')}}/{{$empresa->imagen}}" alt="" class="img-fluid">
                     <figcaption class="ms-thumbnail-caption text-center">
                       <div class="ms-thumbnail-caption-content">
-                        <h4 class="ms-thumbnail-caption-title mb-2">{{$empresa->nombre}}</h4>
+                        <h4 class="ms-thumbnail-caption-title mb-2 ">{{$empresa->nombre}}</h4>
                         <a href="{{$empresa->facebook}}" class="btn-circle btn-circle-raised btn-circle-xs mr-1 btn-circle-white color-danger">
                           <i class="zmdi zmdi-facebook"></i>
                         </a>
@@ -66,20 +66,15 @@
                       </div>
                     </figcaption>
                   </figure>
-                  <div class="card-body text-center">
-                    <a href="javascript:void(0)" class="btn-circle btn-circle-warning btn-circle-raised btn-card-float right wow zoomInDown index-2">
+                  <div class="card-body">
+                    <a href="javascript:void(0)" class="btn-circle btn-circle-primary btn-circle-raised btn-card-float right wow zoomInDown index-2">
                       <i class="zmdi zmdi-star"></i>
                     </a>
-                    <h4 class="color-warning">{{$empresa->nombre}}</h4>
-                    <p><strong>Descripcion :</strong>{{$empresa->descripcion}}</p>
-                    <p><strong>Promocion :</strong> {{$empresa->promocion}}</p>
-                    <p><strong>Horario :</strong> {{$empresa->horario}}</p>
-                    <p><strong>Direccion :</strong> {{$empresa->direccion}}</p>
-                    <p><strong>Contacto :</strong> {{$empresa->telefono}}</p>
-                    <a href="javascript:void(0)" class="btn btn-warning">
+                    <h4 class="color-primary">{{$empresa->nombre}}</h4>
+                    <a href="javascript:void(0)" class="btn btn-info">
                       <i class="zmdi zmdi-star"></i> {{$empresa->descuento}}</a>
-                    <a href="javascript:void(0)" class="btn btn-warning btn-raised">
-                      <i class="zmdi zmdi-globe"></i> {{$empresa->ciudad->nombre}}</a>
+                    <a href="{{route('detalleEmpresa',$empresa->id)}}" class="btn btn-warning btn-raised">
+                      <i class="zmdi zmdi-caret-right-circle"></i>   Leer mas...</a>
                   </div>
                 </div>
               </div>

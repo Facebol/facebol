@@ -23,6 +23,7 @@ class CreateEmpresasTable extends Migration
             $table->string('direccion')->nullable();
             $table->string('promocion')->nullable();
             $table->string('descuento')->nullable();
+            $table->string('video')->nullable();
             $table->string('horario');
             $table->boolean('activo');
             $table->string('web')->unique()->nullable();
@@ -33,7 +34,6 @@ class CreateEmpresasTable extends Migration
             $table->foreign('categoria_id')->references('id')->on('categorias');
             $table->foreign('usuario_id')->references('id')->on('users');
             $table->foreign('ciudad_id')->references('id')->on('ciudads');
-            $table->boolean('estado');
             $table->timestamps();
         });
     }

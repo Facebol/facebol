@@ -8,11 +8,10 @@ use Alert;
 use Exception;
 class controladorPais extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware('panel');
+    }
     public function index()
     {
       $pais=Pais::orderBy('id','desc')->paginate('5');

@@ -28,24 +28,34 @@
                 <i class="fa fa-dashboard"></i> <span>Inicio</span>
             </a>
         </li>
-        @if(Auth::user()->tipo=="Administrador")
+        @if(Auth::user()->tipo=="Sadministrador")
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-bar-chart-o"></i>
+                <span>Pagina Web</span>
+                <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">   
+                <li><a href="{{route('institucion.index')}}"><i class="fa fa-angle-double-right"></i> Institucion</a></li>
+                <li><a href="{{route('equipo.index')}}"><i class="fa fa-angle-double-right"></i> Equipo</a></li>
+                <li><a href="{{route('planes.index')}}"><i class="fa fa-angle-double-right"></i> Planes</a></li>
+            </ul>
+        </li>
+        @endif
+        @if(Auth::user()->tipo=="Administrador" || Auth::user()->tipo=="Sadministrador")
         <li class="treeview">
             <a href="#">
                 <i class="fa fa-bar-chart-o"></i>
                 <span>Administracion</span>
                 <i class="fa fa-angle-left pull-right"></i>
             </a>
-            <ul class="treeview-menu">
-               
+            <ul class="treeview-menu">   
                 <li><a href="{{route('usuarios.index')}}"><i class="fa fa-angle-double-right"></i> Usuarios</a></li>
                 <li><a href="{{route('empresas.index')}}"><i class="fa fa-angle-double-right"></i> Empresas</a></li>
-                <li><a href=""><i class="fa fa-angle-double-right"></i> Correos</a></li>
+                <li><a href="{{route('email.index')}}"><i class="fa fa-angle-double-right"></i> Correos</a></li>
                 <li><a href="{{route('actividades.index')}}"><i class="fa fa-angle-double-right"></i> Actividades</a></li>
                 <li><a href="{{route('pais.index')}}"><i class="fa fa-angle-double-right"></i> Pais</a></li>
                 <li><a href="{{route('ciudad.index')}}"><i class="fa fa-angle-double-right"></i> Ciudad</a></li>
-                <li><a href="{{route('equipo.index')}}"><i class="fa fa-angle-double-right"></i> Equipo</a></li>
-                <li><a href="{{route('planes.index')}}"><i class="fa fa-angle-double-right"></i> Planes</a></li>
-                <li><a href="{{route('institucion.index')}}"><i class="fa fa-angle-double-right"></i> Institucion</a></li>
                 <li><a href="{{route('categoria.index')}}"><i class="fa fa-angle-double-right"></i> Categorias</a></li>
                 <li><a href="{{route('productos.index')}}"><i class="fa fa-angle-double-right"></i> Productos</a></li>
             </ul>

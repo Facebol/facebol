@@ -28,6 +28,7 @@ class seedEmpresa extends Seeder
                 'categoria_id'=>2,
                 'activo'=>1,
                 'usuario_id'=>1,
+                'video'=>'nGaRd3Kndxc'
             ],
             [
                 'ciudad_id'=>1,
@@ -45,6 +46,7 @@ class seedEmpresa extends Seeder
                 'imagen'=>'crismar.png',
                 'categoria_id'=>2,
                 'usuario_id'=>1,
+                'video'=>'nGaRd3Kndxc'
             ],
             [
                 'ciudad_id'=>1,
@@ -62,6 +64,7 @@ class seedEmpresa extends Seeder
                 'imagen'=>'mundo.png',
                 'categoria_id'=>1,
                 'usuario_id'=>1,
+                'video'=>'nGaRd3Kndxc'
             ],
             [
                 'ciudad_id'=>1,
@@ -79,6 +82,7 @@ class seedEmpresa extends Seeder
                 'categoria_id'=>3,
                 'usuario_id'=>1,
                 'activo'=>1,
+                'video'=>'nGaRd3Kndxc'
             ]
         );
         Empresa::insert($datos);

@@ -6,20 +6,23 @@
             <h3 class="ms-footbar-title">Menu</h3>
             <ul class="list-unstyled ms-icon-list three_cols">
               <li>
-                <a href="index-2.html">
+                <a href="{{route('inicio')}}">
                   <i class="zmdi zmdi-home"></i> Inicio</a>
               </li>
               <li>
-                <a href="page-blog.html">
+                <a href="{{route('empresa')}}">
                   <i class="zmdi zmdi-edit"></i> Empresas</a>
               </li>
-
               <li>
-                <a href="portfolio-filters_sidebar.html">
+                <a href="{{route('actividad')}}">
                   <i class="zmdi zmdi-case"></i> Actividades</a>
               </li>
               <li>
-                <a href="page-timeline_left2.html">
+                <a href="{{route('noticia')}}">
+                  <i class="zmdi zmdi-case"></i> Noticias</a>
+              </li>
+              <li>
+                <a href="{{route('contactanos')}}">
                   <i class="zmdi zmdi-time"></i> Contactanos</a>
               </li>
             </ul>

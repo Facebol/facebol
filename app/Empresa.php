@@ -7,7 +7,7 @@ use Carbon\Carbon;
 class Empresa extends Model
 {
     protected $table="empresas";
-    protected $fillable=['nombre','descripcion','telefono','email','facebook','direccion','promocion','descuento','horario','web','categoria_id','imagen','usuario_id','ciudad_id','activo'];
+    protected $fillable=['nombre','descripcion','telefono','email','facebook','direccion','promocion','descuento','horario','web','categoria_id','imagen','usuario_id','ciudad_id','activo','video'];
     public function setImagenAttribute($imagen){
         if(! empty($imagen)){
               $name = Carbon::now()->second.$imagen->getClientOriginalName();

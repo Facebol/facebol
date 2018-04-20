@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   
-<!-- Mirrored from agmstudio.io/themes/material-style/2.2.2/page-contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 23:12:15 GMT -->
+<!-- Mirrored from agmstudio.io/themes/material-style/2.2.2/page-timeline_left.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 23:12:24 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,52 +28,52 @@
     </div>
     <div class="ms-site-container">
       <!-- Modal -->
-     @include('inicio.partes.modal')
-     @include('inicio.partes.navLogo')
-     @include('inicio.partes.nav')
+    @include('inicio.partes.modal')
+    @include('inicio.partes.navLogo')
+    @include('inicio.partes.nav')
+      <div class="ms-hero-page ms-hero-img-meeting ms-hero-bg-primary ms-bg-fixed mb-4">
+        <div class="container">
+          <div class="text-center">
+            <h1 class="no-m ms-site-title color-white center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-5">Noticias</h1>
+            <p class="lead lead-lg color-light text-center center-block mt-2 mw-800 text-uppercase fw-300 animated fadeInUp animation-delay-7">Todas las noticias estan listadas de manera cronologica.
+              <br>Si estas suscrito podras recibir notificaciones a tu correo de las noticias que tenemos.</p>s
+          </div>
+        </div>
+      </div>
       <div class="container">
         <div class="row">
-          <div class="col-xl-8 col-lg-7">
-            <div class="card card-primary animated fadeInUp animation-delay-7">
-              <div class="ms-hero-bg-primary ms-hero-img-mountain">
-                <h2 class="text-center no-m pt-4 pb-4 color-white index-1">Contacto</h2>
-              </div>
-              <div class="card-body">
-                {{Form::open(['route'=>'email_post','method'=>'POST','class'=>'form-horizontal'])}}
-                <form class="form-horizontal">
-                  <fieldset class="container">
-                    <div class="form-group row">
-                      <label for="inputEmail" autocomplete="false" class="col-lg-3 control-label">Nombre</label>
-                      <div class="col-lg-9">
-                        <input type="text" name="nombre" class="form-control" id="inputName" placeholder="Nombre"> </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="inputEmail" autocomplete="false" class="col-lg-3 control-label">Correo</label>
-                      <div class="col-lg-9">
-                        <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Correo Electronico"> </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="inputEmail" autocomplete="false" class="col-lg-3 control-label">Situacion</label>
-                      <div class="col-lg-9">
-                        <input type="text" name="situacion"class="form-control" id="inputSubject" placeholder="Situacion"> </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="textArea" class="col-lg-3 control-label">Mensaje</label>
-                      <div class="col-lg-9">
-                        <textarea class="form-control" name="mensaje"rows="3" id="textArea" placeholder="Tu Mensaje"></textarea>
+          <div class="col-lg-8">
+            <ul class="ms-timeline">
+              @foreach($actividades as $actividad)
+                @if($actividad->tipo == 'noticia')
+                  <li class="ms-timeline-item wow materialUp">
+                    <div class="ms-timeline-date">
+                      <time class="timeline-time" datetime="">{{$actividad->año}}
+                        <span>{{$actividad->mes}}</span>
+                        <span>{{$actividad->dia}}</span>
+                      </time>
+                      <i class="ms-timeline-point bg-primary"></i>
+                     </div>
+                    <div class="card card-info">
+                      <div class="card-header">
+                        <h3 class="card-title text-center">{{$actividad->nombre}}</h3>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-4 text-center">
+                            <img src="{{asset('imagen/'.$actividad->imagen)}}" alt="" class="img-fluid mb-2" width="150px" height="150px"> </div>
+                          <div class="col-md-8">
+                            <p>{{$actividad->descripcion}}</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="form-group row justify-content-end">
-                      <div class="col-lg-10">
-                        <button type="submit" class="btn btn-raised btn-primary">Enviar</button>
-                      </div>
-                    </div>
-                  </fieldset>
-                {{Form::close()}}
-              </div>
-            </div>
+                  </li>
+                @endif
+              @endforeach
+            </ul>
           </div>
-          <div class="col-xl-4 col-lg-5">
+          <div class="col-lg-4">
             <div class="card card-primary animated fadeInUp animation-delay-7">
               <div class="card-body">
                 <div class="text-center mb-2">
@@ -110,11 +110,11 @@
       </div>
       <!-- container -->
       @include('inicio.partes.footer')
-      <!-- ms-site-container -->
-      @include('inicio.partes.menuL')
-   @include('inicio.partes.styles.js')
     </div>
+    <!-- ms-site-container -->
+    @include('inicio.partes.menuL')
+   @include('inicio.partes.styles.js')
   </body>
 
-<!-- Mirrored from agmstudio.io/themes/material-style/2.2.2/page-contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 23:12:15 GMT -->
+<!-- Mirrored from agmstudio.io/themes/material-style/2.2.2/page-timeline_left.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 23:12:25 GMT -->
 </html>

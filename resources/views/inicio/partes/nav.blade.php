@@ -23,27 +23,23 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a href="" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="blog">Empresas
+            <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="page">Empresas
               <i class="zmdi zmdi-chevron-down"></i>
             </a>
             <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="{{route('empresa')}}">
-                  <i class="zmdi zmdi-sort-amount-desc"></i> Todas las empresas</a>
+              <li class="dropdown-submenu">
+                <a href="javascript:void(0)" class="dropdown-item has_children">Categorias</a>
+                <ul class="dropdown-menu dropdown-menu-left">
+                  @foreach($categorias as $categoria)
+                  <li>
+                    <a class="dropdown-item" href="{{route('categoria',$categoria->id)}}">{{$categoria->nombre}}</a>
+                  </li>
+                 @endforeach
+                </ul>
               </li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-8" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="portfolio">Categoria
-              <i class="zmdi zmdi-chevron-down"></i>
-            </a>
-            <ul class="dropdown-menu">
-              @foreach($categorias as $categoria)
               <li>
-                <a class="dropdown-item" href="{{route('categoria',$categoria->id)}}">
-                  <i class="zmdi zmdi-sort-amount-desc"></i> {{$categoria->nombre}}</a>
+                <a class="dropdown-item" href="{{route('empresa')}}" class="dropdown-link">Todas las empresas</a>
               </li>
-              @endforeach
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -57,6 +53,17 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="">Noticias
+                <i class="zmdi zmdi-chevron-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="{{route('noticia')}}">
+                    <i class="zmdi zmdi-sort-amount-desc"></i> Todas las Noticias</a>
+                </li>
+              </ul>
+            </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="">Nuestro Equipo
               <i class="zmdi zmdi-chevron-down"></i>

@@ -8,7 +8,10 @@ use App\User;
 use App\Ciudad;
 class controllerUsuario extends Controller
 {
-
+    public function __construct()
+    {
+        $this->middleware('panel');
+    }
     public function index()
     {
        $usuarios=User::orderBy('id','desc')->paginate(10);
@@ -23,6 +26,7 @@ class controllerUsuario extends Controller
 
     public function store(Request $request)
     {
+        $cod_face=$request->ci."FB";
         User::create(
             [
                 'nombre'=>$request->nombre,
@@ -34,7 +38,7 @@ class controllerUsuario extends Controller
                 'password'=>$request->password,
                 'imagen'=>$request->imagen,
                 'codigo'=>str_random(20),
-                'cod_face'=>$request->cod_face,
+                'cod_face'=>$cod_face,
                 'ciudad_id'=>$request->ciudad_id,
                 'activo'=>1,
                 'tipo'=>$request->tipo,
@@ -74,6 +78,7 @@ class controllerUsuario extends Controller
     public function update(Request $request, $id)
     {
         $usuario= User::find($id);
+        $cod_face=$request->ci."FB";
         $usuario->fill(
             [
                 'nombre'=>$request->nombre,
@@ -84,7 +89,7 @@ class controllerUsuario extends Controller
                 'email'=>$request->email,
                 'password'=>$request->password,
                 'imagen'=>$request->imagen,
-                'cod_face'=>$request->cod_face,
+                'cod_face'=>$cod_face,
                 'ciudad_id'=>$request->ciudad_id,
                 'tipo'=>$request->tipo,
             ]

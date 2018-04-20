@@ -9,11 +9,11 @@ use Auth;
 use App\PlanesDetalle;
 class controllerPlanes extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware('panel');
+        $this->middleware('sudo');
+    }
     public function index()
     {
         $planDetalle=PlanesDetalle::all();

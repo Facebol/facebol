@@ -51,6 +51,10 @@
         <label>Direccion</label>
         {{Form::text('direccion',null,['class'=>'form-control','autofocus','requerid'])}}
     </div>
+    <div class="form-group col-md-6">
+        <label>Video (url ID)</label>
+        {{Form::text('video',null,['class'=>'form-control','autofocus','requerid'])}}
+    </div>
     <div class="form-group col-md-12">
         <label>Imagen</label>
         {{Form::file('imagen',null,['class'=>'form-control','requerid'])}}

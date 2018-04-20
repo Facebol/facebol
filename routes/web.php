@@ -1,6 +1,7 @@
 <?php
 // pagina principal
-
+Route::get('empresa/{id}','controllerInicio@detalleEmpresa')->name('detalleEmpresa');
+Route::get('noticia','controllerInicio@noticia')->name('noticia');
 Route::post('preregistro','controllerInicio@preRegistro')->name('preregistro');
 Route::get('equipo','controllerInicio@equipo')->name('equipo');
 Route::get('empresa','controllerInicio@empresa')->name('empresa');
@@ -32,8 +33,3 @@ Route::resource('panel/email','controllerEmail');
 Route::resource('panel/usuarios','controllerUsuario');
 Route::resource('panel/institucion','controllerInstitucion');
 Route::get('panel','controllerPanel@startAdmin')->name('start-a');
-Route::get('panel-c','controllerPanel@startCurrier')->name('start-c');
-Route::get('prueba',function(){
-    Alert::success('hecho ','realizado');
-    return view('pueba');
-});

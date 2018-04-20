@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   
 <!-- Mirrored from agmstudio.io/themes/material-style/2.2.2/portfolio-cards.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 23:13:23 GMT -->
 <head>
@@ -69,19 +69,14 @@
                       </figcaption>
                     </figure>
                     <div class="card-body text-center">
-                      <a href="javascript:void(0)" class="btn-circle btn-circle-warning btn-circle-raised btn-card-float right wow zoomInDown index-2">
+                      <a href="javascript:void(0)" class="btn-circle btn-circle-primary btn-circle-raised btn-card-float right wow zoomInDown index-2">
                         <i class="zmdi zmdi-star"></i>
                       </a>
-                      <h4 class="color-warning">{{$empresa->nombre}}</h4>
-                      <p><strong>Descripcion :</strong>{{$empresa->descripcion}}</p>
-                      <p><strong>Promocion :</strong> {{$empresa->promocion}}</p>
-                      <p><strong>Horario :</strong> {{$empresa->horario}}</p>
-                      <p><strong>Direccion :</strong> {{$empresa->direccion}}</p>
-                      <p><strong>Contacto :</strong> {{$empresa->telefono}}</p>
-                      <a href="javascript:void(0)" class="btn btn-warning">
-                        <i class="zmdi zmdi-star"></i> {{$empresa->descuento}}</a>
-                      <a href="javascript:void(0)" class="btn btn-warning btn-raised">
-                        <i class="zmdi zmdi-globe"></i> {{$empresa->ciudad->nombre}}</a>
+                      <h4 class="color-primary">{{$empresa->nombre}}</h4>
+                    <a href="javascript:void(0)" class="btn btn-info">
+                      <i class="zmdi zmdi-star"></i> {{$empresa->descuento}}</a>
+                    <a href="{{route('detalleEmpresa',$empresa->id)}}" class="btn btn-warning btn-raised">
+                      <i class="zmdi zmdi-caret-right-circle"></i>   Leer mas...</a>
                     </div>
                   </div>
                 </div>

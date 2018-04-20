@@ -7,11 +7,11 @@ use App\Http\Controllers\Controller;
 use App\Equipo;
 class controladorEquipo extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware('panel');
+        $this->middleware('sudo');
+    }
     public function index()
     {
         $equipo = Equipo::orderBy('id','desc')->paginate('5');

@@ -9,6 +9,10 @@ use App\Categoria;
 use App\User;
 class controllerEmpresa extends Controller
 {
+	public function __construct()
+    {
+        $this->middleware('panel');
+	}
     public function index(){
     	$empresa = Empresa::orderBy('id','desc')->paginate('5');
     	return view('panel.empresas.index',compact('empresa'));
@@ -43,7 +47,7 @@ class controllerEmpresa extends Controller
 
 	public function store(Request $request)
 	{
-		$usuario=User::where('cod_fa',$request->cod_user)->first();
+		$usuario=User::where('cod_fa',$request->cod_user)->where('tipo','Empresa')->first();
 		if($usuario)
 		{
 			Empresa::create([
@@ -52,16 +56,17 @@ class controllerEmpresa extends Controller
 				'telefono'=>$request->telefono,
 				'email'=>$request->email,
 				'facebook'=>$request->facebook,
-		 'direccion'=>$request->direccion,
-		 'promocion'=>$request->promocion,
-		 'descuento'=>$request->descuento,
-		 'horario'=>$request->horario,
-		 'activo'=>1,
+		 		'direccion'=>$request->direccion,
+		 		'promocion'=>$request->promocion,
+		 		'descuento'=>$request->descuento,
+		 		'horario'=>$request->horario,
+		 		'activo'=>1,
 				'web'=>$request->web,
-		 'categoria_id'=>$request->categoria_id,
+		 		'categoria_id'=>$request->categoria_id,
 				'imagen'=>$request->imagen,
-		 'usuario_id'=>$usuario->id,
-				'ciudad_id'=>$request->ciudad_id
+		 		'usuario_id'=>$usuario->id,
+				'ciudad_id'=>$request->ciudad_id,
+				'video'=>$request->video
 			]);
 			return redirect()->route('empresas.index');
 		}else
@@ -96,7 +101,8 @@ class controllerEmpresa extends Controller
         'categoria_id'=>$request->categoria_id,
         'imagen'=>$request->imagen,
         'usuario_id'=>$request->usuario_id,
-        'ciudad_id'=>$request->ciudad_id,
+		'ciudad_id'=>$request->ciudad_id,
+		'video'=>$request->video
 		   ]);
 		$empresa->save();
    		return redirect()->route('empresas.index');

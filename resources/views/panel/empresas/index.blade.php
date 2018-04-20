@@ -19,7 +19,6 @@
                                 <th>Nombre</th>
                                 <th>Telefono</th>
                                 <th>Email</th>
-                                <th>Facebook</th>
                                 <th>Ciudad</th>
                                 <th>Opciones</th>
                             </tr>
@@ -31,7 +30,6 @@
                                 <td>{{$empresas->nombre}}</td>
                                 <td>{{$empresas->telefono}}</td>
                                 <td>{{$empresas->email}}</td>
-                                <td>{{$empresas->facebook}}</td>
                                 <td>{{$empresas->ciudad->nombre}}</td>
                                 <td>
                                     @if($empresas->activo==1)
@@ -55,7 +53,6 @@
                                 <th>Nombre</th>
                                 <th>Telefono</th>
                                 <th>Email</th>
-                                <th>Facebook</th>
                                 <th>Ciudad</th>
                                 <th>Opciones</th>
                             </tr>

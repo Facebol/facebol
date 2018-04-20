@@ -7,6 +7,10 @@ use Auth;
 use Alert;
 class controllerPanel extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('panel');
+    }
     public function startAdmin()
     {   
        //Alert::success('Warning Title', 'Warning Message');

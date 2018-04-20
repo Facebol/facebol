@@ -62,10 +62,6 @@
               <i class="zmdi zmdi-star"></i> {{$descripcion->descripcion}}</li>
             @endforeach
           </ul>
-          <div class="text-center">
-            <a href="javascript:void(0)" class="btn btn-warning btn-raised">
-              <i class="zmdi zmdi-cloud-download"></i> Get Now</a>
-          </div>
         </div>
         <div class="col-lg-4"></div>
       </div>
