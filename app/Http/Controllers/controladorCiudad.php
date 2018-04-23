@@ -15,26 +15,14 @@ class controladorCiudad extends Controller
     public function index()
     {
         $ciudad=Ciudad::orderBy('id','desc')->paginate('5');
+        Session::flash('message','Datos Cargados Correctamente');
       return view('panel.ciudad.index',compact('ciudad'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
        $ciudad = Ciudad::orderBy('id','desc')->pluck('nombre');
         return view('panel.ciudad.create', compact('ciudad'));
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
        Ciudad::create(
@@ -47,38 +35,12 @@ class controladorCiudad extends Controller
 
        return redirect()->route('ciudad.index');
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $ciudad=Ciudad::Find($id);
         return view('panel.ciudad.edit',compact('ciudad'));
 
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $ciudad= Ciudad::find($id);
@@ -90,13 +52,6 @@ class controladorCiudad extends Controller
          $ciudad->save();
         return redirect()->route('ciudad.index'); 
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         try{

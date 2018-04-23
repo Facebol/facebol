@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Email;
+use Session;
 class controllerEmail extends Controller
 {
 	public function __construct()
@@ -12,7 +13,8 @@ class controllerEmail extends Controller
     }
     public function index(){
   
-    	$email = Email::orderBy('id','desc')->paginate('5');
+		$email = Email::orderBy('id','desc')->paginate('5');
+		Session::flash('message','Datos Cargados Correctamente');
     	return view('panel.email.index',compact('email'));
 
     }

@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Actividad;
+use Session;
+use App\Http\Requests\RequestActividadCreate;
+use App\Http\Requests\RequestActividadUpdate;
+use Alert;
 class controladorActividades extends Controller
 {
     public function __construct()
@@ -15,6 +19,20 @@ class controladorActividades extends Controller
     public function index()
     {
         $actividades = Actividad::orderBy('id','desc')->paginate('5');
+        Session::flash('message','Datos Cargados Correctamente');
+        return view('panel.actividades.index',compact('actividades'));
+    }
+    public function pagination($n)
+    {
+        $actividades=Actividad::orderBy('id','desc')->paginate($n);
+        Session::flash('title','Datos Cargados Correctamente');
+        return view('panel.actividades.index',compact('actividades'));
+    }
+    public function search(Request $request)
+    {
+        $actividades=Actividad::where('nombre','LIKE',"%{$request->search}%")
+                        ->orWhere('tipo','LIKE',"%{$request->search}%")->get();
+        Session::flash('title','Datos Buscados Correctamente');
         return view('panel.actividades.index',compact('actividades'));
     }
     public function create()
@@ -23,7 +41,7 @@ class controladorActividades extends Controller
         return view('panel.actividades.create', compact('actividades'));
     }
 
-    public function store(Request $request)
+    public function store(RequestActividadCreate $request)
     {
             Actividad::create([
             'nombre'=>$request->nombre,
@@ -33,6 +51,7 @@ class controladorActividades extends Controller
             'fecha'=>$request->fecha,
             'activo'=>1,
         ]);
+        Alert::success('Exito!!','El registro fue realizado exitosamente');
         return redirect()->route('actividades.index');
     }
     public function show($id)
@@ -60,7 +79,7 @@ class controladorActividades extends Controller
         
         return view('panel.actividades.edit',compact('actividad'));
     }
-    public function update(Request $request,$id)
+    public function update(RequestActividadUpdate $request,$id)
     {
         $actividad= Actividad::find($id);
         $actividad->fill([
@@ -72,13 +91,14 @@ class controladorActividades extends Controller
             'activo'=>1,
         ]);
         $actividad->save();
+        Alert::success('Exito!!','El registro fue editado exitosamente');
         return redirect()->route('actividades.index');
     }
     public function destroy($id)
-    {
-        
-        $actividades= Actividad::find($id);
-        $actividaes->delete();
+    {   
+        $actividad= Actividad::find($id);
+        $actividad->delete();
+        Alert::success('Exito!!','El registro se elimino correctamente');
         return redirect()->route('actividades.index');
 
     }

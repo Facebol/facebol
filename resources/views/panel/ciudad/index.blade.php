@@ -44,3 +44,8 @@
         </div>
 </section><!-- /.content -->
 @stop
+@section('toast')
+    @if(Session::has('message'))
+    toastr.success('{{\Session::get('message')}}');
+    @endif
+@stop

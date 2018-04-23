@@ -21,11 +21,11 @@ class seedUsuario extends Seeder
                 'password'=>\Hash::make('123456'),
                 'imagen'=>'perfil.jpg',
                 'codigo'=>str_random(25),
-                'tipo'=>'Administrador',
+                'tipo'=>'Sadministrador',
                 'activo'=>1,
                 'ciudad_id'=>1,
                 'ci'=>13149840,
-                'cod_face'=>'345',
+                'cod_face'=>'13149840FB',
             ],
             [
                 'nombre'=>'luis ',

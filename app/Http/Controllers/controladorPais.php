@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Pais;
 use Alert;
 use Exception;
+use Session;
 class controladorPais extends Controller
 {
     public function __construct()
@@ -15,14 +16,9 @@ class controladorPais extends Controller
     public function index()
     {
       $pais=Pais::orderBy('id','desc')->paginate('5');
+      Session::flash('message','Datos Cargados Correctamente');
       return view('panel.pais.index',compact('pais'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
        
@@ -30,13 +26,6 @@ class controladorPais extends Controller
         return view('panel.pais.create', compact('pais'));
 
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         try{
@@ -53,18 +42,6 @@ class controladorPais extends Controller
             return redirect()->route('pais.index');
         }
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
     public function edit($id)
     {
         $pais=Pais::find($id);
@@ -90,13 +67,6 @@ class controladorPais extends Controller
             return redirect()->route('pais.index');
         }
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $nombre=Pais::where('id',$id)->first()->nombre;

@@ -13,7 +13,6 @@ Route::get('/','controllerInicio@inicio')->name('inicio');
 Route::post('suscribir','controllerInicio@suscribir')->name('suscribir');
 Route::post('email_post','controllerInicio@emailPost')->name('email_post');
 
-
 Route::post('log','controllerLogin@log')->name('log');
 Route::get('logout','controllerLogin@logout')->name('logout');
 Route::post('reset/password/save','controllerInicio@passwordSave')->name('passwordSave');
@@ -22,14 +21,22 @@ Route::post('reset','controllerInicio@emailReset')->name('reset');
 
 Route::get('panel/reset/{codigo}','controllerInicio@passwordReset')->name('passwordReset');
 Route::resource('panel/planes','controllerPlanes');
-Route::resource('panel/categoria','controladorEquipo');
+Route::resource('panel/categoria','controllerCategoria');
+Route::get('panel/equipo/paginar/{n}','controladorEquipo@pagination')->name('equPaginar');
+Route::post('panel/equipo/buscar','controladorEquipo@search')->name('equBuscar');
 Route::resource('panel/equipo','controladorEquipo');
+Route::get('panel/actividades/paginar/{n}','controladorActividades@pagination')->name('actPaginar');
+Route::post('panel/actividades/buscar','controladorActividades@search')->name('actBuscar');
 Route::resource('panel/actividades','controladorActividades');
 Route::resource('panel/ciudad','controladorCiudad');
 Route::resource('panel/pais','controladorPais');
 Route::resource('panel/productos','controllerProductos');
+Route::get('panel/empresas/paginar/{n}','controllerEmpresa@pagination')->name('emPaginar');
+Route::post('panel/empresas/buscar','controllerEmpresa@search')->name('emBuscar');
 Route::resource('panel/empresas','controllerEmpresa');
 Route::resource('panel/email','controllerEmail');
+Route::get('panel/usuarios/paginar/{n}','controllerUsuario@pagination')->name('usuPaginar');
+Route::post('panel/usuarios/buscar','controllerUsuario@search')->name('usuBuscar');
 Route::resource('panel/usuarios','controllerUsuario');
 Route::resource('panel/institucion','controllerInstitucion');
 Route::get('panel','controllerPanel@startAdmin')->name('start-a');

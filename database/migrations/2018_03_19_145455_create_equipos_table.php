@@ -19,9 +19,9 @@ class CreateEquiposTable extends Migration
             $table->string('cargo');
             $table->string('imagen');
             $table->string('facebook');
-            $table->string('twitter');
-            $table->string('instagram');
-            $table->string('descripcion');
+            $table->string('twitter')->nullable();
+            $table->string('instagram')->nullable();
+            $table->text('descripcion');
             $table->timestamps();
         });
     }

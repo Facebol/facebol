@@ -11,9 +11,7 @@
 
 		<div class="box-footer col-md-12 text-center">
 			{{Form::submit('Guardar',['class'=>'btn btn-primary'])}}
-            <a href="{{route('empresas.index')}}">
-		      <button type="button" class="btn btn-danger"><i class="fa fa-close"></i> Cancelar</button>
-		    </a>
+		      <a href="{{route('empresas.index')}}" class="btn btn-danger"><i class="fa fa-close"></i> Cancelar</a>
         </div>
 		{{Form::close()}}
 </div>

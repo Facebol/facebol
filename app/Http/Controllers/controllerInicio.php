@@ -132,6 +132,7 @@ class controllerInicio extends Controller
                 'email'=>$datos->email,
                 'celular'=>$datos->celular,
                 'usuario_id'=>$usuario->id,
+                'imagen'=>$datos->imagen,
             ]);
             Session::flash('title','El Pre Registro fue un Éxito');
             Session::flash('body','Su pre registro fue un éxito, le mandamos un mensaje a su correo electrónico para mas información revíselo');

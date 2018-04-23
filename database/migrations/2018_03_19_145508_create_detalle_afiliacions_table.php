@@ -15,7 +15,7 @@ class CreateDetalleAfiliacionsTable extends Migration
     {
         Schema::create('detalle_afiliacions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('descripcion');
+            $table->text('descripcion');
             $table->integer('afiliacion_id')->unsigned();
             $table->foreign('afiliacion_id')->references('id')->on('afiliacions');
             $table->timestamps();

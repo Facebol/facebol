@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
         <!-- Theme style -->
         <link href="{{asset('css/AdminLTE.css')}}" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -69,7 +70,10 @@
 
         <!-- DATA TABES SCRIPT -->
         <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
-        @yield('scripts')
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script>
+           @yield('toast')
+        </script>
         <!-- Page script -->
         <!-- page script -->
     </body>

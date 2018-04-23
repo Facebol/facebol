@@ -21,6 +21,10 @@
                     <dd class="col-sm-8">{{ucwords($equipo->twitter)}}</dd>      
                 </dl>
                 <dl class="row">
+                    <dt class="col-sm-4">Instagram :</dt>
+                    <dd class="col-sm-8">{{ucwords($equipo->instagram)}}</dd>      
+                </dl>
+                <dl class="row">
                         <dt class="col-sm-4">Descripcion :</dt>
                         <dd class="col-sm-8">{{$equipo->descripcion}}</dd>      
                 </dl>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Producto;
 use App\Empresa;
+use Session;
 class controllerProductos extends Controller
 {
 	public function __construct()
@@ -14,6 +15,7 @@ class controllerProductos extends Controller
 	public function index(){
 
 		$producto = Producto::orderBy('id','desc')->paginate('5');
+		Session::flash('message','Datos Cargados Correctamente');
 		return view('panel.productos.index',compact('producto'));
 
 	}

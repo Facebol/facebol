@@ -17,7 +17,7 @@ class CreateActividadsTable extends Migration
             
             $table->increments('id');
             $table->string('nombre');
-            $table->string('descripcion');
+            $table->text('descripcion');
             $table->string('imagen');
             $table->date('fecha');
             $table->boolean('activo');

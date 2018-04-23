@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Equipo;
+use Session;
+use Alert;
+use App\Http\Requests\RequestEquipoCreate;
+use App\Http\Requests\RequestEquipoUpdate;
 class controladorEquipo extends Controller
 {
     public function __construct()
@@ -14,28 +18,30 @@ class controladorEquipo extends Controller
     }
     public function index()
     {
-        $equipo = Equipo::orderBy('id','desc')->paginate('5');
-        return view('panel.equipo.index',compact('equipo'));
+        $equipos = Equipo::orderBy('id','desc')->paginate('5');
+        Session::flash('message','Datos Cargados Correctamente');
+        return view('panel.equipo.index',compact('equipos'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function pagination($n)
+    {
+        $equipos=Equipo::orderBy('id','desc')->paginate($n);
+        Session::flash('title','Datos Cargados Correctamente');
+        return view('panel.equipo.index',compact('equipos'));
+    }
+    public function search(Request $request)
+    {
+        $equipos=Equipo::where('nombre','LIKE',"%{$request->search}%")
+                        ->orWhere('cargo','LIKE',"%{$request->search}%")->get();
+        Session::flash('title','Datos Buscados Correctamente');
+        return view('panel.equipo.index',compact('equipos'));
+    }
     public function create()
     {
         $equipo = Equipo::orderBy('id','desc')->pluck('nombre','id');
         return view('panel.equipo.create', compact('eqipo'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(RequestEquipoCreate $request)
     {
             Equipo::create([
             'nombre'=>$request->nombre,
@@ -46,42 +52,17 @@ class controladorEquipo extends Controller
             'instagram'=>$request->instagram,
             'cargo'=>$request->cargo
         ]);
+        Alert::success('Exito!!','El registro se creo correctamente');
         return redirect()->route('equipo.index');
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $equipo = Equipo::find($id);
         return view('panel.equipo.edit',compact('equipo'));
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function update(RequestEquipoUpdate $request, $id)
     {
-                $equipo = Equipo::find($id);
+        $equipo = Equipo::find($id);
         $equipo->fill([
             'nombre'=>$request->nombre,
             'descripcion'=>$request->descripcion,
@@ -92,19 +73,14 @@ class controladorEquipo extends Controller
             'cargo'=>$request->cargo
            ]);
         $equipo->save();
+        Alert::success('Exito!!','El registro se edito correctamente');
         return redirect()->route('equipo.index');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $equipo= Equipo::find($id);
         $equipo->delete();
+        Alert::success('Exito!!','El registro se elimino correctamente');
         return redirect()->route('equipo.index');
     }
 }

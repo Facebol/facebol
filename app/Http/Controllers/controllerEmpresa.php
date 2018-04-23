@@ -7,6 +7,10 @@ use App\Empresa;
 use App\Ciudad;
 use App\Categoria;
 use App\User;
+use Session;
+use Alert;
+use App\Http\Requests\RequestEmpresaCreate;
+use App\Http\Requests\RequestEmpresaUpdate;
 class controllerEmpresa extends Controller
 {
 	public function __construct()
@@ -14,11 +18,24 @@ class controllerEmpresa extends Controller
         $this->middleware('panel');
 	}
     public function index(){
-    	$empresa = Empresa::orderBy('id','desc')->paginate('5');
-    	return view('panel.empresas.index',compact('empresa'));
+		$empresas = Empresa::orderBy('id','desc')->paginate('5');
+		Session::flash('message','Datos Cargados Correctamente');
+    	return view('panel.empresas.index',compact('empresas'));
 
     }
-
+	public function pagination($n)
+    {
+        $empresas=Empresa::orderBy('id','desc')->paginate($n);
+        Session::flash('title','Datos Cargados Correctamente');
+        return view('panel.empresas.index',compact('empresas'));
+    }
+    public function search(Request $request)
+    {
+        $empresas=Empresa::where('nombre','LIKE',"%{$request->search}%")
+                        ->orWhere('email','LIKE',"%{$request->search}%")->get();
+        Session::flash('title','Datos Buscados Correctamente');
+        return view('panel.empresas.index',compact('empresas'));
+    }
     public function create(){
 
       $usuario = User::orderBy('id','desc')->pluck('cod_face','id');
@@ -45,9 +62,9 @@ class controllerEmpresa extends Controller
 		return redirect()->route('empresas.index');
 	}
 
-	public function store(Request $request)
+	public function store(RequestEmpresaCreate $request)
 	{
-		$usuario=User::where('cod_fa',$request->cod_user)->where('tipo','Empresa')->first();
+		$usuario=User::where('cod_face',$request->cod_face)->where('tipo','Empresa')->first();
 		if($usuario)
 		{
 			Empresa::create([
@@ -64,11 +81,13 @@ class controllerEmpresa extends Controller
 				'web'=>$request->web,
 		 		'categoria_id'=>$request->categoria_id,
 				'imagen'=>$request->imagen,
+				'cod_face'=>$request->cod_face,
 		 		'usuario_id'=>$usuario->id,
 				'ciudad_id'=>$request->ciudad_id,
 				'video'=>$request->video
 			]);
 			return redirect()->route('empresas.index');
+            Alert::success('Exito!!','El registro fue realizado exitosamente');
 		}else
 		{
 			return redirect()->route('empresa.create');
@@ -84,27 +103,29 @@ class controllerEmpresa extends Controller
 
    	}
 
-   	public function update(Request $request, $id){
-
+   	public function update(RequestEmpresaUpdate $request, $id){
+		$usuario=User::where('cod_face',$request->cod_face)->where('tipo','Empresa')->first();
 		$empresa = Empresa::find($id);
    		$empresa->fill([
-   			'nombre'=>$request->nombre,
-        'descripcion'=>$request->descripcion,
-        'telefono'=>$request->telefono,
-        'email'=>$request->email,
-        'facebook'=>$request->facebook,
-        'direccion'=>$request->direccion,
-        'promocion'=>$request->promocion,
-        'descuento'=>$request->descuento,
-        'horario'=>$request->horario,
-        'web'=>$request->web,
-        'categoria_id'=>$request->categoria_id,
-        'imagen'=>$request->imagen,
-        'usuario_id'=>$request->usuario_id,
-		'ciudad_id'=>$request->ciudad_id,
-		'video'=>$request->video
+			'nombre'=>$request->nombre,
+			'descripcion'=>$request->descripcion,
+			'telefono'=>$request->telefono,
+			'email'=>$request->email,
+			'facebook'=>$request->facebook,
+			'direccion'=>$request->direccion,
+			'promocion'=>$request->promocion,
+			'descuento'=>$request->descuento,
+			'horario'=>$request->horario,
+			'web'=>$request->web,
+			'cod_face'=>$request->cod_face,
+			'categoria_id'=>$request->categoria_id,
+			'imagen'=>$request->imagen,
+			'usuario_id'=>$usuario->id,
+			'ciudad_id'=>$request->ciudad_id,
+			'video'=>$request->video
 		   ]);
 		$empresa->save();
+		Alert::success('Exito!!','El registro fue editado exitosamente');		
    		return redirect()->route('empresas.index');
    	} 
 }

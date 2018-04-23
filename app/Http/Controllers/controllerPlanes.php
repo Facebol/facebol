@@ -7,6 +7,8 @@ use App\Planes;
 use Session;
 use Auth;
 use App\PlanesDetalle;
+use App\Http\Requests\RequestPlanUpdate;
+use Alert;
 class controllerPlanes extends Controller
 {
     public function __construct()
@@ -18,62 +20,16 @@ class controllerPlanes extends Controller
     {
         $planDetalle=PlanesDetalle::all();
         $planes=Planes::orderBy('id','desc')->paginate(5);
+        Session::flash('message','Datos Cargados Correctamente');
         return view('panel.planes.index',compact('planes','planDetalle'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $plan=Planes::find($id);
         $planDetalle=PlanesDetalle::all();
         return view('panel.planes.edit',compact('plan','planDetalle'));
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function update(RequestPlanUpdate $request, $id)
     {
         $planDetalle=PlanesDetalle::all();
         foreach ($planDetalle as $descripcion)
@@ -92,17 +48,7 @@ class controllerPlanes extends Controller
             'moneda'=>$request->moneda
         ]);
         $plan->save();
+        Alert::success('Exito!!','El registro fue editado exitosamente');
         return redirect()->route('planes.index');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

@@ -27,6 +27,7 @@ class seedEmpresa extends Seeder
                 'imagen'=>'pampa.png',
                 'categoria_id'=>2,
                 'activo'=>1,
+                'cod_face'=>'13149840FB',
                 'usuario_id'=>1,
                 'video'=>'nGaRd3Kndxc'
             ],
@@ -45,6 +46,7 @@ class seedEmpresa extends Seeder
                 'web'=>'https://huajchilla.com',
                 'imagen'=>'crismar.png',
                 'categoria_id'=>2,
+                'cod_face'=>'13149840FB',
                 'usuario_id'=>1,
                 'video'=>'nGaRd3Kndxc'
             ],
@@ -63,6 +65,7 @@ class seedEmpresa extends Seeder
                 'web'=>'https://huajchilla2.com',
                 'imagen'=>'mundo.png',
                 'categoria_id'=>1,
+                'cod_face'=>'13149840FB',
                 'usuario_id'=>1,
                 'video'=>'nGaRd3Kndxc'
             ],
@@ -80,6 +83,7 @@ class seedEmpresa extends Seeder
                 'web'=>'https://huajchilla3.com',
                 'imagen'=>'grapic.png',
                 'categoria_id'=>3,
+                'cod_face'=>'13149840FB',
                 'usuario_id'=>1,
                 'activo'=>1,
                 'video'=>'nGaRd3Kndxc'

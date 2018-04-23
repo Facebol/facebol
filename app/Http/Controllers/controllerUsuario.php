@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 use App\DataTables\dataTableUsuario;
 use App\User;
 use App\Ciudad;
+use Session;
+use Validator;
+use App\Http\Requests\RequestUsuarioCreate;
+use App\Http\Requests\RequestUsuarioUpdate;
+use Alert;
 class controllerUsuario extends Controller
 {
     public function __construct()
@@ -15,36 +20,61 @@ class controllerUsuario extends Controller
     public function index()
     {
        $usuarios=User::orderBy('id','desc')->paginate(10);
+       Session::flash('message','Datos Cargados Correctamente');
        return view('panel.usuarios.index',compact('usuarios'));
     }
-
+    public function pagination($n)
+    {
+        $usuarios=User::orderBy('id','desc')->paginate($n);
+        Session::flash('title','Datos Cargados Correctamente');
+        return view('panel.usuarios.index',compact('usuarios'));
+    }
+    public function search(Request $request)
+    {
+        $usuarios=User::where('nombre','LIKE',"%{$request->search}%")
+                        ->orWhere('apellido','LIKE',"%{$request->search}%")
+                        ->orWhere('email','LIKE',"%{$request->search}%")->get();
+        Session::flash('title','Datos Buscados Correctamente');
+        return view('panel.usuarios.index',compact('usuarios'));
+    }
     public function create()
     {
         $ciudades=Ciudad::orderBy('id','desc')->pluck('nombre','id');
         return view('panel.usuarios.create',compact('ciudades'));
     }
-
-    public function store(Request $request)
+    public function codigo()
     {
-        $cod_face=$request->ci."FB";
-        User::create(
-            [
-                'nombre'=>$request->nombre,
-                'apellido'=>$request->apellido,
-                'ci'=>$request->ci,
-                'direccion'=>$request->direccion,
-                'celular'=>$request->celular,
-                'email'=>$request->email,
-                'password'=>$request->password,
-                'imagen'=>$request->imagen,
-                'codigo'=>str_random(20),
-                'cod_face'=>$cod_face,
-                'ciudad_id'=>$request->ciudad_id,
-                'activo'=>1,
-                'tipo'=>$request->tipo,
-            ]
-        );
-        return redirect()->route('usuarios.index');
+        $codigo=str_random(20);
+        $usuario=User::where('codigo',$codigo)->first();
+        if($usuario)
+        {
+            $this->codigo();
+        }else{
+            return $codigo;
+        }
+    }
+    public function store(RequestUsuarioCreate $request)
+    {
+            $cod_face=$request->ci."FB";
+            User::create(
+                [
+                    'nombre'=>$request->nombre,
+                    'apellido'=>$request->apellido,
+                    'ci'=>$request->ci,
+                    'direccion'=>$request->direccion,
+                    'celular'=>$request->celular,
+                    'email'=>$request->email,
+                    'password'=>$request->password,
+                    'imagen'=>$request->imagen,
+                    'codigo'=>$this->codigo(),
+                    'cod_face'=>$cod_face,
+                    'ciudad_id'=>$request->ciudad_id,
+                    'activo'=>1,
+                    'tipo'=>$request->tipo,
+                ]
+            );
+            Alert::success('Exito!!','El registro fue realizado exitosamente');
+            return redirect()->route('usuarios.index');
     }
 
     public function show($id)
@@ -75,7 +105,7 @@ class controllerUsuario extends Controller
         return view('panel.usuarios.edit',compact('usuario','ciudades'));
     }
 
-    public function update(Request $request, $id)
+    public function update(RequestUsuarioUpdate $request, $id)
     {
         $usuario= User::find($id);
         $cod_face=$request->ci."FB";
@@ -95,11 +125,7 @@ class controllerUsuario extends Controller
             ]
         );
         $usuario->save();
+        Alert::success('Exito!!','El registro fue editado exitosamente');
         return redirect()->route('usuarios.index');
-    }
-
-    public function destroy($id)
-    {
-        
     }
 }

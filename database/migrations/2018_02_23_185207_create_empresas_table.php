@@ -29,6 +29,7 @@ class CreateEmpresasTable extends Migration
             $table->string('web')->unique()->nullable();
             $table->integer('categoria_id')->unsigned();
             $table->string('imagen')->unique();
+            $table->string('cod_face');
             $table->integer('usuario_id')->unsigned();
             $table->integer('ciudad_id')->unsigned();
             $table->foreign('categoria_id')->references('id')->on('categorias');

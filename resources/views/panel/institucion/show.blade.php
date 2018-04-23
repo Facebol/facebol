@@ -14,23 +14,19 @@
                     </dl>
                     <dl class="row">
                         <dt class="col-sm-4">Primera Frase :</dt>
-                        <textarea cols="50" rows="7" disabled="">{{$instituciones->frase1}}</textarea>
+                        <textarea cols="50" rows="5" disabled="">{{$instituciones->frase1}}</textarea>
                     </dl>
                     <dl class="row">
                         <dt class="col-sm-4">Segunda Frase :</dt>
-                        <textarea cols="50" rows="7" disabled="">{{$instituciones->frase2}}</textarea>
+                        <textarea cols="50" rows="5" disabled="">{{$instituciones->frase2}}</textarea>
                     </dl>
                     <dl class="row">
                         <dt class="col-sm-4">Tercera Frase :</dt>
-                        <textarea cols="50" rows="7" disabled="">{{$instituciones->frase3}}</textarea>
+                        <textarea cols="50" rows="5" disabled="">{{$instituciones->frase3}}</textarea>
                     </dl>
                     <dl class="row">
                         <dt class="col-sm-4">Trabaja con Nosotros :</dt>
                         <textarea cols="50" rows="7" disabled="">{{$instituciones->trabaja}}</textarea>
-                    </dl>
-                    <dl class="row">
-                        <dt class="col-sm-4">Direccion :</dt>
-                        <dd class="col-sm-6">{{$instituciones->direccion}}</dd>      
                     </dl>
                     <dl class="row">
                         <dt class="col-sm-4">Celular :</dt>
@@ -39,10 +35,6 @@
                     <dl class="row">
                         <dt class="col-sm-4">Telefono :</dt>
                         <dd class="col-sm-6">{{$instituciones->telefono}}</dd>      
-                    </dl>
-                     <dl class="row">
-                        <dt class="col-sm-4">Email :</dt>
-                        <dd class="col-sm-6">{{$instituciones->email}}</dd>      
                     </dl>
                     <dl class="row">
                         <dt class="col-sm-4">Facebook :</dt>

@@ -33,7 +33,6 @@
       <div class="ms-hero-page-override ms-hero-img-city2 ms-hero-bg-primary">
         <div class="container">
           <div class="text-center">
-            <span class="ms-logo ms-logo-lg ms-logo-white center-block mb-2 mt-2 animated zoomInDown animation-delay-5">F</span>
             <h1 class="no-m ms-site-title color-white center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-5">Nuestro
               <span>Equipo</span> de Trabajo</h1>
             <p class="lead lead-lg color-medium text-center center-block mt-2 mw-800 text-uppercase fw-300 animated fadeInUp animation-delay-7">EL equipo de trabajo trata de brindar el mejor servicio como para las empresas y los afiliados.</p>

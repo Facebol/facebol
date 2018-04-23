@@ -15,7 +15,7 @@ class CreatePlanesDetallesTable extends Migration
     {
         Schema::create('planes_detalles', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('descripcion');
+            $table->text('descripcion');
             $table->integer('planes_id')->unsigned();
             $table->foreign('planes_id')->references('id')->on('planes');
             $table->timestamps();

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-class controllerNoticia extends Controller
+use App\Categoria;
+use Auth;
+use Alert;
+class controllerCategoria extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,8 @@ class controllerNoticia extends Controller
      */
     public function index()
     {
-        //
+        $categorias=Categoria::orderBy('id','desc')->paginate(5);
+        return view('panel.categorias.index',compact('categorias'));
     }
 
     /**
