@@ -52,9 +52,9 @@
               <a href="blog-full.html">Blog Full Page 1</a>
             </li>
             <li>
+              <li>
               <a href="blog-full2.html">Blog Full Page 2</a>
             </li>
-            <li>
               <a href="blog-post.html">Blog Post 1</a>
             </li>
             <li>

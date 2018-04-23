@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-
+use Illuminate\Validation\Rule;
 class RequestEmpresaCreate extends FormRequest
 {
     /**
@@ -24,10 +24,13 @@ class RequestEmpresaCreate extends FormRequest
     public function rules()
     {
         return [
-            'cod_face'=>'required|exists:users,cod_face',
+            'cod_face'=>['required', Rule::exists('users')->where(function ($query) {
+                $query->where('tipo', 'Empresa');
+            }),
+        ], 
             'nombre'=>'required|unique:empresas',
             'descripcion'=>'required',
-            'telefono'=>'required|min:7|max:8',
+            'telefono'=>'required|numeric|unique:empresas',
             'email'=>'required|unique:empresas',
             'facebook'=>'required|unique:empresas',
             'promocion'=>'required',
@@ -35,7 +38,8 @@ class RequestEmpresaCreate extends FormRequest
             'direccion'=>'required',
             'horario'=>'required',
             'imagen'=>'required|image|unique:empresas',
-            'video'=>'required'
+            'video'=>'required',
+            'web'=>'unique:empresas'
         ];
     }
 }

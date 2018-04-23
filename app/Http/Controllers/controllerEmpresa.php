@@ -90,7 +90,8 @@ class controllerEmpresa extends Controller
             Alert::success('Exito!!','El registro fue realizado exitosamente');
 		}else
 		{
-			return redirect()->route('empresa.create');
+			return redirect()->route('empresas.create');
+			Alert::error('Ups!!','El registro no pudo ser editado, el usuario debe ser un tipo Empresa');				
 		}
    	}
    	public function edit($id){
@@ -106,26 +107,33 @@ class controllerEmpresa extends Controller
    	public function update(RequestEmpresaUpdate $request, $id){
 		$usuario=User::where('cod_face',$request->cod_face)->where('tipo','Empresa')->first();
 		$empresa = Empresa::find($id);
-   		$empresa->fill([
-			'nombre'=>$request->nombre,
-			'descripcion'=>$request->descripcion,
-			'telefono'=>$request->telefono,
-			'email'=>$request->email,
-			'facebook'=>$request->facebook,
-			'direccion'=>$request->direccion,
-			'promocion'=>$request->promocion,
-			'descuento'=>$request->descuento,
-			'horario'=>$request->horario,
-			'web'=>$request->web,
-			'cod_face'=>$request->cod_face,
-			'categoria_id'=>$request->categoria_id,
-			'imagen'=>$request->imagen,
-			'usuario_id'=>$usuario->id,
-			'ciudad_id'=>$request->ciudad_id,
-			'video'=>$request->video
-		   ]);
-		$empresa->save();
-		Alert::success('Exito!!','El registro fue editado exitosamente');		
-   		return redirect()->route('empresas.index');
+		if($usuario)
+		{
+			$empresa->fill([
+				'nombre'=>$request->nombre,
+				'descripcion'=>$request->descripcion,
+				'telefono'=>$request->telefono,
+				'email'=>$request->email,
+				'facebook'=>$request->facebook,
+				'direccion'=>$request->direccion,
+				'promocion'=>$request->promocion,
+				'descuento'=>$request->descuento,
+				'horario'=>$request->horario,
+				'web'=>$request->web,
+				'cod_face'=>$request->cod_face,
+				'categoria_id'=>$request->categoria_id,
+				'imagen'=>$request->imagen,
+				'usuario_id'=>$usuario->id,
+				'ciudad_id'=>$request->ciudad_id,
+				'video'=>$request->video
+			]);
+			$empresa->save();
+			Alert::success('Exito!!','El registro fue editado exitosamente');		
+		    return redirect()->route('empresas.index');
+		}else
+		{
+			Alert::error('Ups!!','El registro no pudo ser editado, el usuario debe ser un tipo Empresa');	
+			return redirect()->route('empresas.edit',['empresa'=>$empresa]);
+		}
    	} 
 }

@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-
+use Illuminate\Validation\Rule;
 class RequestEmpresaUpdate extends FormRequest
 {
     /**
@@ -24,7 +24,10 @@ class RequestEmpresaUpdate extends FormRequest
     public function rules()
     {
         return [
-            'cod_face'=>'required|exists:users,cod_face',
+            'cod_face'=>['required', Rule::exists('users')->where(function ($query) {
+                $query->where('tipo', 'Empresa');
+            }),
+        ], 
             'nombre'=>'required',
             'descripcion'=>'required',
             'telefono'=>'required|min:7|max:8',
