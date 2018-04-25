@@ -21,6 +21,8 @@ Route::post('reset','controllerInicio@emailReset')->name('reset');
 
 Route::get('panel/reset/{codigo}','controllerInicio@passwordReset')->name('passwordReset');
 Route::resource('panel/planes','controllerPlanes');
+Route::get('panel/categoria/paginar/{n}','controllerCategoria@pagination')->name('catPaginar');
+Route::post('panel/categoria/buscar','controllerCategoria@search')->name('catBuscar');
 Route::resource('panel/categoria','controllerCategoria');
 Route::get('panel/equipo/paginar/{n}','controladorEquipo@pagination')->name('equPaginar');
 Route::post('panel/equipo/buscar','controladorEquipo@search')->name('equBuscar');
@@ -34,9 +36,12 @@ Route::resource('panel/productos','controllerProductos');
 Route::get('panel/empresas/paginar/{n}','controllerEmpresa@pagination')->name('emPaginar');
 Route::post('panel/empresas/buscar','controllerEmpresa@search')->name('emBuscar');
 Route::resource('panel/empresas','controllerEmpresa');
+Route::get('panel/email/paginar/{n}','controllerEmail@pagination')->name('mailPaginar');
+Route::post('panel/email/buscar','controllerEmail@search')->name('mailBuscar');
 Route::resource('panel/email','controllerEmail');
 Route::get('panel/usuarios/paginar/{n}','controllerUsuario@pagination')->name('usuPaginar');
 Route::post('panel/usuarios/buscar','controllerUsuario@search')->name('usuBuscar');
 Route::resource('panel/usuarios','controllerUsuario');
 Route::resource('panel/institucion','controllerInstitucion');
 Route::get('panel','controllerPanel@startAdmin')->name('start-a');
+

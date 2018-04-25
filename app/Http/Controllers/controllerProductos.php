@@ -8,18 +8,17 @@ use App\Empresa;
 use Session;
 class controllerProductos extends Controller
 {
-	public function __construct()
+    public function __construct()
     {
         $this->middleware('panel');
+		$this->middleware('admin');        
     }
-	public function index(){
-
+	public function index()
+	{
 		$producto = Producto::orderBy('id','desc')->paginate('5');
 		Session::flash('message','Datos Cargados Correctamente');
 		return view('panel.productos.index',compact('producto'));
-
 	}
-
 	public function create(){
 
 		$tipo = ['Normal','Servicio'];

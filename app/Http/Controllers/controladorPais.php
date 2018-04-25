@@ -7,11 +7,14 @@ use App\Pais;
 use Alert;
 use Exception;
 use Session;
+use App\Http\Requests\RequestPaisUpdate;
+use App\Http\Requests\RequestPaisCreate;
 class controladorPais extends Controller
 {
     public function __construct()
     {
         $this->middleware('panel');
+		$this->middleware('admin');        
     }
     public function index()
     {
@@ -21,12 +24,9 @@ class controladorPais extends Controller
     }
     public function create()
     {
-       
-        $pais = Pais::orderBy('id','desc')->pluck('nombre');
-        return view('panel.pais.create', compact('pais'));
-
+       return view('panel.pais.create');
     }
-    public function store(Request $request)
+    public function store(RequestPaisCreate $request)
     {
         try{
         Pais::create(
@@ -48,7 +48,7 @@ class controladorPais extends Controller
         return view('panel.pais.edit',compact('pais'));
     }
 
-    public function update(Request $request, $id)
+    public function update(RequestPaisUpdate $request, $id)
     {
         $nombre=Pais::where('id',$id)->first()->nombre;
         try{

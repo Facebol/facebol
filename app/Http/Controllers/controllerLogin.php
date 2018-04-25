@@ -13,8 +13,8 @@ class controllerLogin extends Controller
         if(Auth::attempt(['email'=>$request['email'],'password'=>$request['password']]))
         {   
             return redirect()->route('start-a');
+    
         }else{
-            Alert::error('Error Title', 'Error Message');
             return redirect()->route('inicio');
         }
     }

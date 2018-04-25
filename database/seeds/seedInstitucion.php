@@ -36,11 +36,12 @@ class seedInstitucion extends Seeder
                 'youtube'=>'https://www.youtube.com',
                 'instagram'=>'https://www.instagram.com',
                 'google'=>'https://www.google.com',
-                'imagen'=>'banner.png',
+                'imagen'=>'Logo.png',
                 'vision'=>'Ser una de las empresas más reconocidas a nivel nacional e internacional, y poder dar un gran aporte en bien de la sociedad.',
                 'mision'=>'Brindar a las personas la oportunidad, de aumentar sus ingresos, reducir sus gastos, e impulsar su educación e inteligencia financiera.',
                 'created_at'=>Carbon::now(),
                 'updated_at'=>Carbon::now(),
+                'desEmpresa'=>'FaceBol SRL, ofrece a sus clientes y trabajadores, beneficios con descuentos y promociones en :'
             ]
         );
         Institucion::insert($datos);

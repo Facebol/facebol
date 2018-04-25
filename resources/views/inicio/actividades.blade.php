@@ -103,7 +103,7 @@
                 <h3 class="card-title">
                   <i class="zmdi zmdi-map"></i>Map</h3>
               </div>
-              <iframe width="100%" height="340" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48342.06480344582!2d-73.980069429762!3d40.775680208459505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2589a018531e3%3A0xb9df1f7387a94119!2sCentral+Park!5e0!3m2!1sen!2sus!4v1491233314840"></iframe>
+              <iframe  height="400" width="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJR6WCDMPfXpERgIgG3Pop2rE&key=AIzaSyCKisBs3MYGlziWimO-IyMEeJCzz4bQsLI" allowfullscreen></iframe>
             </div>
           </div>
         </div>

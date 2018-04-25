@@ -7,28 +7,28 @@
             <ul class="list-unstyled ms-icon-list three_cols">
               <li>
                 <a href="{{route('inicio')}}">
-                  <i class="zmdi zmdi-home"></i> Inicio</a>
+                  <i class="zmdi zmdi-home"></i>Inicio</a>
               </li>
               <li>
                 <a href="{{route('empresa')}}">
-                  <i class="zmdi zmdi-edit"></i> Empresas</a>
+                  <i class="zmdi zmdi-edit"></i>Empresas</a>
               </li>
               <li>
                 <a href="{{route('actividad')}}">
-                  <i class="zmdi zmdi-case"></i> Actividades</a>
+                  <i class="zmdi zmdi-case"></i>Actividades</a>
               </li>
               <li>
                 <a href="{{route('noticia')}}">
-                  <i class="zmdi zmdi-case"></i> Noticias</a>
+                  <i class="zmdi zmdi-case"></i>Noticias</a>
               </li>
               <li>
                 <a href="{{route('contactanos')}}">
-                  <i class="zmdi zmdi-time"></i> Contactanos</a>
+                  <i class="zmdi zmdi-time"></i>Contactanos</a>
               </li>
             </ul>
           </div>
           <div class="ms-footbar-block">
-            <h3 class="ms-footbar-title">Suscribite</h3>
+            <h3 class="ms-footbar-title">Suscribirse</h3>
             <p class="">Para recibir mas informacion acerca de la empresa envianos tu correo electronico. Ademas te enviaremos un correo de invitacion para distintos seminarios, actividades que proporciona la empresa.</p>
             {{Form::open(['route'=>'suscribir','method'=>'POST'])}}
               <div class="form-group label-floating mt-2 mb-1">
@@ -92,7 +92,7 @@
   </aside>
   <footer class="ms-footer">
     <div class="container">
-      <p>Copyright &copy; Material Style 2017</p>
+      <p>Copyright &copy; Material Style 2018</p>
     </div>
   </footer>
   <div class="btn-back-top">

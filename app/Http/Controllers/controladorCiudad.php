@@ -4,13 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Ciudad;
+use App\Pais;
 use Exception;
 use Session;
+use App\Http\Requests\RequestCiudadCreate;
+use App\Http\Requests\RequestCiudadUpdate;
 class controladorCiudad extends Controller
 {
     public function __construct()
     {
         $this->middleware('panel');
+		$this->middleware('admin');        
     }
     public function index()
     {
@@ -20,15 +24,15 @@ class controladorCiudad extends Controller
     }
     public function create()
     {
-       $ciudad = Ciudad::orderBy('id','desc')->pluck('nombre');
-        return view('panel.ciudad.create', compact('ciudad'));
+       $pais = Pais::orderBy('id','desc')->pluck('nombre','id');
+        return view('panel.ciudad.create', compact('pais'));
     }
-    public function store(Request $request)
+    public function store(RequestCiudadCreate $request)
     {
        Ciudad::create(
       [
         'nombre'=>$request->nombre,
-
+        'pais_id'=>$request->pais_id,
       ]
 
        );
@@ -37,16 +41,18 @@ class controladorCiudad extends Controller
     }
     public function edit($id)
     {
+        $pais = Pais::orderBy('id','desc')->pluck('nombre','id');        
         $ciudad=Ciudad::Find($id);
-        return view('panel.ciudad.edit',compact('ciudad'));
+        return view('panel.ciudad.edit',compact('ciudad','pais'));
 
     }
-    public function update(Request $request, $id)
+    public function update(RequestCiudadUpdate $request, $id)
     {
         $ciudad= Ciudad::find($id);
         $ciudad->fill(
             [
                'nombre'=>$request->nombre,
+                'pais_id'=>$request->pais_id,       
             ]
         );
          $ciudad->save();

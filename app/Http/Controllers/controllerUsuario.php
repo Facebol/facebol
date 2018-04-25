@@ -16,6 +16,7 @@ class controllerUsuario extends Controller
     public function __construct()
     {
         $this->middleware('panel');
+		$this->middleware('admin');        
     }
     public function index()
     {

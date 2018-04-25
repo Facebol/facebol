@@ -20,6 +20,7 @@ class CreateInstitucionsTable extends Migration
             $table->text('frase2');
             $table->text('frase3');
             $table->text('trabaja');
+            $table->text('desEmpresa');
             $table->string('direccion');
             $table->integer('celular');
             $table->integer('telefono');

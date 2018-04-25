@@ -3,13 +3,13 @@
     <div class="container container-full">
       <div class="ms-title">
         <a href="{{route('inicio')}}">
-          <img src="{{asset('img/facebol.png')}}" alt="" width="220px" height="80px"> 
+          <img src="{{asset('imagen/'.$institucion->imagen)}}" alt="" width="200px" height="80px"> 
           <!-- <span class="ms-logo animated zoomInDown animation-delay-5">F</span>
           <h1 class="animated fadeInRight animation-delay-6">ace
             <span>Bol</span>
           </h1>-->
         </a>
-      </div>
+      </div> 
       <div class="header-right">
         <div class="share-menu">
           <ul class="share-menu-list">
@@ -20,8 +20,8 @@
             </li>
             <li class="animated fadeInRight animation-delay-2">
               <a href="javascript:void(0)" class="btn-circle btn-facebook">
-                <i class="zmdi zmdi-facebook"></i>
               </a>
+              <i class="zmdi zmdi-facebook"></i>
             </li>
             <li class="animated fadeInRight animation-delay-1">
               <a href="javascript:void(0)" class="btn-circle btn-twitter">

@@ -25,6 +25,10 @@
                         <textarea cols="50" rows="5" disabled="">{{$instituciones->frase3}}</textarea>
                     </dl>
                     <dl class="row">
+                        <dt class="col-sm-4">Descripcion de Empresas:</dt>
+                        <textarea cols="50" rows="7" disabled="">{{$instituciones->desEmpresa}}</textarea>
+                    </dl>
+                    <dl class="row">
                         <dt class="col-sm-4">Trabaja con Nosotros :</dt>
                         <textarea cols="50" rows="7" disabled="">{{$instituciones->trabaja}}</textarea>
                     </dl>

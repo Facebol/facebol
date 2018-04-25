@@ -1,23 +1,27 @@
 <div class="box-body">
     <div class="form-group col-md-6">
         <label>Quienes Somos </label>
-        {{Form::textarea('qSomos',null,['class'=>'form-control','cols'=>'50','rows'=>'7', 'autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
+        {{Form::textarea('qSomos',null,['class'=>'form-control','cols'=>'50','rows'=>'7', 'autofocus','requerid','placeholder'=>'Introduce una Descripcion'])}}
     </div>
     <div class="form-group col-md-6">
         <label>Primera Frase</label>
-        {{Form::textarea('frase1',null,['class'=>'form-control','cols'=>'50','rows'=>'7','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
+        {{Form::textarea('frase1',null,['class'=>'form-control','cols'=>'50','rows'=>'7','autofocus','requerid','placeholder'=>'Introduce una Descripcion'])}}
     </div>
     <div class="form-group col-md-6">
         <label>Segunda Frase </label>
-        {{Form::textarea('frase2',null,['class'=>'form-control','cols'=>'50','rows'=>'7','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
+        {{Form::textarea('frase2',null,['class'=>'form-control','cols'=>'50','rows'=>'7','autofocus','requerid','placeholder'=>'Introduce una Descripcion'])}}
     </div>
     <div class="form-group col-md-6">
         <label>Tercera Frase </label>
-        {{Form::textarea('frase3',null,['class'=>'form-control','cols'=>'50','rows'=>'7','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
+        {{Form::textarea('frase3',null,['class'=>'form-control','cols'=>'50','rows'=>'7','autofocus','requerid','placeholder'=>'Introduce una Descripcion'])}}
     </div>
     <div class="form-group col-md-6">
         <label>Trabaja con Nosotros </label>
-        {{Form::textarea('trabaja',null,['class'=>'form-control','cols'=>'50','rows'=>'7','autofocus','requerid','placeholder'=>'Introduce un Nombre'])}}
+        {{Form::textarea('trabaja',null,['class'=>'form-control','cols'=>'50','rows'=>'7','autofocus','requerid','placeholder'=>'Introduce una Descripcion'])}}
+    </div>
+    <div class="form-group col-md-6">
+        <label>Descripcion de Empresas Afiliadas </label>
+        {{Form::textarea('desEmpresa',null,['class'=>'form-control','cols'=>'50','rows'=>'7','autofocus','requerid','placeholder'=>'Introduce una Descripcion'])}}
     </div>
     <div class="form-group col-md-6">
         <label>Direccion</label>
@@ -67,10 +71,6 @@
         <label>Imagen</label>
         {{Form::file('imagen',null,['class'=>'form-control','requerid'])}}
     </div>
-    <div class="form-group">
-        <p class="help-block">Example block-level help text here.</p>
-    </div>
-    
 </div><!-- /.box-body -->
 
     

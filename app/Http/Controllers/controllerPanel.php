@@ -14,11 +14,10 @@ class controllerPanel extends Controller
     public function startAdmin()
     {   
        //Alert::success('Warning Title', 'Warning Message');
-       return view('panel.index');
+       return view('panel-user.index');
     }
-    public function startCurrier()
+    public function panel_user()
     {
-        $name=ucfirst(Auth::user()->name);
-        return view('panel.panel-c.index');
+        return view('panel-user.index');
     }
 }

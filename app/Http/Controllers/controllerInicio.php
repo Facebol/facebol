@@ -82,11 +82,13 @@ class controllerInicio extends Controller
         return redirect()->route('inicio');
     }
     public function passwordReset($dato)
-    {
+    {    
+        $institucion=Institucion::first();
+        $categorias=Categoria::all();
         $usuario=User::where('codigo',$dato)->first();
         if($usuario)
         {
-            return view('inicio.reset.index',compact('dato'));
+            return view('inicio.reset.index',compact('dato','categorias','institucion'));
         }else
         {
             return redirect()->route('inicio');

@@ -73,6 +73,7 @@ class controllerInstitucion extends Controller
             'vision'=>$request->vision,
             'mision'=>$request->mision,
             'imagen'=>$request->imagen,
+            'desEmpresa'=>$request->desEmpresa,
         ]);
         $institucion->save();
         return redirect()->route('institucion.index');

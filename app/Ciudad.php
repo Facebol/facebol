@@ -18,5 +18,9 @@ class Ciudad extends Model
     {
         return $this->hasMany(User::class);
     }
+    public function pais()
+    {
+        return $this->belongsTo(Pais::class);
+    }
 }
 

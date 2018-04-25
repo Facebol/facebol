@@ -15,10 +15,17 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::user()->tipo != 'Administrador')
+        if(Auth::user()->tipo == "Sadministrador")
         {
-            return redirect()->route('start-a');
+            return $next($request);            
+        }else
+        {
+            if(Auth::user()->tipo == "Administrador")
+            {
+                return $next($request);            
+            }else{
+                return redirect()->route('start-a');
+            }
         }
-        return $next($request);
     }
 }

@@ -34,12 +34,11 @@
       <div class="ms-hero-page ms-hero-img-meeting ms-hero-bg-primary ms-bg-fixed mb-4">
         <div class="container">
           <div class="text-center">
-            <h1 class="no-m ms-site-title color-white center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-5">Empresas</h1>
-            <p class="lead lead-lg color-light text-center center-block mt-2 mw-800 text-uppercase fw-300 animated fadeInUp animation-delay-7">Empresas Afiliadas
-              <br>Estas son todas las empresas, las cuales ofrecen proociones y/o descuentos a las personas que esten afiliadas a Facebol.</p>
+            <h1 class="no-m ms-site-title color-white center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-5">Beneficios en Empresas</h1>
+            <p class="lead lead-lg color-light text-center center-block mt-2 mw-800 text-uppercase fw-300 animated fadeInUp animation-delay-7">{{$institucion->desEmpresa}}</p>
           </div>
         </div>
-      </div>
+      </div>  
       <div class="container">
         <div class="row">
           <div class="col-md-12">

@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Carbon\Carbon;
 class Categoria extends Model
 {
      protected $table='categorias';

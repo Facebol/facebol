@@ -15,7 +15,8 @@ class controllerEmpresa extends Controller
 {
 	public function __construct()
     {
-        $this->middleware('panel');
+		$this->middleware('panel');
+		$this->middleware('admin');		
 	}
     public function index(){
 		$empresas = Empresa::orderBy('id','desc')->paginate('5');

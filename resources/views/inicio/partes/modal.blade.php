@@ -108,7 +108,7 @@
                         <span class="input-group-addon">
                           <i class="zmdi zmdi-file"></i>
                         </span>
-                        <label class="control-label" for="ms-form-pass-r">Imagen de Recivo</label>
+                        <label class="control-label" for="ms-form-pass-r">Imagen de Resivo</label>
                         <input name="imagen" type="file" id="ms-form-pass-r" class="form-control">
                       </div>
                     </div>
