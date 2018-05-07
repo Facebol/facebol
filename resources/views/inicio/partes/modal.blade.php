@@ -69,56 +69,91 @@
               {!!Form::close()!!}
             </div>
             <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
-              {{Form::open(['route'=>'preregistro','method'=>'POST'])}}
+              {{Form::open(['route'=>'preregistro.store','method'=>'POST','files'=>TRUE])}}
                 <fieldset>
-                  <div class="form-group label-floating">
-                    <div class="input-group">
+                  <div class="form-group label-floating {{ $errors->has('nombre') ? ' has-error' : '' }}">
+                    <div class="input-group {{ $errors->has('nombre') ? ' text-danger' : '' }}">
                       <span class="input-group-addon">
                         <i class="zmdi zmdi-account"></i>
                       </span>
                       <label class="control-label" for="ms-form-user-r">Nombres</label>
-                      <input name="nombre" type="text" id="ms-form-user-r" class="form-control"> </div>
+                      {{Form::text('nombre',null,['class'=>'form-control','id'=>'ms-form-user-r','autofocus','required'])}}         
+                    </div>
+                      @if ($errors->has('nombre'))
+                      <span class="help-block">
+                          <strong>{{ $errors->first('nombre') }}</strong>
+                      </span>
+                      @endif
                   </div>
-                  <div class="form-group label-floating">
-                    <div class="input-group">
+                  <div class="form-group label-floating{{ $errors->has('apellido') ? ' has-error' : '' }}">
+                    <div class="input-group {{ $errors->has('apellido') ? ' text-danger' : '' }}">
                       <span class="input-group-addon">
                         <i class="zmdi zmdi-account"></i>
                       </span>
-                      <label class="control-label" for="ms-form-email-r">Apellidos</label>
-                      <input name="apellido" type="text" id="ms-form-email-r" class="form-control"> </div>
+                      <label class="control-label" for="ms-form-apellido-r">Apellidos</label>
+                      {{Form::text('apellido',null,['class'=>'form-control','id'=>'ms-form-apellido-r','autofocus','required'])}}                                
+                    </div>
+                      @if ($errors->has('apellido'))
+                      <span class="help-block">
+                          <strong>{{ $errors->first('apellido') }}</strong>
+                      </span>
+                      @endif
                   </div>
-                  <div class="form-group label-floating">
-                    <div class="input-group">
+                  <div class="form-group label-floating{{ $errors->has('email') ? ' has-error' : '' }}">
+                    <div class="input-group {{ $errors->has('email') ? ' text-danger' : '' }}">
                       <span class="input-group-addon">
                         <i class="zmdi zmdi-email"></i>
                       </span>
-                      <label class="control-label" for="ms-form-pass-r">Correo</label>
-                      <input name="email" type="email" id="ms-form-pass-r" class="form-control"> </div>
+                      <label class="control-label" for="ms-form-apellido-r">Correo</label>
+                      {{Form::email('email',null,['class'=>'form-control','id'=>'ms-form-apellido-r','autofocus','required'])}}                                
+                    </div>
+                      @if ($errors->has('email'))
+                      <span class="help-block">
+                          <strong>{{ $errors->first('email') }}</strong>
+                      </span>
+                      @endif
                   </div>
-                  <div class="form-group label-floating">
-                      <div class="input-group">
-                        <span class="input-group-addon">
-                          <i class="zmdi zmdi-phone"></i>
-                        </span>
-                        <label class="control-label" for="ms-form-pass-r">Celular</label>
-                        <input name="celular" type="number" id="ms-form-pass-r" class="form-control"></div>
+                  <div class="form-group label-floating{{ $errors->has('celular') ? ' has-error' : '' }}">
+                    <div class="input-group {{ $errors->has('celular') ? ' text-danger' : '' }}">
+                      <span class="input-group-addon">
+                        <i class="zmdi zmdi-phone"></i>
+                      </span>
+                      <label class="control-label" for="ms-form-apellido-r">Celular</label>
+                      {{Form::number('celular',null,['class'=>'form-control','id'=>'ms-form-apellido-r','autofocus','required'])}}                                
                     </div>
-                    <div class="form-group label-floating">
-                      <div class="input-group">
-                        <span class="input-group-addon">
-                          <i class="zmdi zmdi-file"></i>
-                        </span>
-                        <label class="control-label" for="ms-form-pass-r">Imagen de Resivo</label>
-                        <input name="imagen" type="file" id="ms-form-pass-r" class="form-control">
-                      </div>
+                      @if ($errors->has('celular'))
+                      <span class="help-block">
+                          <strong>{{ $errors->first('celular') }}</strong>
+                      </span>
+                      @endif
+                  </div>
+                  <div class="form-group label-floating{{ $errors->has('imagen') ? ' has-error' : '' }}">
+                    <div class="input-group {{ $errors->has('imagen') ? ' text-danger' : '' }}">
+                      <span class="input-group-addon">
+                        <i class="zmdi zmdi-file"></i>
+                      </span>
+                      <label class="control-label" for="ms-form-apellido-r">Imagen de Recibo (Opcional)</label>
+                      {{Form::file('imagen',['class'=>'form-control','id'=>'ms-form-apellido-r','autofocus'])}}                                
                     </div>
-                  <div class="form-group label-floating">
-                    <div class="input-group">
+                      @if ($errors->has('imagen'))
+                      <span class="help-block">
+                          <strong>{{ $errors->first('imagen') }}</strong>
+                      </span>
+                      @endif
+                  </div>
+                  <div class="form-group label-floating{{ $errors->has('codigo') ? ' has-error' : '' }}">
+                    <div class="input-group {{ $errors->has('codigo') ? ' text-danger' : '' }}">
                       <span class="input-group-addon">
                         <i class="zmdi zmdi-lock"></i>
                       </span>
-                      <label class="control-label" for="ms-form-pass-rn">Codigo de Usuario(Opcional)</label>
-                      <input name="codigo" type="text" id="ms-form-pass-rn" class="form-control"> </div>
+                      <label class="control-label" for="ms-form-apellido-r">Codigo de Usuario (Opcional)</label>
+                      {{Form::text('codigo',null,['class'=>'form-control','id'=>'ms-form-apellido-r','autofocus'])}}                                
+                    </div>
+                      @if ($errors->has('codigo'))
+                      <span class="help-block">
+                          <strong>{{ $errors->first('codigo') }}</strong>
+                      </span>
+                      @endif
                   </div>
                   {{Form::submit('Registrar Ahora',['class'=>'btn btn-raised btn-block btn-primary'])}}
                 </fieldset>
@@ -134,7 +169,6 @@
                     </span>
                     <label class="control-label" for="ms-form-email-re">Correo</label>
                     {!!Form::email('email',null,['id'=>'ms-form-email-re','class'=>'form-control'])!!}
-                    
                 </div>
                     {!!Form::submit('Restablecer',['class'=>'btn btn-raised btn-block btn-primary'])!!}
               </fieldset>

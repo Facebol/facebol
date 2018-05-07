@@ -9,12 +9,12 @@
                     </div>
                     <div class="modal-body">
                     <dl class="row">
-                        <dt class="col-sm-4">Codigo de Usuario :</dt>
-                        <dd class="col-sm-6" disabled="">{{$empresa->usuario_id}}</dd>
+                        <dt class="col-sm-4">Usuario Administrador :</dt>
+                        <dd class="col-sm-6" disabled="">{{ucwords($empresa->usuario->nombre." ".$empresa->usuario->apellido)}}</dd>
                     </dl>
                     <dl class="row">
                         <dt class="col-sm-4">Categoria :</dt>
-                        <dd class="col-sm-6" disabled="">{{$empresa->categoria_id}}</dd>
+                        <dd class="col-sm-6" disabled="">{{$empresa->categoria->nombre}}</dd>
                     </dl>
                     <dl class="row">
                         <dt class="col-sm-4">Descripcion :</dt>

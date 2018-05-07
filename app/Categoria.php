@@ -16,6 +16,10 @@ class Categoria extends Model
               \Storage::disk('local')->put($name, \File::get($imagen));
         }
     }
+    public function empresas()
+    {
+        return $this->hasMany(Empresa::class);
+    }
 }
 
 

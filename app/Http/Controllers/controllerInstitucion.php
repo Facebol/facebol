@@ -76,6 +76,7 @@ class controllerInstitucion extends Controller
             'desEmpresa'=>$request->desEmpresa,
         ]);
         $institucion->save();
+        Alert::success('Exito!!','El registro fue editado exitosamente');        
         return redirect()->route('institucion.index');
     }
 }

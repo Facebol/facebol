@@ -20,6 +20,7 @@ class CreatePreRegistrosTable extends Migration
             $table->string('email');
             $table->integer('celular');
             $table->integer('usuario_id')->unsigned()->nullable();
+            $table->string('imagen')->nullable();
             $table->foreign('usuario_id')->references('id')->on('users');
             $table->timestamps();
         });

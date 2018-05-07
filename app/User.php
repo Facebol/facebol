@@ -43,4 +43,8 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Ciudad::class);
     }
+    public function empresas()
+    {
+        return $this->hasMany(Empresas::class);
+    }
 }

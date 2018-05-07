@@ -99,7 +99,7 @@
                         <tbody>
                             @if(Auth::user()->tipo=="Sadministrador")
                                 @foreach($usuarios as $usuario)
-                                    @if(Auth::user()->id != $usuario->id)
+                                    @if(Auth::user()->id != $usuario->id && $usuario->tipo !='Sadministrador')
                                         <tr>
                                             <td class="text-center">{{ucwords($usuario->nombre)}}</td>
                                             <td class="text-center">{{ucwords($usuario->apellido)}}</td>

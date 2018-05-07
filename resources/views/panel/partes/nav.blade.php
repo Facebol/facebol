@@ -1,4 +1,5 @@
-<a href="../../index.html" class="logo">
+<a href="{{route('start-a')}}" class="logo">
+    
     <!-- Add the class icon to your logo image or logo icon to add the margining -->
     FaceBol
 </a>

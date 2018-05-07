@@ -21,6 +21,9 @@ Route::post('reset','controllerInicio@emailReset')->name('reset');
 
 Route::get('panel/reset/{codigo}','controllerInicio@passwordReset')->name('passwordReset');
 Route::resource('panel/planes','controllerPlanes');
+Route::get('panel/preregistro/paginar/{n}','controllerPreRegistro@pagination')->name('prePaginar');
+Route::post('panel/preregistro/buscar','controllerPreRegistro@search')->name('preBuscar');
+Route::resource('panel/preregistro','controllerPreRegistro');
 Route::get('panel/categoria/paginar/{n}','controllerCategoria@pagination')->name('catPaginar');
 Route::post('panel/categoria/buscar','controllerCategoria@search')->name('catBuscar');
 Route::resource('panel/categoria','controllerCategoria');

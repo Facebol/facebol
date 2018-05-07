@@ -19,5 +19,13 @@ class Empresa extends Model
     {
         return $this->belongsTo(Ciudad::class);
     } 
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class);
+    }
+    public function usuario()
+    {
+        return $this->belongsTo(User::class);
+    }
     
 }
